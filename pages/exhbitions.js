@@ -3,9 +3,17 @@ export default class Exhibitions{
           this.template();
      }
 
-      template() {
-          document.querySelector('#exhibitions').innerHTML += /*html*/ `
-               <h1>Exhibitions Page</h1>
-          `;
+     template() {
+           
+          let htmlTemplate = "";
+          for (const exhibition of exhibitions) {
+               htmlTemplate += /*html*/ `
+                    <article>
+                         <h1>exhibition.name</h1>
+                         <p>exhibition.date</p>
+                    </article>
+               `;
+          }
+          document.querySelector('#exhibitions').innerHTML += htmlTemplate;
      }
 }
