@@ -1,0 +1,24 @@
+:root{
+    --red: #803536;
+    --blue: #80AEBD;
+    --yellow: #D2A446;
+    --green: #797A24;
+    --grey: #848A94;
+    --white: #F2F2F2;
+    --black: #262626;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:"futura-pt";
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
