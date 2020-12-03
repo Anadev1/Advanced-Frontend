@@ -1,27 +1,39 @@
 "use strict";
 
-// Hide all pages
-function hideAllPages() {
-  let pages = document.querySelectorAll(".page");
-  for (let page of pages) {
-    page.style.display = "none";
+class SpaService{
+  constructor(){
+    this.defaultPage = "home";
+  }
+  
+  init(){
+    this.page = document.querySelectorAll(".page");
+    this.pageChange();
+  }
+
+  // Hide all pages
+  hideAllPages() {
+    let pages = document.querySelectorAll(".page");
+    for (let page of pages) {
+      page.style.display = "none";
+    }
+  }
+
+  // Show page or tab
+  showPage(pageId) {
+    hideAllPages();
+    document.querySelector(`#${pageId}`).style.display = "block";
+    setActiveTab(pageId);
+  }
+
+  //Change the page
+  pageChange() {
+    let page = "home";
+    if (location.hash) {
+      page = location.hash.slice(1);
+    }
+    this.showPage(page);
   }
 }
 
-// Show page or tab
-function showPage(pageId) {
-  hideAllPages();
-  document.querySelector(`#${pageId}`).style.display = "block";
-  setActiveTab(pageId);
-}
-
-//Change the page
-function pageChange() {
-  let page = "home";
-  if (location.hash) {
-    page = location.hash.slice(1);
-  }
-  showPage(page);
-}
-
-pageChange();
+const spaService = new SpaService();
+export default spaService;
