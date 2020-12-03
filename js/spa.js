@@ -1,5 +1,3 @@
-"use strict";
-
 class SpaService{
   constructor(){
     this.defaultPage = "home";
@@ -20,16 +18,16 @@ class SpaService{
 
   // Show page or tab
   showPage(pageId) {
-    hideAllPages();
+    this.hideAllPages();
     document.querySelector(`#${pageId}`).style.display = "block";
-    setActiveTab(pageId);
+    this.setActiveTab(pageId);
   }
 
   //Change the page
   pageChange() {
-    let page = "home";
-    if (location.hash) {
-      page = location.hash.slice(1);
+    let page = this.defaultPage;
+    if (window.location.hash) {
+      page = window.location.hash.slice(1);
     }
     this.showPage(page);
   }

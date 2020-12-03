@@ -1,7 +1,5 @@
-"use strict";
-
 // import components, pages and services
-import spaService from "spa.js";
+import spaService from "./js/spa.js";
 
 spaService.init();
 
