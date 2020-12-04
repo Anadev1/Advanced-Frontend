@@ -18,5 +18,10 @@ export default class HomePage{
                 <p>My Single Page Web App Template</p>
             </section>
         `;
-    }
+        let navBtn = document.querySelector(".nav-btn");
+        navBtn.onclick = function(){
+            console.log("Opened nav");
+            document.querySelector(".nav-container").setAttribute("style", "right: 0px;");
+        }
+    }    
 }

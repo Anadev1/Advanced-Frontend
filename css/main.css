@@ -1,4 +1,4 @@
-:root{
+:root {
     --red: #803536;
     --blue: #80AEBD;
     --yellow: #D2A446;
@@ -8,29 +8,36 @@
     --black: #262626;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family:"futura-pt";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "futura-pt";
 }
 
-html{
+html {
     width: 100%;
     height: 100%;
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
-.page{
+.page {
     height: 100vh;
     width: 100%;
     padding: 30px;
 }
+
 /***HOME PAGE***/
-.home-page{
+.home-page {
     height: 100vh;
     width: 100%;
     background-image: url("../img/bg-img.jpg");
@@ -41,7 +48,7 @@ html{
 
 
 /***NAVIGATION***/
-.nav-btn{
+.nav-btn {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -50,31 +57,32 @@ html{
     flex-direction: column;
 }
 
-.nav-btn div{
+.nav-btn div {
     height: 2px;
     background-color: var(--white);
     margin-top: 5px;
 }
 
-.nav-btn div:first-child{
+.nav-btn div:first-child {
     width: 25px;
 }
 
-.nav-btn div:last-child{
+.nav-btn div:last-child {
     width: 15px;
 }
 
-.nav-container{
+.nav-container {
     background-color: rgba(26, 26, 26, 0.596);
     width: 100%;
     height: 100vh;
-    position: relative;
-    transform: translateX(3000px);
-    overflow: hidden;
-    display: none;
+    position: absolute;
+    right: -3000px;
+    top: 0px;
+    display: block;
+    z-index: 999999;
 }
 
-.close-btn{
+.close-btn {
     position: absolute;
     right: 30px;
     top: 20px;
@@ -82,7 +90,7 @@ html{
     font-size: 30px;
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -92,7 +100,7 @@ html{
     margin: 0 auto;
 }
 
-.navigation:after{
+.navigation:after {
     content: "";
     width: 2px;
     background-color: var(--white);
@@ -101,24 +109,24 @@ html{
     right: 20px;
 }
 
-.navigation ul{
+.navigation ul {
     list-style-type: none;
     justify-self: center;
 }
 
-.navigation ul>li{
+.navigation ul>li {
     margin: 20px 0;
 }
 
-.navigation ul>li a{
+.navigation ul>li a {
     font-size: 30px;
     color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
-    font-family:"futura-pt";
+    font-family: "futura-pt";
 }
 
-.hours{
+.hours {
     margin-top: 20%;
     font-family: "futura-pt";
     font-weight: bold;
@@ -126,21 +134,21 @@ html{
     text-transform: uppercase;
 }
 
-.log-out-container{
+.log-out-container {
     margin-top: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.log-out-container p{
+.log-out-container p {
     font-size: 18px;
     color: var(--white);
     margin-left: 10px;
     text-transform: uppercase;
 }
 
-.arrow-icon{
+.arrow-icon {
     width: 30px;
     height: 30px;
     border-radius: 200px;
@@ -150,7 +158,7 @@ html{
     align-items: center;
 }
 
-.arrow-icon i{
+.arrow-icon i {
     padding: 10px;
     color: var(--white);
     font-size: 20px;
@@ -165,9 +173,9 @@ html{
 
 #details-banner {
     color: var(--white);
-    background: radial-gradient(circle, rgba(0,0,0,0.35) 100%,
-     rgba(255,255,255,1) 100%),
-     url("../media/søndag-morgen.jpg");
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.35) 100%,
+            rgba(255, 255, 255, 1) 100%),
+        url("../media/søndag-morgen.jpg");
     height: 40vh;
     width: 100%;
     background-size: cover;
@@ -211,10 +219,6 @@ html{
      background-color: var(--black);
 }
 
-article {
-
-}
-
 .list_title {
     font-size: 24px;
     padding: 30px;
@@ -224,7 +228,7 @@ article {
     position: relative;
 } 
 
-article {
+#exhibition-artworks {
     height: 13vh;
 }
 

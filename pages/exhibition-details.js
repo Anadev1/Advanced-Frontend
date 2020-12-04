@@ -25,7 +25,7 @@ export default class ExhibitionDetailsPage {
         let template = "";
         for (let artwork of artworks) {
             template += /*html*/ `
-        <article>
+        <article id="exhibition-artworks">
         <div id="artwork-text">
             <h1 class="artwork_title">${artwork.title}</h1>
             <p class="artwork_name">${artwork.name}</p>

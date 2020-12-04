@@ -1,7 +1,7 @@
 export default class NavBar{
     constructor(){
         this.template();
-        console.log("worsk");
+        console.log("works");
     }
 
     template(){

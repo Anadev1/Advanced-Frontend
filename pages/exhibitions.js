@@ -4,20 +4,18 @@ import {
 
 export default class Exhibitions {
      constructor() {
+          this.template();
           this.exhibitionRef = firebaseDB.collection("exhibitions");
           this.read();
-          this.template();
      }
 
      read() {
-          // ========== READ ==========
-          // watch the database ref for changes
           this.exhibitionRef.onSnapshot(snapshotData => {
                let exhibitions = [];
                snapshotData.forEach(doc => {
                     let exhibition = doc.data();
                     exhibition.id = doc.id;
-                    exhibitions.push(exhibitions);
+                    exhibitions.push(exhibition);
                });
           this.appendExhibitions(exhibitions);
           });
@@ -36,12 +34,13 @@ export default class Exhibitions {
           let template = "";
           for (let exhibition of exhibitions) {
                template += /*html*/ `
-               <article>
-                    <h1>${exhibition.name}</h1>
-                    <p>${exhibition.date}</p>
+               <article class="exhibition-item">
+                    <h1 class="exhibition-name">${exhibition.name}</h1>
+                    <p class="exhibition-date">${exhibition.date}</p>
+
                </article>
                `;
           }
     document.querySelector("#exhibitions-list").innerHTML = template;
-  }
+     }
 }
