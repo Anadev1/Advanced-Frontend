@@ -15,4 +15,16 @@ export default class Exhibitions{
                </section>
           `;
      }
+     appendExhibitions(exhibitions) {
+    let template = "";
+    for (let exhibition of exhibitions) {
+      template += /*html*/ `
+        <article>
+          <h1>${exhibition.name}</h1>
+          <p>${exhibition.date}</p>
+        </article>
+        `;
+    }
+    document.querySelector("#grid-exhibitions").innerHTML = template;
+  }
 }
