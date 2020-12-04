@@ -1,33 +1,12 @@
-import {
-    firebaseDB
-} from "./firebase-config.js";
-
-export default class ExhibitionDetails {
+export default class ExhibitionsDetails {
     constructor() {
-        this.artworkRef = firebaseDB.collection("artworks");
-        this.read();
+        this.template();
     }
 
-    read() {
-        this.artworkRef.onSnapshot(snapshotData => {
-            let artworks = [];
-            snapshotData.forEach(doc => {
-                let artwork = doc.data();
-                artwork.id = doc.id;
-                artworks.push(artwork);
-            });
-            this.appendArtworks(artworks);
-        });
+    template() {
+        document.querySelector('#app').innerHTML += /*html*/ `
+               <section id="persons" class="page">
+               </section>
+          `;
     }
-
-    appendArtworks(artworks) {
-        let htmlTemplate = "";
-        for (const artwork of artworks) {
-            htmlTemplate += `
-            <article>
-            <h2>${artwork.title}</h2>
-            <h4>${artwork.name}</h4>
-            `;
-        }
-        document.querySelector("#exhibition-details").innerHTML = htmlTemplate;
-    }
+}
