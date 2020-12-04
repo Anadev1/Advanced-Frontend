@@ -20,7 +20,6 @@ class SpaService{
   showPage(pageId) {
     this.hideAllPages();
     document.querySelector(`#${pageId}`).style.display = "block";
-    this.setActiveTab(pageId);
   }
 
   //Change the page
