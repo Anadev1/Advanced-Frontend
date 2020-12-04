@@ -4,20 +4,18 @@ import {
 
 export default class Exhibitions {
      constructor() {
+          this.template();
           this.exhibitionRef = firebaseDB.collection("exhibitions");
           this.read();
-          this.template();
      }
 
      read() {
-          // ========== READ ==========
-          // watch the database ref for changes
           this.exhibitionRef.onSnapshot(snapshotData => {
                let exhibitions = [];
                snapshotData.forEach(doc => {
                     let exhibition = doc.data();
                     exhibition.id = doc.id;
-                    exhibitions.push(exhibitions);
+                    exhibitions.push(exhibition);
                });
           this.appendExhibitions(exhibitions);
           });
