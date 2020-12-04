@@ -1,16 +1,12 @@
-export default class Map {
+export default class OnboardingPage {
     constructor() {
         this.template();
     }
 
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
-            
-        <section id="map" class="page">
+        <section id="onboarding" class="page onboarding">
 
-           <div>
-               <h2>Kunste Museum Map</h2>
-            </div>
             
         </section>
         

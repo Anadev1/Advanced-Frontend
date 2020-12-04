@@ -1,8 +1,8 @@
-  import {
-  firebaseDB
+import {
+     firebaseDB
 } from "../js/firebase_config.js";
 
-export default class Exhibitions{
+export default class Exhibitions {
      constructor() {
           this.template();
           this.userRef = firebaseDB.collection("exhibitions");
@@ -15,9 +15,9 @@ export default class Exhibitions{
           this.exhibitionRef.onSnapshot(snapshotData => {
                let exhibitions = [];
                snapshotData.forEach(doc => {
-               let exhibition = doc.data();
-               exhibition.id = doc.id;
-               exhibitions.push(exhibitions);
+                    let exhibition = doc.data();
+                    exhibition.id = doc.id;
+                    exhibitions.push(exhibitions);
                });
           });
           this.appendExhibitions(exhibitions);
@@ -31,15 +31,15 @@ export default class Exhibitions{
           `;
      }
      appendExhibitions(exhibitions) {
-    let template = "";
-    for (let exhibition of exhibitions) {
-      template += /*html*/ `
+          let template = "";
+          for (let exhibition of exhibitions) {
+               template += /*html*/ `
         <article>
           <h1>${exhibition.name}</h1>
           <p>${exhibition.date}</p>
         </article>
         `;
-    }
-    document.querySelector("#exhibitions-list").innerHTML = template;
-  }
+          }
+          document.querySelector("#exhibitions-list").innerHTML = template;
+     }
 }
