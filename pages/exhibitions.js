@@ -1,13 +1,28 @@
-import exhibitionsData from "../js/exhibitions-data.js";
+  import {
+  firebaseDB
+} from "../js/firebase_config.js";
+
 export default class Exhibitions{
      constructor() {
           this.template();
+          this.userRef = firebaseDB.collection("exhibitions");
+          this.read();
      }
 
-     async initData() {
-          let exhibitions = await exhibitionsData.loadExhibitions();
+     read() {
+          // ========== READ ==========
+          // watch the database ref for changes
+          this.exhibitionRef.onSnapshot(snapshotData => {
+               let exhibitions = [];
+               snapshotData.forEach(doc => {
+               let exhibition = doc.data();
+               exhibition.id = doc.id;
+               exhibitions.push(exhibitions);
+               });
+          });
           this.appendExhibitions(exhibitions);
-      }
+     }
+
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibitions" class="page">
@@ -25,6 +40,6 @@ export default class Exhibitions{
         </article>
         `;
     }
-    document.querySelector("#grid-exhibitions").innerHTML = template;
+    document.querySelector("#exhibitions-list").innerHTML = template;
   }
 }

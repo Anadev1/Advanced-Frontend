@@ -12,50 +12,52 @@ let firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const _db = firebase.firestore();
+export const firebaseDB = firebase.firestore();
 
-let ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // let ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-ui.start('#firebaseui-auth-container', {
-  signInOptions: [
-    {
-      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      signInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD
-    }
-  ],
-  // Other config options...
-});
+  // ui.start('#firebaseui-auth-container', {
+  //   signInOptions: [
+  //     {
+  //       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  //       signInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD
+  //     }
+  //   ],
+  //   // Other config options...
+  // });
 
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) { // if user exists and is authenticated
-    userAuthenticated(user);
-  } else { // if user is not logged in
-    userNotAuthenticated();
-  }
-});
+  // firebase.auth().onAuthStateChanged(function (user) {
+  //   if (user) { // if user exists and is authenticated
+  //     userAuthenticated(user);
+  //   } else { // if user is not logged in
+  //     userNotAuthenticated();
+  //   }
+  // });
 
-function userAuthenticated(user) {
-  _currentUser = user;
-  init();
-}
+  // function userAuthenticated(user) {
+  //   _currentUser = user;
+  //   init();
+  // }
 
-// sign out user
-function logout() {
-  firebase.auth().signOut();
-  showPage("login");
-}
+  // // sign out user
+  // function logout() {
+  //   firebase.auth().signOut();
+  //   showPage("login");
+  // }
 
-function init() {
-  // init user data and favourite movies
-  _userRef.doc(_currentUser.uid).onSnapshot({
-    includeMetadataChanges: true
-  }, function (userData) {
-    if (!userData.metadata.hasPendingWrites && userData.data()) {
-      _currentUser = {
-        ...firebase.auth().currentUser,
-        ...userData.data()
-      }; //concating two objects: authUser object and userData objec from the db
+  // function init() {
+  //   // init user data and favourite movies
+  //   _userRef.doc(_currentUser.uid).onSnapshot({
+  //     includeMetadataChanges: true
+  //   }, function (userData) {
+  //     if (!userData.metadata.hasPendingWrites && userData.data()) {
+  //       _currentUser = {
+  //         ...firebase.auth().currentUser,
+  //         ...userData.data()
+  //       }; //concating two objects: authUser object and userData objec from the db
 
-    }
-  });
-}
+  //     }
+  //   });
+  // } 
+
+
