@@ -155,3 +155,49 @@ html{
     color: var(--white);
     font-size: 20px;
 }
+
+/***EXHIBITION DETAILS PAGE***/
+
+.exhibition-details {
+    padding: 0;
+    background-color: var(--black);
+}
+
+#details-banner {
+    color: var(--white);
+    background: radial-gradient(circle, rgba(0,0,0,0.35) 100%,
+     rgba(255,255,255,1) 100%),
+     url("../media/søndag-morgen.jpg");
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.exhibition_title {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+#details-description {
+    padding: 30px;
+    color: var(--white);
+    display: flex;
+}
+
+.description_title {
+    font-size: 30px;
+}
+
+.description-text {
+    font-size: 16px;
+}
+
+.floor_number {
+    font-size: 48px;
+    transform: rotate(270deg);
+}
