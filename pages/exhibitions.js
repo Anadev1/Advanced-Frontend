@@ -4,9 +4,9 @@ import {
 
 export default class Exhibitions {
      constructor() {
-          this.template();
-          this.userRef = firebaseDB.collection("exhibitions");
+          this.exhibitionRef = firebaseDB.collection("exhibitions");
           this.read();
+          this.template();
      }
 
      read() {
@@ -19,8 +19,9 @@ export default class Exhibitions {
                     exhibition.id = doc.id;
                     exhibitions.push(exhibitions);
                });
-          });
           this.appendExhibitions(exhibitions);
+          });
+          
      }
 
      template() {
@@ -30,16 +31,17 @@ export default class Exhibitions {
                </section>
           `;
      }
+
      appendExhibitions(exhibitions) {
           let template = "";
           for (let exhibition of exhibitions) {
                template += /*html*/ `
-        <article>
-          <h1>${exhibition.name}</h1>
-          <p>${exhibition.date}</p>
-        </article>
-        `;
+               <article>
+                    <h1>${exhibition.name}</h1>
+                    <p>${exhibition.date}</p>
+               </article>
+               `;
           }
-          document.querySelector("#exhibitions-list").innerHTML = template;
-     }
+    document.querySelector("#exhibitions-list").innerHTML = template;
+  }
 }

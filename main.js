@@ -20,4 +20,5 @@ let onboardingPage = new OnboardingPage();
 
 spaService.init();
 
+
 window.pageChange = () => spaService.pageChange();
