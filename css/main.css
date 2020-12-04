@@ -187,6 +187,7 @@ html{
     padding: 30px;
     color: var(--white);
     display: flex;
+    position: relative;
 }
 
 .description_title {
@@ -201,6 +202,39 @@ html{
     font-size: 48px;
     transform: rotate(270deg);
     white-space: nowrap;
-    width: 10vh;
-    
+    width: 12vh;
+    left: 0;
+}
+
+#exhibition-artworks {
+     color: var(--white);
+     background-color: var(--black);
+}
+
+article {
+
+}
+
+.list_title {
+    font-size: 24px;
+    padding: 30px;
+}
+
+#artwork-list {
+    position: relative;
+} 
+
+article {
+    height: 13vh;
+}
+
+.artwork_img {
+    width: 100%;
+    height: 13vh;
+    object-fit: cover;
+}
+
+#artwork-text {
+    position: absolute;
+    padding: 30px;
 }

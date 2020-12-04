@@ -26,9 +26,11 @@ export default class ExhibitionDetailsPage {
         for (let artwork of artworks) {
             template += /*html*/ `
         <article>
-            <img src='${artwork.image}'>
-            <h1>${artwork.title}</h1>
-            <p>${artwork.name}</p>
+        <div id="artwork-text">
+            <h1 class="artwork_title">${artwork.title}</h1>
+            <p class="artwork_name">${artwork.name}</p>
+        </div>
+        <img class="artwork_img" src='${artwork.image}'>
         </article>
         `;
         }
@@ -60,8 +62,10 @@ export default class ExhibitionDetailsPage {
                               of course, be included in this new hanging.</p> 
                       </div>
                   </div>
+                  <div id="exhibition-artworks">
+                      <h4 class="list_title">Artworks in this exhibition</h4>
                   <div id="artwork-list"></div>
-
+                </div>
                </section>
           `;
     }
