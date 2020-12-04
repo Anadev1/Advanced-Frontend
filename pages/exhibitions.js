@@ -34,12 +34,13 @@ export default class Exhibitions {
           let template = "";
           for (let exhibition of exhibitions) {
                template += /*html*/ `
-               <article>
-                    <h1>${exhibition.name}</h1>
-                    <p>${exhibition.date}</p>
+               <article class="exhibition-item">
+                    <h1 class="exhibition-name">${exhibition.name}</h1>
+                    <p class="exhibition-date">${exhibition.date}</p>
+
                </article>
                `;
           }
     document.querySelector("#exhibitions-list").innerHTML = template;
-  }
+     }
 }
