@@ -10,11 +10,8 @@ export default class Exhibitions{
       }
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
-               <section id="persons" class="page">
-               <header class="topbar">
-                    <h2>Persons</h2>
-               </header>
-               <div id="grid-persons" class="grid-container"></div>
+               <section id="exhibitions" class="page">
+               <div id="exhibitions-list" class="list-container"></div>
                </section>
           `;
      }
