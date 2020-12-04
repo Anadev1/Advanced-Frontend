@@ -4,7 +4,7 @@ import ExhibitionDetailPage from "./pages/exhibition-details.js";
 import NavBar from "./components/nav.js";
 import HomePage from "./pages/home.js";
 import Map from "/pages/map.js";
-import Exhibitions from "./pages/exhbitions.js";
+import Exhibitions from "./pages/exhibitions.js";
 
 
 //Declare and init
@@ -17,4 +17,5 @@ let exhibitionDetailPage = new ExhibitionDetailPage();
 
 
 spaService.init();
+
 window.pageChange = () => spaService.pageChange();
