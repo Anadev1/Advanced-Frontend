@@ -18,4 +18,5 @@ let exhibitionDetailPage = new ExhibitionDetailPage();
 
 spaService.init();
 
+
 window.pageChange = () => spaService.pageChange();
