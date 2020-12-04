@@ -9,35 +9,47 @@
     <link rel="stylesheet" href="https://use.typekit.net/sky3pkz.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+
     <title>Kunste Art Museum</title>
-</head>
-<body onhashchange="pageChange()">
+    </head>
+    <body onhashchange="pageChange()">
 
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#map">Map</a>
-        <a href="#exhibitions">Exhibitions</a>
-        <a href="#tickets">Ticket Store</a>
-        <a href="#profile">Profile</a>
-    </nav>
-
-    <section id="home" class="page">
+        <section id="home" class="page">
 
 
-    </section>
+        </section>
 
-    <section id="exhibitions" class="page">
-
-
-    </section>
-
-    <section id="art-details" class="page">
+        <section id="exhibitions" class="page">
 
 
-    </section>
-    
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-    <script type="module" src="main.js"></script>
-    
-</body>
+        </section>
+
+        <section id="art-details" class="page">
+
+
+        </section>
+
+
+
+       
+
+        <section id="login" class="page">
+            <header class="topbar">
+                <h2>Welcome to</h2>
+            </header>
+            <button onclick="logout()"></button>
+            <section id="firebaseui-auth-container"></section>
+        </section>
+        
+        
+        <script type="module" src="main.js"></script>
+        <script src="js/firebase_config.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        
+    </body>
 </html>
