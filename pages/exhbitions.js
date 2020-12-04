@@ -1,19 +1,21 @@
+import exhibitionsData from "../js/exhibitions-data.js";
 export default class Exhibitions{
      constructor() {
           this.template();
      }
 
+     async initData() {
+          let exhibitions = await exhibitionsData.loadExhibitions();
+          this.appendExhibitions(exhibitions);
+      }
      template() {
-           
-          let htmlTemplate = "";
-          for (const exhibition of exhibitions) {
-               htmlTemplate += /*html*/ `
-                    <article>
-                         <h1>exhibition.name</h1>
-                         <p>exhibition.date</p>
-                    </article>
-               `;
-          }
-          document.querySelector('#exhibitions').innerHTML += htmlTemplate;
+          document.querySelector('#app').innerHTML += /*html*/ `
+               <section id="persons" class="page">
+               <header class="topbar">
+                    <h2>Persons</h2>
+               </header>
+               <div id="grid-persons" class="grid-container"></div>
+               </section>
+          `;
      }
 }
