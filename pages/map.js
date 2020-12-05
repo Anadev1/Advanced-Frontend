@@ -1,10 +1,10 @@
-export default class Map{
-    constructor(){
+export default class Map {
+    constructor() {
         this.template();
         thefunction();
     }
 
-    template(){
+    template() {
         document.querySelector("#app").innerHTML += /*html*/ `
             
         <section id="map" class="page map_page">
