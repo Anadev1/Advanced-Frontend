@@ -34,6 +34,8 @@ class SpaService {
       page = window.location.hash.slice(1);
     }
     this.showPage(page);
+    let navContainer = document.querySelector(".nav-container");
+        navContainer.style.display = "none";
   }
 }
 

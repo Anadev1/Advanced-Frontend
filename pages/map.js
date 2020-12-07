@@ -10,10 +10,6 @@ export default class Map {
             <header class="topbar">
                <h2>Kunste Museum Map</h2>
             </header>
-            <div class="nav-btn">
-                    <div></div>
-                    <div></div>
-            </div>
             <div class="map_container">
                 <div class="map_floors">
                     <div class="circles_numbers">

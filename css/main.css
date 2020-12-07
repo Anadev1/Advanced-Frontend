@@ -331,11 +331,12 @@ html {
 
 /****** MAP PAGE*******/
 .map_page {
-    background-image: url(../media/map_background1.png);
+    background-image: url(../media/map_background.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    height: 100vh;
 }
 
 .map_container {
