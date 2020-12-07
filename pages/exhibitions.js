@@ -25,7 +25,7 @@ export default class Exhibitions {
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibitions" class="page">
-               <div id="exhibitions-list" class="list-container"></div>
+                    <img src="./media/search_icon.svg" id="search-icon" alt="search icon">
                </section>
           `;
      }
@@ -49,7 +49,7 @@ export default class Exhibitions {
           </article>
           `;
           }
-          document.querySelector("#exhibitions-list").innerHTML = template;
+          document.querySelector("#exhibitions").innerHTML = template;
      }    
 }
 
