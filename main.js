@@ -16,8 +16,8 @@ import spaService from "./js/spa.js";
 let map = new Map();
 let profile = new Profile();
 let exhibitions = new Exhibitions();
-let nav = new NavBar();
 let homePage = new HomePage();
+let nav = new NavBar();
 let exhibitionDetailPage = new ExhibitionDetailPage();
 let onboardingPage = new OnboardingPage();
 let onboardingPage2 = new OnboardingPage2();
@@ -26,6 +26,6 @@ let onboardingPage3 = new OnboardingPage3();
 spaService.init();
 
 window.pageChange = () => spaService.pageChange();
-//window.openNav = () => homePage.openNav();
-
-//document.querySelector(".nav-btn").addEventListener("click", homePage.openNav());
+window.openCloseNav = () => homePage.openCloseNav();
+window.openCloseNav = () => new NavBar();
+window.navigateTo = () => spaService.navigateTo();

@@ -8,6 +8,7 @@ export default class NavBar{
         document.querySelector("#app").innerHTML += /*html*/`
         <div class="nav-container">
             <nav class="navigation">
+                <span class="close-btn" onclick="closeNav()">&#10006;</span>
                 <ul>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#map" class="nav-link">Museum Map</a></li>
@@ -24,5 +25,10 @@ export default class NavBar{
             </nav>
         </div>
         `;
+    }
+
+    closeNav(){
+        let navContainer = document.querySelector(".nav-container");
+        navContainer.style.display = "none";
     }
 }
