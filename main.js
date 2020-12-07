@@ -14,8 +14,8 @@ import spaService from "./js/spa.js";
 
 let map = new Map();
 let exhibitions = new Exhibitions();
-//let nav = new NavBar();
 let homePage = new HomePage();
+let nav = new NavBar();
 let exhibitionDetailPage = new ExhibitionDetailPage();
 let onboardingPage = new OnboardingPage();
 let onboardingPage2 = new OnboardingPage2();
