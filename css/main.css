@@ -31,9 +31,7 @@ html {
 }
 
 .page {
-    height: 100vh;
-    width: 100%;
-    padding: 30px;
+    display: none;
 }
 
 /***HOME PAGE***/
@@ -119,7 +117,7 @@ html {
     position: absolute;
     right: -3000px;
     top: 0px;
-    display: block;
+    display: none;
     z-index: 999999;
 }
 
