@@ -1,7 +1,6 @@
 export default class Map {
     constructor() {
         this.template();
-        thefunction();
     }
 
     template() {
