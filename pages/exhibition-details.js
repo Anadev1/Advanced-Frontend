@@ -26,11 +26,16 @@ export default class ExhibitionDetailsPage {
         for (let artwork of artworks) {
             template += /*html*/ `
         <article id="exhibition-artworks">
+        <div id="artwork-content">
+        <div id="overlay">
         <div id="artwork-text">
             <h1 class="artwork_title">${artwork.title}</h1>
             <p class="artwork_name">${artwork.name}</p>
         </div>
+            <img src="/media/arrow.svg" onclick="navigateTo('art-details')" alt="arrow" class="artworks_arrow">
+        </div>
         <img class="artwork_img" src='${artwork.image}'>
+        </div>
         </article>
         `;
         }
@@ -46,9 +51,9 @@ export default class ExhibitionDetailsPage {
                 </div>
                   <div id="details-banner">
                       <h3 class="exhibition_title">Human Nature</h3>
+                      <img src="/media/map.svg" onclick="navigateTo('map')" alt="map" class="banner_img">
                   </div>
                   <div id="details-description">
-                      <div>
                       <h1 class="floor_number">Floor 8</h1>
                     </div>
                       <div>

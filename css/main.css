@@ -200,6 +200,7 @@ html {
 
 .description_title {
     font-size: 30px;
+    margin-bottom: 2vh;
 }
 
 .description-text {
@@ -210,8 +211,9 @@ html {
     font-size: 48px;
     transform: rotate(270deg);
     white-space: nowrap;
-    width: 12vh;
-    left: 0;
+    width: 30vw;
+    height: 12vw;
+    padding: 18vh 10vw;
 }
 
 #exhibition-artworks {
