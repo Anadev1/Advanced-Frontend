@@ -17,7 +17,7 @@ export default class Exhibitions {
                     exhibition.id = doc.id;
                     exhibitions.push(exhibition);
                });
-          this.appendExhibitions(exhibitions);
+               this.appendExhibitions(exhibitions);
           });
           
      }
@@ -29,40 +29,28 @@ export default class Exhibitions {
                </section>
           `;
      }
-
-//      appendExhibitions(exhibitions) {
-//           let template = "";
-//           for (let exhibition of exhibitions) {
-//                template += /*html*/ `
-//                <article class="exhibition-item">
-//                     <h1 class="exhibition-name">${exhibition.name}</h1>
-//                     <p class="exhibition-date">${exhibition.date}</p>
-
-//                </article>
-//                `;
-//           }
-//     document.querySelector("#exhibitions-list").innerHTML = template;
-//      }
-     
      appendExhibitions(exhibitions) {
-          let template = "";
-          for (let exhibition of exhibitions) {
-               template += /*html*/ `
-               <article class="exhibition-item">
-                    <div class="image-container">
-                         <img src="${exhibition.image}" alt="exhibition" class="exhibition-image">
+     let template = "";
+     for (let exhibition of exhibitions) {
+          template += /*html*/ `
+          <article class="exhibition-item">
+               <div class="image-container">
+                    <img src="${exhibition.image}" alt="exhibition" class="exhibition-image">
+               </div>
+               <div class="dark-overlay"></div>
+               <div class="exhibition-details-container">
+                    <h1 class="exhibition-name">${exhibition.name}</h1>
+                    <div class="date-arrow-container">
+                    <p class="exhibition-date">Exhibition end: ${exhibition.date}</p>
+                    <img src="/media/arrow.svg" alt="arrow" id="arrow">
                     </div>
-                    <div class="dark-overlay"></div>
-                    <div class="exhibition-details-container">
-                         <h1 class="exhibition-name">${exhibition.name}</h1>
-                         <div class="date-arrow-container">
-                         <p class="exhibition-date">Exhibition end: ${exhibition.date}</p>
-                         <img src="/media/arrow.svg" alt="arrow" id="arrow">
-                         </div>
-                    </div>
-               </article>
-               `;
-          }
-          document.querySelector("#exhibitions").innerHTML = template;
+               </div>
+          </article>
+          `;
+     }
 }
 }
+
+     
+
+
