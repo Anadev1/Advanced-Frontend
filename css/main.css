@@ -560,6 +560,12 @@ html {
     margin: 5px;
 }
 
+.favourite_artworks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .profile_title{
     margin: 30px 0;
 }
@@ -692,4 +698,17 @@ html {
     right: 0;
     top: 0;
     padding: 62px 30px;
+}
+
+.exhibition-favourite{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 2.5%;
+}
+
+.favourite-image{
+    width: 100%;
+  
 }

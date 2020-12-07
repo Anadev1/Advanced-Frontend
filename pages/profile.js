@@ -1,7 +1,26 @@
+import {
+    firebaseDB
+} from "../js/firebase_config.js";
+
 export default class Profile {
     constructor() {
+        this.exhibitionRef = firebaseDB.collection("artworks");
         this.template();
+        this.read();
     }
+
+    read() {
+        this.exhibitionRef.onSnapshot(snapshotData => {
+             let exhibitions = [];
+             snapshotData.forEach(doc => {
+                  let exhibition = doc.data();
+                  exhibition.id = doc.id;
+                  exhibitions.push(exhibition);
+             });
+             this.appendExhibitions(exhibitions);
+        });
+        
+   }
 
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
@@ -50,4 +69,16 @@ export default class Profile {
         `;
         
     }
+
+    appendExhibitions(exhibitions) {
+        let template = "";
+        for (let exhibition of exhibitions) {
+             template += /*html*/ `
+             <article class="exhibition-favourite">
+                       <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
+             </article>
+             `;
+             }
+             document.querySelector(".favourite_artworks").innerHTML = template;
+        }   
 }
