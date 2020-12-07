@@ -1,9 +1,9 @@
-class SpaService{
-  constructor(){
+class SpaService {
+  constructor() {
     this.defaultPage = "home";
   }
-  
-  init(){
+
+  init() {
     this.page = document.querySelectorAll(".page");
     this.pageChange();
   }
@@ -21,6 +21,10 @@ class SpaService{
     this.hideAllPages();
     document.querySelector(`#${pageId}`).style.display = "block";
   }
+  // navigate to a new view/page by changing href
+  navigateTo(pageId) {
+    window.location.href = `#${pageId}`;
+  }
 
   //Change the page
   pageChange() {
@@ -31,6 +35,8 @@ class SpaService{
     this.showPage(page);
   }
 }
+
+
 
 const spaService = new SpaService();
 export default spaService;
