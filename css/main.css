@@ -210,7 +210,6 @@ html {
 #exhibition-details {
     padding: 0;
     background-color: var(--black);
-    height: fit-content;
 }
 
 #details-banner {
