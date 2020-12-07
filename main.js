@@ -24,6 +24,4 @@ let onboardingPage3 = new OnboardingPage3();
 spaService.init();
 
 window.pageChange = () => spaService.pageChange();
-//window.openNav = () => homePage.openNav();
-
-//document.querySelector(".nav-btn").addEventListener("click", homePage.openNav());
+window.openCloseNav = () => homePage.openCloseNav();
