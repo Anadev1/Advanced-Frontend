@@ -23,4 +23,4 @@ spaService.init();
 window.pageChange = () => spaService.pageChange();
 //window.openNav = () => homePage.openNav();
 
-document.querySelector(".nav-btn").addEventListener("click", homePage.openNav());
+//document.querySelector(".nav-btn").addEventListener("click", homePage.openNav());
