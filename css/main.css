@@ -211,7 +211,6 @@ html {
 #exhibition-details {
     padding: 0;
     background-color: var(--black);
-    height: fit-content;
 }
 
 #details-banner {
@@ -420,7 +419,7 @@ html {
 
 .exhibition-image {
     max-width: 100%;
-
+}
     .description_title {
         font-size: 30px;
         margin-bottom: 2vh;
