@@ -28,5 +28,18 @@ export default class HomePage{
                 </div>
             </section>
         `;
-    }    
+    } 
+    
+    openCloseNav(){
+        console.log("Clicked nav");
+        let navContainer = document.querySelector(".nav-container");
+        navContainer.style.right = "0px";
+        if(navContainer.style.right = "-3000px"){
+            navContainer.style.right = "0px";
+            console.log("Open nav");
+        }   else if (navContainer.style.right = "0px"){
+            navContainer.style.right = "-3000px";
+            console.log("Close nav");
+        }
+    }
 }
