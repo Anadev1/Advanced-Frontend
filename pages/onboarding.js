@@ -18,7 +18,7 @@ export default class OnboardingPage {
                     <div id="progress-dots">
                     <span class="dot_active"></span>
                     <span onclick="navigateTo('onboarding2')" class="dot"></span>
-                    <span onclick="navigateTo('')" class="dot"></span>
+                    <span onclick="navigateTo('onboarding3')" class="dot"></span>
                 </div>
                     <img src="/media/arrow-big.svg" onclick="navigateTo('onboarding2')" alt="arrow" class="onboarding_arrow">
                 </div>

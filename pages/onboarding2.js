@@ -6,7 +6,7 @@ export default class OnboardingPage2 {
 
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
-        <section id="onboarding" class="page onboarding-page">
+        <section id="onboarding2" class="page onboarding-page">
             <img src="/media/onboarding-2.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
                 <h3 class="onboarding_title">Discover exhibitions</h3>

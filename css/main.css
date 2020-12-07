@@ -245,7 +245,6 @@ html {
     padding: 30px;
     color: var(--white);
     display: flex;
-    position: relative;
 }
 
 .description_title {
@@ -262,7 +261,7 @@ html {
     width: 25vw;
 }
 
-.floor_number {
+.floornumber {
     font-size: 48px;
     transform: rotate(270deg);
     white-space: nowrap;
@@ -332,7 +331,7 @@ html {
 
 /****** MAP PAGE*******/
 .map_page {
-    background-image: url(../media/map_background.png);
+    background-image: url(../media/map_background1.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;

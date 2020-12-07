@@ -54,7 +54,8 @@ export default class ExhibitionDetailsPage {
                       <img src="/media/map.svg" onclick="navigateTo('map')" alt="map" class="banner_img">
                   </div>
                   <div id="details-description">
-                      <h1 class="floor_number">Floor 8</h1>
+                      <div id="floor-description">
+                      <h1 class="floornumber">Floor 8</h1>
                     </div>
                       <div>
                           <h3 class="description_title">Description</h3>
