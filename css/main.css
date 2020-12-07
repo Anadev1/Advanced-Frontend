@@ -460,10 +460,7 @@ html {
 }
 
 .onboarding_img {
-    height: 100%;
-    width: 300%;
-    margin-left: -300px;
-    position: relative;
+    max-height: 100%
     padding: 0;
 }
 
@@ -493,15 +490,17 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
 
-.skip_btn {
-    border: none;
-    background-color: transparent;
+.skip_btn{
     color: white;
-    font-family: "futura-pt";
     font-size: 18px;
+    font-weight: 600;
+    margin: auto 0;
+    text-decoration: none;
 }
+
 
 #progress-dots {
     margin: auto;
