@@ -119,16 +119,17 @@ html {
     position: absolute;
     right: 0px;
     top: 0px;
-    display: block;
+    display: none;
     z-index: 999999;
 }
 
 .close-btn {
     position: absolute;
-    right: 30px;
     top: 20px;
+    right: 30px;
     color: var(--white);
     font-size: 30px;
+    cursor: pointer;
 }
 
 .navigation {
