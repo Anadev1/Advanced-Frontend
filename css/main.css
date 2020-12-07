@@ -543,7 +543,7 @@ html {
     position: relative;
 }
 
-.exhibition_title {
+.artwork-title {
     position: absolute;
     bottom: 0;
     padding-bottom: 15px;
@@ -559,13 +559,13 @@ html {
     padding-right: 30px;
 }
 
-#details-description {
+#details-container {
     padding: 30px;
     color: var(--white);
     display: flex;
 }
 
-.description_title {
+.description-title {
     font-size: 30px;
     margin-bottom: 2vh;
 }
@@ -574,7 +574,7 @@ html {
     font-size: 16px;
 }
 
-#floor-description {
+#artwork-description {
     padding: 20vh 0;
     width: 25vw;
 }
@@ -586,63 +586,18 @@ html {
     height: 10vh;
 }
 
-#exhibition-artworks {
+#artist-artworks {
     color: var(--white);
     background-color: var(--black);
+    height: 13vh;
 }
 
-.list_title {
+.list-title {
     font-size: 24px;
     padding: 30px;
     background-color: #262626;
 }
 
-#artwork-list {
+#artworks-list {
     position: relative;
-}
-
-#exhibition-artworks {
-    height: 13vh;
-}
-
-.artwork_img {
-    width: 100%;
-    height: 13vh;
-    object-fit: cover;
-}
-
-#overlay {
-    content: " ";
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-#artwork-content {
-    position: absolute;
-    width: 100%;
-    height: 13vh;
-    z-index: 2;
-}
-
-#artwork-text {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    padding: 25px;
-}
-
-.artwork_title {
-    margin-bottom: 2vh;
-}
-
-.artworks_arrow {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 62px 30px;
 }
