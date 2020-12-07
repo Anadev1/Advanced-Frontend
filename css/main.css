@@ -460,7 +460,8 @@ html {
 
 .onboarding_img {
     height: 100%;
-    margin-left: -70px;
+    width: 300%;
+    margin-left: -300px;
     position: relative;
     padding: 0;
 }
