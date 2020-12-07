@@ -4,6 +4,7 @@ import ArtDetails from "./pages/art-details.js";
 import NavBar from "./components/nav.js";
 import HomePage from "./pages/home.js";
 import Map from "/pages/map.js";
+import Profile from "/pages/profile.js";
 import Exhibitions from "./pages/exhibitions.js";
 import OnboardingPage from "/pages/onboarding.js";
 import OnboardingPage2 from "/pages/onboarding2.js";
@@ -14,6 +15,7 @@ import spaService from "./js/spa.js";
 //Declare and init
 
 let map = new Map();
+let profile = new Profile();
 let exhibitions = new Exhibitions();
 let homePage = new HomePage();
 let nav = new NavBar();
@@ -28,4 +30,5 @@ spaService.init();
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.openCloseNav = () => new NavBar();
-window.navigateTo = () => spaService.navigateTo();
+window.closeNav = () => nav.closeNav();
+

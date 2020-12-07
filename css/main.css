@@ -21,7 +21,6 @@ h4,
 h5,
 h6 {
     font-family: "futura-pt";
-    text-transform: uppercase;
 }
 
 html {
@@ -32,6 +31,8 @@ html {
 }
 
 .page {
+    width: 100%;
+    padding: 30px;
     display: none;
 }
 
@@ -330,11 +331,12 @@ html {
 
 /****** MAP PAGE*******/
 .map_page {
-    background-image: url(../media/map_background1.png);
+    background-image: url(../media/map_background.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    height: 100vh;
 }
 
 .map_container {
@@ -459,10 +461,6 @@ html {
 }
 
 .onboarding_img {
-    height: 100%;
-    width: 300%;
-    margin-left: -300px;
-    position: relative;
     padding: 0;
 }
 
@@ -492,15 +490,17 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
 
 .skip_btn {
-    border: none;
-    background-color: transparent;
     color: white;
-    font-family: "futura-pt";
     font-size: 18px;
+    font-weight: 600;
+    margin: auto 0;
+    text-decoration: none;
 }
+
 
 #progress-dots {
     margin: auto;
@@ -522,6 +522,54 @@ html {
     background-color: #848A94;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* PROFILE PAGE */
+
+.profile_page {
+    background-color: var(--black);
+    color: white;
+}
+
+.virtual_card {
+    margin: 30px 0;
+}
+
+.subscription_time {
+    display: flex;
+    flex-direction: row;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    justify-content: space-around;
+}
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.coffee {
+    height: 50px;
+    width: 50px;
+    background-color: #878787;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.profile_title {
+    margin: 30px 0;
+}
+
+.settings_icon {
+    position: absolute;
+}
+
+.profile_top {
+    margin-top: 80px;
 }
 
 /* ARTWORK DETAILS PAGE  */
