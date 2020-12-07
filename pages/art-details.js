@@ -22,7 +22,7 @@ export default class ArtDetails {
      
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
-               <section id="artwork-details" class="page">
+               <section id="art-details" class="page">
                   <div id="details-banner">
                       <h3 class="art-title">Human Nature</h3>
                       <img src="/media/map.svg" onclick="navigateTo('map')" alt="map" class="banner_img">
