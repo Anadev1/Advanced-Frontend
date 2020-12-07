@@ -52,6 +52,12 @@ html {
     padding: 20px;
 }
 
+.logo-main{
+    width: 70%;
+    height: auto;
+    transform: rotate(90deg) translate(40%, calc(100% - 10%));
+}
+
 .applogo {
     color: var(--white);
 }
