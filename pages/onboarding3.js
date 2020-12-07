@@ -1,8 +1,12 @@
+export default class OnboardingPage3 {
+    constructor() {
+        this.template();
+    }
 
-function onboardingTemplate3() {
-    document.querySelector("#onboarding3").innerHTML += /*html*/ `
+    template() {
+        document.querySelector("#onboarding3").innerHTML += /*html*/ `
         <section id="onboarding" class="page onboarding-page">
-            <img src="/media/onboarding3.jpg" alt="Art museum" class="onboarding_img">
+            <img src="/media/onboarding-3.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
                 <h3 class="onboarding_title">Purchase your ticket</h3>
                 <p class="onboarding_text">Do you want to skip the line? Purchasing your tickets or 
@@ -20,6 +24,5 @@ function onboardingTemplate3() {
             </div>
         </section>
         `;
+    }
 }
-
-onboardingTemplate3();

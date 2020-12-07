@@ -1,8 +1,13 @@
+export default class OnboardingPage2 {
+    constructor() {
+        this.template();
+    }
 
-function onboardingTemplate2() {
-    document.querySelector("#onboarding2").innerHTML += /*html*/ `
+
+    template() {
+        document.querySelector("#onboarding2").innerHTML += /*html*/ `
         <section id="onboarding" class="page onboarding-page">
-            <img src="/media/onboarding2.jpg" alt="Art museum" class="onboarding_img">
+            <img src="/media/onboarding-2.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
                 <h3 class="onboarding_title">Discover exhibitions</h3>
                 <p class="onboarding_text">The app also helps you stay up to date with the 
@@ -20,6 +25,5 @@ function onboardingTemplate2() {
             </div>
         </section>
         `;
+    }
 }
-
-onboardingTemplate2();
