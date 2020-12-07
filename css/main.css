@@ -21,7 +21,6 @@ h4,
 h5,
 h6 {
     font-family: "futura-pt";
-    text-transform: uppercase;
 }
 
 html {
@@ -34,6 +33,7 @@ html {
 .page {
     width: 100%;
     padding: 30px;
+    display: none;
 }
 
 /***HOME PAGE***/
@@ -337,11 +337,12 @@ html {
 
 /****** MAP PAGE*******/
 .map_page {
-    background-image: url(../media/map_background1.png);
+    background-image: url(../media/map_background.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    height: 100vh;
 }
 
 .map_container {
@@ -466,9 +467,6 @@ html {
 }
 
 .onboarding_img {
-    height: 100%;
-    margin-left: -70px;
-    position: relative;
     padding: 0;
 }
 
@@ -498,15 +496,17 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
 
-.skip_btn {
-    border: none;
-    background-color: transparent;
+.skip_btn{
     color: white;
-    font-family: "futura-pt";
     font-size: 18px;
+    font-weight: 600;
+    margin: auto 0;
+    text-decoration: none;
 }
+
 
 #progress-dots {
     margin: auto;
@@ -528,4 +528,193 @@ html {
     background-color: #848A94;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* PROFILE PAGE */
+
+.profile_page {
+    background-color: var(--black);
+    color: white;
+}
+
+.virtual_card {
+    margin: 30px 0;
+}
+
+.subscription_time{
+    display: flex;
+    flex-direction: row;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    justify-content: space-around;
+}
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.coffee {
+    height: 50px;
+    width: 50px;
+    background-color: #878787;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.favourite_artworks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile_title{
+    margin: 30px 0;
+}
+
+.settings_icon{
+    position: absolute;
+}
+
+.profile_top {
+    margin-top: 80px;
+}
+/* ARTWORK DETAILS PAGE  */
+
+#artwork-details {
+    padding: 0;
+    background-color: var(--black);
+}
+
+#details-banner {
+    color: var(--white);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 100%,
+            rgba(255, 255, 255, 1) 100%),
+        url("../media/human-nature.jpg");
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.exhibition_title {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+.banner_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+#details-description {
+    padding: 30px;
+    color: var(--white);
+    display: flex;
+}
+
+.description_title {
+    font-size: 30px;
+    margin-bottom: 2vh;
+}
+
+.description-text {
+    font-size: 16px;
+}
+
+#floor-description {
+    padding: 20vh 0;
+    width: 25vw;
+}
+
+.floornumber {
+    font-size: 48px;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    height: 10vh;
+}
+
+#exhibition-artworks {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.list_title {
+    font-size: 24px;
+    padding: 30px;
+    background-color: #262626;
+}
+
+#artwork-list {
+    position: relative;
+}
+
+#exhibition-artworks {
+    height: 13vh;
+}
+
+.artwork_img {
+    width: 100%;
+    height: 13vh;
+    object-fit: cover;
+}
+
+#overlay {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#artwork-content {
+    position: absolute;
+    width: 100%;
+    height: 13vh;
+    z-index: 2;
+}
+
+#artwork-text {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 25px;
+}
+
+.artwork_title {
+    margin-bottom: 2vh;
+}
+
+.artworks_arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 62px 30px;
+}
+
+.exhibition-favourite{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 2.5%;
+}
+
+.favourite-image{
+    width: 100%;
+  
 }

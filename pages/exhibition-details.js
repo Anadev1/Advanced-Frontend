@@ -32,7 +32,7 @@ export default class ExhibitionDetailsPage {
             <h1 class="artwork_title">${artwork.title}</h1>
             <p class="artwork_name">${artwork.name}</p>
         </div>
-            <img src="/media/arrow.svg" onclick="navigateTo('art-details')" alt="arrow" class="artworks_arrow">
+            <a href="#art-details"><img src="/media/arrow.svg" alt="arrow" class="artworks_arrow"></a>
         </div>
         <img class="artwork_img" src='${artwork.image}'>
         </div>
@@ -51,7 +51,7 @@ export default class ExhibitionDetailsPage {
                 </div>
                   <div id="details-banner">
                       <h3 class="exhibition_title">Human Nature</h3>
-                      <img src="/media/map.svg" onclick="navigateTo('map')" alt="map" class="banner_img">
+                      <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
                   </div>
                   <div id="details-description">
                       <div id="floor-description">

@@ -19,16 +19,12 @@ class SpaService {
   // Show page or tab
   showPage(pageId) {
     this.hideAllPages();
-    if(pageId == "home"){
+    if (pageId == "home") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-    }else{
+    } else {
       document.querySelector(`#${pageId}`).style.display = "block";
     }
-    
-  }
-  // navigate to a new view/page by changing href
-  navigateTo(pageId) {
-    window.location.href = `#${pageId}`;
+
   }
 
   //Change the page
@@ -38,6 +34,8 @@ class SpaService {
       page = window.location.hash.slice(1);
     }
     this.showPage(page);
+    let navContainer = document.querySelector(".nav-container");
+    navContainer.style.display = "none";
   }
 }
 

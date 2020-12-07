@@ -14,13 +14,13 @@ export default class OnboardingPage2 {
                     KüNSTE newest exhibitions and makes it easier for you to read more about
                      the different artworks.</p>
                 <div id="onboarding-nav">
-                    <button onclick="navigateTo('home')" class="skip_btn">SKIP</button>
+                    <a href="#home" class="skip_btn">SKIP</a>
                     <div id="progress-dots">
-                    <span onclick="navigateTo('onboarding')" class="dot"></span>
+                    <a href="#onboarding"><span class="dot"></span></a>
                     <span class="dot_active"></span>
-                    <span onclick="navigateTo('onboarding3')" class="dot"></span>
+                    <a href="#onboarding3"><span class="dot"></span></a>
                 </div>
-                    <img src="/media/arrow-big.svg" onclick="navigateTo('onboarding3')" alt="arrow" class="onboarding_arrow">
+                    <a href="#onboarding3"><img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow"></a>
                 </div>
             </div>
         </section>
