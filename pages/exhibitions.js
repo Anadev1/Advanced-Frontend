@@ -4,7 +4,7 @@ import {
 
 export default class Exhibitions {
      constructor() {
-          this.template();
+          //this.template();
           this.exhibitionRef = firebaseDB.collection("exhibitions");
           this.read();
      }
@@ -22,13 +22,13 @@ export default class Exhibitions {
           
      }
 
-     // template() {
-     //      document.querySelector('#app').innerHTML += /*html*/ `
-     //           <section id="exhibitions" class="page">
-     //           <div id="exhibitions-list" class="list-container"></div>
-     //           </section>
-     //      `;
-     // }
+     template() {
+          document.querySelector('#app').innerHTML += /*html*/ `
+               <section id="exhibitions" class="page">
+               <div id="exhibitions-list" class="list-container"></div>
+               </section>
+          `;
+     }
 
 //      appendExhibitions(exhibitions) {
 //           let template = "";
