@@ -26,6 +26,7 @@ class SpaService {
     }
     
   }
+
   // navigate to a new view/page by changing href
   navigateTo(pageId) {
     window.location.href = `#${pageId}`;
