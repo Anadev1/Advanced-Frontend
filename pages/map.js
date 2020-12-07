@@ -17,7 +17,7 @@ export default class Map {
             </div>
             <div class="map_container">
                 <div class="map_floors">
-                    <div class="circles_numbers">
+                    <div class="circles_numbers" onclick="closeFloors()">
                     <p>Floor</p>
                         <div class="circle">-3</div>
                     </div>
