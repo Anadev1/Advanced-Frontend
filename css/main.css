@@ -21,13 +21,14 @@ h4,
 h5,
 h6 {
     font-family: "futura-pt";
+    text-transform: uppercase;
 }
 
 html {
     width: 100%;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    overflow: hidden;
+    /** overflow: hidden; **/
 }
 
 .page {
@@ -40,10 +41,50 @@ html {
 .home-page {
     height: 100vh;
     width: 100%;
-    background-image: url("../img/bg-img.jpg");
+    background-image: url("../media/bg-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    flex-direction: column;
+    padding: 0;
+}
+
+.home-content {
+    padding: 20px;
+}
+
+.applogo {
+    color: var(--white);
+}
+
+.current-exhibitions {
+    margin-top: auto;
+    background-color: rgba(26, 26, 26, 0.6);
+    padding: 20px;
+    color: var(--white);
+}
+
+.current-exhibitions-stuff {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 15px 0;
+}
+
+.current-exhibitions-stuff img {
+    height: 150px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.current-exhibitions-stuff img:first-child {
+    margin-left: 0px;
+}
+
+.more {
+    color: var(--white);
+    text-decoration: none;
+    text-align: right;
 }
 
 
@@ -55,6 +96,7 @@ html {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    z-index: 2;
 }
 
 .nav-btn div {
@@ -72,7 +114,7 @@ html {
 }
 
 .nav-container {
-    background-color: rgba(26, 26, 26, 0.596);
+    background-color: rgba(26, 26, 26, 0.6);
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -164,9 +206,134 @@ html {
     font-size: 20px;
 }
 
+/***EXHIBITION DETAILS PAGE***/
+
+#exhibition-details {
+    padding: 0;
+    background-color: var(--black);
+    height: fit-content;
+}
+
+#details-banner {
+    color: var(--white);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 100%,
+            rgba(255, 255, 255, 1) 100%),
+        url("../media/human-nature.jpg");
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.exhibition_title {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+.banner_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+#details-description {
+    padding: 30px;
+    color: var(--white);
+    display: flex;
+    position: relative;
+}
+
+.description_title {
+    font-size: 30px;
+    margin-bottom: 2vh;
+}
+
+.description-text {
+    font-size: 16px;
+}
+
+#floor-description {
+    padding: 20vh 0;
+    width: 25vw;
+}
+
+.floor_number {
+    font-size: 48px;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    height: 10vh;
+}
+
+#exhibition-artworks {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.list_title {
+    font-size: 24px;
+    padding: 30px;
+    background-color: #262626;
+}
+
+#artwork-list {
+    position: relative;
+}
+
+#exhibition-artworks {
+    height: 13vh;
+}
+
+.artwork_img {
+    width: 100%;
+    height: 13vh;
+    object-fit: cover;
+}
+
+#overlay {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#artwork-content {
+    position: absolute;
+    width: 100%;
+    height: 13vh;
+    z-index: 2;
+}
+
+#artwork-text {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 25px;
+}
+
+.artwork_title {
+    margin-bottom: 2vh;
+}
+
+.artworks_arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 62px 30px;
+}
+
 /****** MAP PAGE*******/
 .map_page {
-    background-image: url(../media/map_background.png);
+    background-image: url(../media/map_background1.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,7 +346,7 @@ html {
     justify-content: flex-end;
 }
 
-.map_floors{
+.map_floors {
     align-self: flex-end;
     font-weight: 600;
     height: auto;
@@ -208,82 +375,152 @@ html {
     margin: 10px 5px;
 }
 
-
-/***EXHIBITION DETAILS PAGE***/
-
-.exhibition-details {
-    padding: 0;
-    background-color: var(--black);
-}
-
-#details-banner {
-    color: var(--white);
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.35) 100%,
-            rgba(255, 255, 255, 1) 100%),
-        url("../media/søndag-morgen.jpg");
-    height: 40vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.exhibition_title {
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    font-size: 30px;
-}
-
-#details-description {
-    padding: 30px;
-    color: var(--white);
-    display: flex;
-    position: relative;
-}
-
-.description_title {
-    font-size: 30px;
-}
-
-.description-text {
-    font-size: 16px;
+.hidden_floors {
+    margin-top: -60px;
 }
 
 .floor_number {
     font-size: 48px;
     transform: rotate(270deg);
     white-space: nowrap;
-    width: 12vh;
-    left: 0;
+    width: 30vw;
+    height: 12vw;
+    padding: 18vh 10vw;
 }
 
-#exhibition-artworks {
-     color: var(--white);
-     background-color: var(--black);
+/* EXHIBITIONS PAGE */
+
+#exhibitions {
+    padding: 0;
 }
 
-.list_title {
-    font-size: 24px;
-    padding: 30px;
-}
-
-#artwork-list {
+.exhibition-item {
     position: relative;
-} 
-
-#exhibition-artworks {
-    height: 13vh;
 }
 
-.artwork_img {
-    width: 100%;
-    height: 13vh;
-    object-fit: cover;
+.exhibition-name {
+    font-size: 20px;
 }
 
-#artwork-text {
+.exhibition-date {
+    font-size: 16px;
+}
+
+.exhibition-details-container {
     position: absolute;
+    color: var(--white);
+    bottom: 0;
+    left: 0;
     padding: 30px;
+    width: 100%;
 }
+
+.image-container {
+    width: 100vw;
+}
+
+.exhibition-image {
+    max-width: 100%;
+
+    .description_title {
+        font-size: 30px;
+        margin-bottom: 2vh;
+    }
+
+    .date-arrow-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dark-overlay {
+        content: " ";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    /***ONBOARDING PAGE***/
+
+    #onboarding {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #onboarding2 {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #onboarding3 {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .onboarding_img {
+        height: 100%;
+        margin-left: -70px;
+        position: relative;
+        padding: 0;
+    }
+
+    #onboarding-content {
+        padding: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        height: 40%;
+        bottom: 0;
+        color: white;
+    }
+
+    .onboarding_title {
+        font-size: 30px;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+        font-weight: 500;
+    }
+
+    .onboarding_text {
+        font-size: 16px;
+        margin-bottom: 4vh;
+        height: 12vh;
+    }
+
+    #onboarding-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skip_btn {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-family: "futura-pt";
+        font-size: 18px;
+    }
+
+    #progress-dots {
+        margin: auto;
+    }
+
+    .dot_active {
+        height: 8px;
+        width: 8px;
+        margin: 0 5px;
+        background-color: #F2F2F2;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 5px;
+        background-color: #848A94;
+        border-radius: 50%;
+        display: inline-block;
+    }
