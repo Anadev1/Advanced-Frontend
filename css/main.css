@@ -52,6 +52,12 @@ html {
     padding: 20px;
 }
 
+.logo-main {
+    width: 70%;
+    height: auto;
+    transform: rotate(90deg) translate(40%, calc(100% - 10%));
+}
+
 .applogo {
     color: var(--white);
 }
@@ -560,6 +566,12 @@ html {
     margin: 5px;
 }
 
+.favourite_artworks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .profile_title {
     margin: 30px 0;
 }
@@ -664,8 +676,16 @@ html {
     white-space: nowrap;
 }
 
-.artwork-name {
-    font-size: 24px;
-    transform: rotate(270deg);
-    white-space: nowrap;
+
+.exhibition-favourite {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 2.5%;
+}
+
+.favourite-image {
+    width: 100%;
+
 }

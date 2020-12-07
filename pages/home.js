@@ -1,6 +1,24 @@
+import {
+    firebaseDB
+} from "../js/firebase_config.js";
+
 export default class HomePage{
     constructor(){
+        this.exhibitsImgRef = firebaseDB.collection("exhibitions");
         this.template();
+        this.read();
+    }
+
+    read(){
+        this.exhibitsImgRef.onSnapshot (snapshotData => {
+            let exhibitsImgs = [];
+            snapshotData.forEach(doc => {
+                let exhibitImg = doc.data();
+                exhibitImg.id = doc.id;
+                exhibitsImgs.push(exhibitImg);
+            });
+            this.appendExhibitsImgs(exhibitsImgs);
+        });
     }
 
     template(){
@@ -8,8 +26,7 @@ export default class HomePage{
             <section id="home" class="page home-page">
                 <div class="home-content">
                     <header class="applogo">
-                        <h1>KuNSTE</h1>
-                        <h2>Art museum</h2>
+                        <img src="../media/aros-logo.svg" class="logo-main">
                     </header>
                 <div class="nav-btn" onclick="openCloseNav()">
                     <div></div>
@@ -18,17 +35,22 @@ export default class HomePage{
                 </div>
                 <div class="current-exhibitions">
                     <h3>Current exhibition</h3>
-                    <div class="current-exhibitions-stuff">
-                        <img src="./media/human-nature.jpg">
-                        <img src="./media/human-nature.jpg">
-                        <img src="./media/human-nature.jpg">
-                        <img src="./media/human-nature.jpg">
-                    </div>
+                    <div class="current-exhibitions-stuff"></div>
                     <a href="#exhibitions" class="more">See more</a>
                 </div>
             </section>
         `;
-    } 
+    }
+    
+    appendExhibitsImgs(exhibitsImgs) {
+        let htmlTemplate = "";
+        for (let exhibitImg of exhibitsImgs) {
+            htmlTemplate += `
+                <img src="${exhibitImg.image}">
+          `;
+        }
+        document.querySelector('.current-exhibitions-stuff').innerHTML = htmlTemplate;
+    }
     
     openCloseNav(){
         console.log("Clicked nav");
