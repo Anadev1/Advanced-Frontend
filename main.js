@@ -1,5 +1,6 @@
 //Declare and init
 import ExhibitionDetailPage from "./pages/exhibition-details.js";
+import ArtDetails from "./pages/art-details.js";
 import NavBar from "./components/nav.js";
 import HomePage from "./pages/home.js";
 import Map from "/pages/map.js";
@@ -17,6 +18,7 @@ let exhibitions = new Exhibitions();
 //let nav = new NavBar();
 let homePage = new HomePage();
 let exhibitionDetailPage = new ExhibitionDetailPage();
+let artDetails = new ArtDetails();
 let onboardingPage = new OnboardingPage();
 let onboardingPage2 = new OnboardingPage2();
 let onboardingPage3 = new OnboardingPage3();
