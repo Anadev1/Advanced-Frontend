@@ -3,6 +3,7 @@ import ExhibitionDetailPage from "./pages/exhibition-details.js";
 import NavBar from "./components/nav.js";
 import HomePage from "./pages/home.js";
 import Map from "/pages/map.js";
+import Profile from "/pages/profile.js";
 import Exhibitions from "./pages/exhibitions.js";
 import OnboardingPage from "/pages/onboarding.js";
 import OnboardingPage2 from "/pages/onboarding2.js";
@@ -13,6 +14,7 @@ import spaService from "./js/spa.js";
 //Declare and init
 
 let map = new Map();
+let profile = new Profile();
 let exhibitions = new Exhibitions();
 let nav = new NavBar();
 let homePage = new HomePage();

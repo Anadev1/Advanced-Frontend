@@ -16,7 +16,7 @@ export default class Map {
             </div>
             <div class="map_container">
                 <div class="map_floors">
-                    <div class="circles_numbers" onclick="closeFloors()">
+                    <div class="circles_numbers">
                     <p>Floor</p>
                         <div class="circle">-3</div>
                     </div>
@@ -55,12 +55,6 @@ export default class Map {
         </section>
         
         `;
-
-        let floor = document.querySelector(".circles_numbers");
-
-        floor.onclick = function() {
-            document.querySelector(".circles_numbers").style.display = "none";
-        }
         
     }
 }
