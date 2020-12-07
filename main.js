@@ -27,5 +27,6 @@ spaService.init();
 
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
-window.openCloseNav = () => new NavBar();
+window.closeNav = () => nav.closeNav();
+
 window.navigateTo = () => spaService.navigateTo();
