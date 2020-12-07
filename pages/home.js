@@ -34,6 +34,7 @@ export default class HomePage{
         console.log("Clicked nav");
         let navContainer = document.querySelector(".nav-container");
         navContainer.style.right = "0px";
+        navContainer.style.display = "block";
         if(navContainer.style.right = "-3000px"){
             navContainer.style.right = "0px";
             navContainer.style.display = "block";

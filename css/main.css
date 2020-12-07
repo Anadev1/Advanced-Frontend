@@ -28,6 +28,7 @@ html {
     width: 100%;
     height: 100%;
     font-family: 'Lato', sans-serif;
+    position: relative;
 }
 
 .page {
@@ -115,7 +116,7 @@ html {
     width: 100%;
     height: 100vh;
     position: absolute;
-    right: -3000px;
+    right: 0px;
     top: 0px;
     display: none;
     z-index: 999999;
@@ -208,7 +209,6 @@ html {
 #exhibition-details {
     padding: 0;
     background-color: var(--black);
-    height: fit-content;
 }
 
 #details-banner {
@@ -520,4 +520,127 @@ html {
     background-color: #848A94;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* ARTWORK DETAILS PAGE  */
+
+#artwork-details {
+    padding: 0;
+    background-color: var(--black);
+}
+
+#details-banner {
+    color: var(--white);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 100%,
+            rgba(255, 255, 255, 1) 100%),
+        url("../media/human-nature.jpg");
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.exhibition_title {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+.banner_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+#details-description {
+    padding: 30px;
+    color: var(--white);
+    display: flex;
+}
+
+.description_title {
+    font-size: 30px;
+    margin-bottom: 2vh;
+}
+
+.description-text {
+    font-size: 16px;
+}
+
+#floor-description {
+    padding: 20vh 0;
+    width: 25vw;
+}
+
+.floornumber {
+    font-size: 48px;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    height: 10vh;
+}
+
+#exhibition-artworks {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.list_title {
+    font-size: 24px;
+    padding: 30px;
+    background-color: #262626;
+}
+
+#artwork-list {
+    position: relative;
+}
+
+#exhibition-artworks {
+    height: 13vh;
+}
+
+.artwork_img {
+    width: 100%;
+    height: 13vh;
+    object-fit: cover;
+}
+
+#overlay {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#artwork-content {
+    position: absolute;
+    width: 100%;
+    height: 13vh;
+    z-index: 2;
+}
+
+#artwork-text {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 25px;
+}
+
+.artwork_title {
+    margin-bottom: 2vh;
+}
+
+.artworks_arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 62px 30px;
 }
