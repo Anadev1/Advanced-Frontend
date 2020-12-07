@@ -5,6 +5,8 @@ import HomePage from "./pages/home.js";
 import Map from "/pages/map.js";
 import Exhibitions from "./pages/exhibitions.js";
 import OnboardingPage from "/pages/onboarding.js";
+import OnboardingPage2 from "/pages/onboarding2.js";
+import OnboardingPage3 from "/pages/onboarding3.js";
 import spaService from "./js/spa.js";
 
 
@@ -16,7 +18,8 @@ let nav = new NavBar();
 let homePage = new HomePage();
 let exhibitionDetailPage = new ExhibitionDetailPage();
 let onboardingPage = new OnboardingPage();
-
+let onboardingPage2 = new OnboardingPage2();
+let onboardingPage3 = new OnboardingPage3();
 
 spaService.init();
 
