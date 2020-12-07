@@ -4,8 +4,8 @@ import {
 
 export default class Exhibitions {
      constructor() {
-          //this.template();
           this.exhibitionRef = firebaseDB.collection("exhibitions");
+          this.template();
           this.read();
      }
 
@@ -29,6 +29,7 @@ export default class Exhibitions {
                </section>
           `;
      }
+     
      appendExhibitions(exhibitions) {
      let template = "";
      for (let exhibition of exhibitions) {
@@ -47,8 +48,9 @@ export default class Exhibitions {
                </div>
           </article>
           `;
-     }
-}
+          }
+          document.querySelector("#exhibitions-list").innerHTML = template;
+     }    
 }
 
      
