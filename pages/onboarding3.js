@@ -4,7 +4,7 @@ export default class OnboardingPage3 {
     }
 
     template() {
-        document.querySelector("#onboarding3").innerHTML += /*html*/ `
+        document.querySelector("#app").innerHTML += /*html*/ `
         <section id="onboarding" class="page onboarding-page">
             <img src="/media/onboarding-3.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
