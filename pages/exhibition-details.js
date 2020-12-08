@@ -50,6 +50,7 @@ export default class ExhibitionDetailsPage {
                     <div></div>
                 </div>
                   <div id="details-banner">
+                      <div id="overlay"></div>
                       <h3 class="exhibition_title"></h3>
                       <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
                   </div>

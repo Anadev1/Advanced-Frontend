@@ -38,7 +38,7 @@ export default class Exhibitions {
      let template = "";
      for (let exhibition of exhibitions) {
           template += /*html*/ `
-          <article class="exhibition-item" onclick="selectUser('${exhibition.name}', '${exhibition.date}', '${exhibition.image}')">
+          <article class="exhibition-item" onclick="selectUser('${exhibition.name}', '${exhibition.image}')">
                <div class="image-container">
                     <img src="${exhibition.image}" alt="exhibition" class="exhibition-image">
                </div>
