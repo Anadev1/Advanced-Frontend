@@ -50,7 +50,7 @@ export default class ExhibitionDetailsPage {
                     <div></div>
                 </div>
                   <div id="details-banner">
-                      <h3 class="exhibition_title">Human Nature</h3>
+                      <h3 class="exhibition_title"></h3>
                       <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
                   </div>
                   <div id="details-description">
