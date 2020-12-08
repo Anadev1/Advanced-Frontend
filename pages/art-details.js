@@ -58,7 +58,7 @@ export default class ArtDetails {
                       </div>
                   </div>
                   <div id="artist-artworks">
-                      <h4 class="list-title">Other artworks by this artist:</h4>
+                      <h4 class="list-title">Other artworks by this artist</h4>
                   <div id="other-artworks-list"></div>
                 </div>
                </section>
