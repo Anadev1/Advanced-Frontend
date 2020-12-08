@@ -1,0 +1,159 @@
+#art-details {
+     padding: 0;
+     background-color: var(--black);
+}
+
+#artwork-banner {
+     color: var(--white);
+     height: 40vh;
+     width: 100vw;
+     position: relative;
+}
+
+.artwork-image-container {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+}
+
+#artwork-overlay {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#artwork-image {
+     height: 100%;
+}
+
+#back-arrow {
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding: 20px 30px;
+}
+
+#heart {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     padding: 20px 30px;
+}
+
+.artwork-title {
+     position: absolute;
+     bottom: 0;
+     padding-bottom: 15px;
+     padding-left: 30px;
+     font-size: 30px;
+}
+
+.banner_img {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     padding-bottom: 20px;
+     padding-right: 30px;
+}
+
+
+.description-title {
+     font-size: 30px;
+     margin-bottom: 2vh;
+}
+
+.description-text {
+     font-size: 16px;
+}
+
+#artist-artworks {
+     color: var(--white);
+     background-color: var(--black);
+     height: 13vh;
+}
+
+.list-title {
+     font-size: 24px;
+     padding: 30px;
+     background-color: #262626;
+}
+
+#artworks-list {
+     position: relative;
+}
+
+#artwork-description-top {
+     color: var(--white);
+     font-size: 20px;
+     display: flex;
+     padding: 30px;
+}
+
+#artist-image-container {
+     width: 30vw;
+}
+
+#artwork-facts-container {
+     padding: 30px;
+}
+
+#artist-image {
+     width: 100%;
+}
+
+#details-container {
+     padding: 30px;
+     color: var(--white);
+     display: flex;
+}
+
+#artwork-description-left {
+     color: var(--white);
+     width: 20vw;
+     height: 35vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-end;
+     transform: rotate(270deg);
+     margin-right: 10vw;
+}
+
+#artwork-description-right {
+     color: var(--white);
+     width: 80vw;
+}
+
+.artworks_arrow {
+     position: absolute;
+     right: 0;
+     top: 0;
+     padding: 62px 30px 0;
+}
+
+.artist-name {
+     font-size: 48px;
+     white-space: nowrap;
+}
+
+.artwork-name {
+     font-size: 24px;
+     white-space: nowrap;
+}
+
+#other-artworks-list {
+     display: flex;
+     flex-direction: row;
+     overflow-x: scroll;
+     background-color: var(--black);
+     padding-bottom: 50px;
+}
+
+.other-artwork-image {
+     height: 150px;
+     width: auto;
+     margin-left: 20px;
+}
