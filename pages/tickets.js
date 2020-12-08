@@ -18,9 +18,9 @@ export default class TicketsPage {
                         <h5 class="ticket_title">Adult<h5> 
                         <div id="ticket-amount">
                                 <h5 class="ticket_price">150DKK<h5> 
-                            <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                            <input id=demoInput type=number min=0 max=100 placeholder="0">
-                            <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                            <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>    
                         </div>  
 
@@ -31,9 +31,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
                         
@@ -41,9 +41,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">Students<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -55,9 +55,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">130DKK<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>
                         </div> 
 
@@ -69,9 +69,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">FREE<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="plus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
 
@@ -87,9 +87,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">ARoS27<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">200DKK<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -97,9 +97,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">The ARoS Club<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">410DKK<h5> 
-                           <button onclick="decrement()"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <input id=demoInput type=number min=0 max=100 placeholder="0">
-                        <button onclick="increment()"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span id="number">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
 
@@ -107,7 +107,7 @@ export default class TicketsPage {
 
                     <div id="price-total">
                     <h3 class="price_text">Total price: 300 DKK<h3>
-                    <button class="checkout_btn">PROCEED TO CHECKOUT<img src="/media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
+                    <button class="checkout_btn" onclick="navigateTo('')">PROCEED TO CHECKOUT<img src="/media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
                 <div>
 
                 </div>
@@ -117,5 +117,13 @@ export default class TicketsPage {
           `;
     }
 
+    updateAmount(that) {
+        let number = document.getElementById('number');
+        let num = parseInt(number.innerHTML);
+        num = (that.value == "minus") ? --num : ++num;
+        number.innerHTML = num;
+    }
+
 
 }
+
