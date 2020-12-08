@@ -31,17 +31,19 @@ window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.openCloseNav = () => new NavBar();
 window.closeNav = () => nav.closeNav();
+window.navigateTo = (pageId) => spaService.navigateTo(pageId);
 // window.selectUser = (id, name, date, image) => exhibitions.selectUser(id, name, date, image);
-window.selectUser = (name, image) => {
-     console.log(name, image);
+window.selectUser = (name, image, floor, description) => {
+     console.log(name, image, floor, description);
      // references to the input fields
      let nameInput = document.querySelector('.exhibition_title');
-     // let dateInput = document.querySelector('.exhibition-date');
+     let floorInput = document.querySelector('.floornumber');
      let imageInput = document.querySelector('#details-banner');
+     let descriptionInput = document.querySelector(".description_text");
      nameInput.textContent = name;
-     // dateInput.value = date;
+     floorInput.textContent = "Floor " + floor;
      imageInput.style.backgroundImage = "url(" + image + ")";
-          // _selectedUserId = id;
-          spaService.navigateTo("exhibition-details");
+     descriptionInput.textContent = description;
+     spaService.navigateTo("exhibition-details");
 };
 

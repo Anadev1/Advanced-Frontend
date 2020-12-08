@@ -4,7 +4,7 @@ import {
 } from "../js/firebase_config.js";
 
 
-let _selectedUserId = "";
+// let _selectedUserId = "";
 
 export default class Exhibitions {
      constructor() {
@@ -38,7 +38,7 @@ export default class Exhibitions {
      let template = "";
      for (let exhibition of exhibitions) {
           template += /*html*/ `
-          <article class="exhibition-item" onclick="selectUser('${exhibition.name}', '${exhibition.image}')">
+          <article class="exhibition-item" onclick="selectUser('${exhibition.name}', '${exhibition.image}', '${exhibition.floor}', '${exhibition.description}' )">
                <div class="image-container">
                     <img src="${exhibition.image}" alt="exhibition" class="exhibition-image">
                </div>

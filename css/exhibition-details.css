@@ -122,3 +122,10 @@
      top: 0;
      padding: 62px 30px;
 }
+
+#back-arrow {
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding: 20px 30px;
+}

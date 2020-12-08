@@ -64,22 +64,17 @@ export default class ExhibitionDetailsPage {
                 </div>
                   <div id="details-banner">
                       <div id="overlay"></div>
+                      <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibitions')">
                       <h3 class="exhibition_title"></h3>
                       <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
                   </div>
                   <div id="details-description">
                     <div id="floor-description">
-                        <h1 class="floornumber">Floor 8</h1>
+                        <h1 class="floornumber"></h1>
                     </div>
                       <div>
                           <h3 class="description_title">Description</h3>
-                          <p class="description_text">There are certain elements that people, at all times, have 
-                              had to respond to in life: nature, religion, philosophy, and science.
-                              KüNSTE has decided to use these themes as common threads in a new presentation 
-                              of works from the collection opening in February. The purpose of the exhibition is to 
-                              present the history of art as well as to allowing art to convey food for thought and a 
-                              chance to reflect on life. A number of the familiar main works in our collection will, 
-                              of course, be included in this new hanging.</p> 
+                          <p class="description_text"></p> 
                       </div>
                   </div>
                   <div id="exhibition-artworks">
