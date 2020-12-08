@@ -27,7 +27,7 @@ export default class ArtDetails {
                   <div id="artwork-banner">
                       <div class="artwork-image-container"><img src="./media/boy.jpg" id="artwork-image"></div>
                       <div id="artwork-overlay"></div>
-                      <img src="./media/Group 19.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('#exhibition-details')">
+                      <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('#exhibition-details')">
                         <!-- add navigateTo function -->
                       <h3 class="artwork-title">Boy</h3>
                       <img src="./media/empty_heart.svg" id="heart" alt="heart">
