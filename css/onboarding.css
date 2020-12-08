@@ -21,7 +21,7 @@
      padding: 30px;
      position: absolute;
      background: rgba(0, 0, 0, 0.5);
-     height: 40%;
+     height: 45%;
      bottom: 0;
      color: white;
 }
@@ -49,7 +49,7 @@
 .skip_btn {
      color: white;
      font-size: 18px;
-     font-weight: 600;
+     font-weight: 500;
      margin: auto 0;
      text-decoration: none;
 }

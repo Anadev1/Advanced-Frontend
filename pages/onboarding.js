@@ -14,13 +14,13 @@ export default class OnboardingPage {
                     help of our museum map you are able to locate a given exhibitions
                     within minutes.</p>
                 <div id="onboarding-nav">
-                    <a href="#home" class="skip_btn">SKIP</a>
+                    <button class="skip_btn" onclick="navigateTo('home')">SKIP</button>
                     <div id="progress-dots">
                     <span class="dot_active"></span>
-                    <a href="#onboarding2"><span class="dot"></span></a>
-                    <a href="#onboarding3"><span class="dot"></span></a>
+                    <span class="dot" onclick="navigateTo('onboarding2')"></span>
+                    <span class="dot" onclick="navigateTo('onboarding3')"></span>
                 </div>
-                    <a href="#onboarding2"><img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow"></a>
+                    <img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow" onclick="navigateTo('onboarding2')">
                 </div>
             </div>
         </section>
