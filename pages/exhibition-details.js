@@ -5,11 +5,21 @@ import {
 export default class ExhibitionDetailsPage {
     constructor() {
         this.template();
+        this.exhibitionRef = firebaseDB.collection("exhibitions");
         this.artworkRef = firebaseDB.collection("artworks");
         this.read();
     }
 
     read() {
+        this.exhibitionRef.onSnapshot(snapshotData => {
+               let exhibitions = [];
+               snapshotData.forEach(doc => {
+                    let exhibition = doc.data();
+                    exhibition.id = doc.id;
+                    exhibitions.push(exhibition);
+               });
+        });
+        
         this.artworkRef.onSnapshot(snapshotData => {
             let artworks = [];
             snapshotData.forEach(doc => {
@@ -19,28 +29,31 @@ export default class ExhibitionDetailsPage {
             });
             this.appendArtworks(artworks);
         });
+
+        
     }
 
-    appendArtworks(artworks) {
+    appendArtworks(artworks, exhibitions) {
         let template = "";
         for (let artwork of artworks) {
-            template += /*html*/ `
-        <article id="exhibition-artworks">
-        <div id="artwork-content">
-        <div id="overlay">
-        <div id="artwork-text">
-            <h1 class="artwork_title">${artwork.title}</h1>
-            <p class="artwork_name">${artwork.name}</p>
-        </div>
-            <a href="#art-details"><img src="/media/arrow.svg" alt="arrow" class="artworks_arrow"></a>
-        </div>
-        <img class="artwork_img" src='${artwork.image}'>
-        </div>
-        </article>
-        `;
+                template += /*html*/ `
+                    <article id="exhibition-artworks">
+                    <div id="artwork-content">
+                    <div id="overlay">
+                    <div id="artwork-text">
+                        <h1 class="artwork_title">${artwork.title}</h1>
+                        <p class="artwork_name">${artwork.name}</p>
+                    </div>
+                        <a href="#art-details"><img src="/media/arrow.svg" alt="arrow" class="artworks_arrow"></a>
+                    </div>
+                    <img class="artwork_img" src='${artwork.image}'>
+                    </div>
+                    </article>
+                `;   
         }
         document.querySelector("#artwork-list").innerHTML = template;
     }
+
 
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
