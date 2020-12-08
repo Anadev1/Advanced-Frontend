@@ -52,7 +52,7 @@ html {
     padding: 20px;
 }
 
-.logo-main{
+.logo-main {
     width: 70%;
     height: auto;
     transform: rotate(90deg) translate(40%, calc(100% - 10%));
@@ -449,6 +449,18 @@ html {
     z-index: 0;
 }
 
+#exhibitions {
+    position: relative;
+}
+
+#search-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    z-index: 999;
+}
+
 /***ONBOARDING PAGE***/
 
 #onboarding {
@@ -499,7 +511,7 @@ html {
     margin: auto;
 }
 
-.skip_btn{
+.skip_btn {
     color: white;
     font-size: 18px;
     font-weight: 600;
@@ -541,7 +553,7 @@ html {
     margin: 30px 0;
 }
 
-.subscription_time{
+.subscription_time {
     display: flex;
     flex-direction: row;
     font-weight: 200;
@@ -566,43 +578,84 @@ html {
     margin: 5px;
 }
 
-.favourite_artworks{
+.favourite_artworks {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.profile_title{
+.profile_title {
     margin: 30px 0;
 }
 
-.settings_icon{
+.settings_icon {
     position: absolute;
 }
 
 .profile_top {
     margin-top: 80px;
 }
+
+.exhibition-favourite {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 2.5%;
+}
+
+.favourite-image {
+    width: 100%;
+}
+
 /* ARTWORK DETAILS PAGE  */
 
-#artwork-details {
+#art-details {
     padding: 0;
     background-color: var(--black);
 }
 
-#details-banner {
+#artwork-banner {
     color: var(--white);
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 100%,
-            rgba(255, 255, 255, 1) 100%),
-        url("../media/human-nature.jpg");
     height: 40vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100vw;
     position: relative;
 }
 
-.exhibition_title {
+.artwork-image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#artwork-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#artwork-image {
+    height: 100%;
+}
+
+#back-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+}
+
+#heart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px 30px;
+}
+
+.artwork-title {
     position: absolute;
     bottom: 0;
     padding-bottom: 15px;
@@ -618,24 +671,14 @@ html {
     padding-right: 30px;
 }
 
-#details-description {
-    padding: 30px;
-    color: var(--white);
-    display: flex;
-}
 
-.description_title {
+.description-title {
     font-size: 30px;
     margin-bottom: 2vh;
 }
 
 .description-text {
     font-size: 16px;
-}
-
-#floor-description {
-    padding: 20vh 0;
-    width: 25vw;
 }
 
 .floornumber {
@@ -645,58 +688,62 @@ html {
     height: 10vh;
 }
 
-#exhibition-artworks {
+#artist-artworks {
     color: var(--white);
     background-color: var(--black);
+    height: 13vh;
 }
 
-.list_title {
+.list-title {
     font-size: 24px;
     padding: 30px;
     background-color: #262626;
 }
 
-#artwork-list {
+#artworks-list {
     position: relative;
 }
 
-#exhibition-artworks {
-    height: 13vh;
+#artwork-description-top {
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    padding: 30px;
 }
 
-.artwork_img {
+#artist-image-container {
+    width: 30vw;
+}
+
+#artwork-facts-container {
+    padding: 30px;
+}
+
+#artist-image {
     width: 100%;
-    height: 13vh;
-    object-fit: cover;
 }
 
-#overlay {
-    content: " ";
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+#details-container {
+    padding: 30px;
+    color: var(--white);
+    display: flex;
 }
 
-#artwork-content {
-    position: absolute;
-    width: 100%;
-    height: 13vh;
-    z-index: 2;
-}
-
-#artwork-text {
+#artwork-description-left {
+    color: var(--white);
+    width: 20vw;
+    height: 35vh;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    padding: 25px;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotate(270deg);
+    margin-right: 10vw;
 }
 
-.artwork_title {
-    margin-bottom: 2vh;
+#artwork-description-right {
+    color: var(--white);
+    width: 80vw;
 }
 
 .artworks_arrow {
@@ -706,15 +753,26 @@ html {
     padding: 62px 30px 0;
 }
 
-.exhibition-favourite{
-    width: 45%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px 2.5%;
+.artist-name {
+    font-size: 48px;
+    white-space: nowrap;
 }
 
-.favourite-image{
-    width: 100%;
-  
+.artwork-name {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+#other-artworks-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    background-color: var(--black);
+    padding-bottom: 50px;
+}
+
+.other-artwork-image {
+    height: 150px;
+    width: auto;
+    margin-left: 20px;
 }

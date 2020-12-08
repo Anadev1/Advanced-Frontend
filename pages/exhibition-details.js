@@ -54,8 +54,8 @@ export default class ExhibitionDetailsPage {
                       <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
                   </div>
                   <div id="details-description">
-                      <div id="floor-description">
-                      <h1 class="floornumber">Floor 8</h1>
+                    <div id="floor-description">
+                        <h1 class="floornumber">Floor 8</h1>
                     </div>
                       <div>
                           <h3 class="description_title">Description</h3>
