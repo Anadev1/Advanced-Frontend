@@ -58,10 +58,6 @@ export default class ExhibitionDetailsPage {
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibition-details" class="page exhibition-details">
-                   <div class="nav-btn">
-                    <div></div>
-                    <div></div>
-                </div>
                   <div id="details-banner">
                       <div id="overlay"></div>
                       <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibitions')">

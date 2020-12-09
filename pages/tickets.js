@@ -18,9 +18,9 @@ export default class TicketsPage {
                         <h5 class="ticket_title">Adult<h5> 
                         <div id="ticket-amount">
                                 <h5 class="ticket_price">150DKK<h5> 
-                            <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                            <button type="button" value="minus" onclick="updateAmount(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity">0</span>
+                        <button type="button" value="plus" onclick="updateAmount(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>    
                         </div>  
 
@@ -31,9 +31,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount1(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity1">0</span>
+                        <button type="button" value="plus" onclick="updateAmount1(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
                         
@@ -41,9 +41,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">Students<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount2(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity2">0</span>
+                        <button type="button" value="plus" onclick="updateAmount2(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -55,9 +55,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">130DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount3(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity3">0</span>
+                        <button type="button" value="plus" onclick="updateAmount3(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>
                         </div> 
 
@@ -69,9 +69,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">FREE<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount4(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity4">0</span>
+                        <button type="button" value="plus" onclick="updateAmount4(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
 
@@ -87,9 +87,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">ARoS27<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">200DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount5(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <span class="quantity_value" id="quantity5">0</span>
+                        <button type="button" value="plus" onclick="updateAmount5(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -97,16 +97,18 @@ export default class TicketsPage {
                            <h5 class="ticket_title">The ARoS Club<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">410DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount(this)"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
-                        <span id="number">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this)"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                                <form>
+                                <button type="button" value="minus" onclick="updateAmount6(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                                <span class="quantity_value" id="quantity6">0</span>
+                                <button type="button" value="plus" onclick="updateAmount6(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                                </form>
                         </div> 
                         </div>
 
                     </div>
 
                     <div id="price-total">
-                    <h3 class="price_text">Total price: 300 DKK<h3>
+                    <h3 class="price_text">Total price:<h3>
                     <button class="checkout_btn" onclick="navigateTo('')">PROCEED TO CHECKOUT<img src="/media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
                 <div>
 
@@ -118,10 +120,53 @@ export default class TicketsPage {
     }
 
     updateAmount(that) {
-        let number = document.getElementById('number');
+        let number = document.getElementById('quantity');
         let num = parseInt(number.innerHTML);
         num = (that.value == "minus") ? --num : ++num;
         number.innerHTML = num;
+        console.log("it works");
+    }
+
+    updateAmount1(that) {
+        let number1 = document.getElementById('quantity1');
+        let num1 = parseInt(number1.innerHTML);
+        num1 = (that.value == "minus") ? --num1 : ++num1;
+        number1.innerHTML = num1;
+    }
+
+    updateAmount2(that) {
+        let number2 = document.getElementById('quantity2');
+        let num2 = parseInt(number2.innerHTML);
+        num2 = (that.value == "minus") ? --num2 : ++num2;
+        number2.innerHTML = num2;
+    }
+
+    updateAmount3(that) {
+        let number3 = document.getElementById('quantity3');
+        let num3 = parseInt(number3.innerHTML);
+        num3 = (that.value == "minus") ? --num3 : ++num3;
+        number3.innerHTML = num3;
+    }
+
+    updateAmount4(that) {
+        let number4 = document.getElementById('quantity4');
+        let num4 = parseInt(number4.innerHTML);
+        num4 = (that.value == "minus") ? --num4 : ++num4;
+        number4.innerHTML = num4;
+    }
+
+    updateAmount5(that) {
+        let number5 = document.getElementById('quantity5');
+        let num5 = parseInt(number5.innerHTML);
+        num5 = (that.value == "minus") ? --num5 : ++num5;
+        number5.innerHTML = num5;
+    }
+
+    updateAmount6(that) {
+        let number6 = document.getElementById('quantity6');
+        let num6 = parseInt(number6.innerHTML);
+        num6 = (that.value == "minus") ? --num6 : ++num6;
+        number6.innerHTML = num6;
     }
 
 
