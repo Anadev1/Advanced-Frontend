@@ -14,13 +14,13 @@ export default class OnboardingPage2 {
                     ARoS newest exhibitions and makes it easier for you to read more about
                      the different artworks.</p>
                 <div id="onboarding-nav">
-                    <a href="#home" class="skip_btn">SKIP</a>
+                    <button class="skip_btn" onclick="navigateTo('home')">SKIP</button>
                     <div id="progress-dots">
-                    <a href="#onboarding"><span class="dot"></span></a>
+                    <span class="dot" onclick="navigateTo('onboarding')"></span>
                     <span class="dot_active"></span>
-                    <a href="#onboarding3"><span class="dot"></span></a>
+                    <span class="dot" onclick="navigateTo('onboarding3')"></span>
                 </div>
-                    <a href="#onboarding3"><img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow"></a>
+                    <img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow" onclick="navigateTo('onboarding3')">
                 </div>
             </div>
         </section>

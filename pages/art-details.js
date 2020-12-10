@@ -17,17 +17,17 @@ export default class ArtDetails {
                 artwork.id = doc.id;
                 artworks.push(artwork);
             });
-        this.appendOtherArtworks(artworks)
+            this.appendOtherArtworks(artworks)
         });
-     }
-     
+    }
+
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="art-details" class="page">
                   <div id="artwork-banner">
                       <div class="artwork-image-container"><img src="./media/boy.jpg" id="artwork-image"></div>
                       <div id="artwork-overlay"></div>
-                      <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('#exhibition-details')">
+                      <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibition-details')">
                         <!-- add navigateTo function -->
                       <h3 class="artwork-title">Boy</h3>
                       <img src="./media/empty_heart.svg" id="heart" alt="heart">

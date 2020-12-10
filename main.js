@@ -35,6 +35,13 @@ window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.closeNav = () => nav.closeNav();
 window.navigateTo = (pageId) => spaService.navigateTo(pageId);
+window.updateAmount = (that) => ticketsPage.updateAmount(that);
+window.updateAmount1 = (that) => ticketsPage.updateAmount1(that);
+window.updateAmount2 = (that) => ticketsPage.updateAmount2(that);
+window.updateAmount3 = (that) => ticketsPage.updateAmount3(that);
+window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
+window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
+window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
 // window.selectUser = (id, name, date, image) => exhibitions.selectUser(id, name, date, image);
 window.selectUser = (name, image, floor, description) => {
      console.log(name, image, floor, description);

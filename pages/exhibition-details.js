@@ -12,14 +12,14 @@ export default class ExhibitionDetailsPage {
 
     read() {
         this.exhibitionRef.onSnapshot(snapshotData => {
-               let exhibitions = [];
-               snapshotData.forEach(doc => {
-                    let exhibition = doc.data();
-                    exhibition.id = doc.id;
-                    exhibitions.push(exhibition);
-               });
+            let exhibitions = [];
+            snapshotData.forEach(doc => {
+                let exhibition = doc.data();
+                exhibition.id = doc.id;
+                exhibitions.push(exhibition);
+            });
         });
-        
+
         this.artworkRef.onSnapshot(snapshotData => {
             let artworks = [];
             snapshotData.forEach(doc => {
@@ -30,13 +30,13 @@ export default class ExhibitionDetailsPage {
             this.appendArtworks(artworks);
         });
 
-        
+
     }
 
     appendArtworks(artworks, exhibitions) {
         let template = "";
         for (let artwork of artworks) {
-                template += /*html*/ `
+            template += /*html*/ `
                     <article id="exhibition-artworks">
                     <div id="artwork-content">
                     <div id="overlay">
@@ -44,12 +44,12 @@ export default class ExhibitionDetailsPage {
                         <h1 class="artwork_title">${artwork.title}</h1>
                         <p class="artwork_name">${artwork.name}</p>
                     </div>
-                        <a href="#art-details"><img src="/media/arrow.svg" alt="arrow" class="artworks_arrow"></a>
+                        <img src="/media/arrow.svg" alt="arrow" class="artworks_arrow" onclick="navigateTo('art-details')">
                     </div>
                     <img class="artwork_img" src='${artwork.image}'>
                     </div>
                     </article>
-                `;   
+                `;
         }
         document.querySelector("#artwork-list").innerHTML = template;
     }
@@ -58,15 +58,11 @@ export default class ExhibitionDetailsPage {
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibition-details" class="page exhibition-details">
-                   <div class="nav-btn">
-                    <div></div>
-                    <div></div>
-                </div>
                   <div id="details-banner">
                       <div id="overlay"></div>
                       <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibitions')">
                       <h3 class="exhibition_title"></h3>
-                      <a href="#map"><img src="/media/map.svg" alt="map" class="banner_img"></a>
+                      <img src="/media/map.svg" alt="map" class="banner_img" onclick="navigateTo('map')">
                   </div>
                   <div id="details-description">
                     <div id="floor-description">

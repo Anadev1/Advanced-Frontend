@@ -13,13 +13,13 @@ export default class OnboardingPage3 {
                     annual passes through our app allows you to skip the line at the ticket office 
                     and you can start exploring our exhibitions in an instant.</p>
                 <div id="onboarding-nav">
-                    <a href="#home" class="skip_btn">SKIP</a>
+                    <button class="skip_btn" onclick="navigateTo('home')">SKIP</button>
                     <div id="progress-dots">
-                    <a href="#onboarding"><span class="dot"></span></a>
-                    <a href="#onboarding2"><span class="dot"></span></a>
+                    <span class="dot" onclick="navigateTo('onboarding')"></span>
+                    <span class="dot" onclick="navigateTo('onboarding2')"></span>
                     <span class="dot_active"></span>
                 </div>
-                    <a href="#home"><img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow"></a>
+                    <img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow" onclick="navigateTo('home')">
                 </div>
             </div>
         </section>
