@@ -21,6 +21,16 @@ class SpaService {
     this.hideAllPages();
     if (pageId == "home") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+    } else if (pageId == "login") {
+      document.querySelector(`#${pageId}`).style.display = "flex";
+    } else if (pageId == "start") {
+      document.querySelector(`#${pageId}`).style.display = "flex";
+    } else if (pageId == "signup") {
+      document.querySelector(`#${pageId}`).style.display = "flex";
+    } else if (pageId == "your-card") {
+      document.querySelector(`#${pageId}`).style.display = "flex";
+    } else if (pageId == "your-card-presentation") {
+      document.querySelector(`#${pageId}`).style.display = "flex";
     } else {
       document.querySelector(`#${pageId}`).style.display = "block";
     }

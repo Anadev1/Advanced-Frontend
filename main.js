@@ -11,6 +11,7 @@ import OnboardingPage2 from "../pages/onboarding2.js";
 import OnboardingPage3 from "../pages/onboarding3.js";
 import spaService from "../js/spa.js";
 import TicketsPage from "../pages/tickets.js";
+import welcomePage from "./pages/welcome.js";
 
 //Declare and init
 let map = new Map();
@@ -26,10 +27,10 @@ let onboardingPage3 = new OnboardingPage3();
 let ticketsPage = new TicketsPage();
 
 spaService.init();
+welcomePage.init();
 
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
-window.openCloseNav = () => new NavBar();
 window.closeNav = () => nav.closeNav();
 window.logout = () => welcomePage.logout();
 window.navigateTo = (pageId) => spaService.navigateTo(pageId);

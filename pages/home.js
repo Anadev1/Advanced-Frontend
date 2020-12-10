@@ -57,15 +57,5 @@ export default class HomePage{
         let navContainer = document.querySelector(".nav-container");
         navContainer.style.right = "0px";
         navContainer.style.display = "block";
-        /**
-        if(navContainer.style.right = "-3000px"){
-            navContainer.style.right = "0px";
-            navContainer.style.display = "block";
-            console.log("Open nav");
-        }   else if (navContainer.style.right = "0px"){
-            navContainer.style.right = "-3000px";
-            navContainer.style.display = "none";
-            console.log("Close nav");
-        }*/
     }
 }
