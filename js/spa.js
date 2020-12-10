@@ -19,12 +19,11 @@ class SpaService {
   // Show page or tab
   showPage(pageId) {
     this.hideAllPages();
-    if (pageId == "home") {
+    if (pageId === "home" || "start" || "login" || "your-card" || "your-card-presentation") {
       document.querySelector(`#${pageId}`).style.display = "flex";
     } else {
       document.querySelector(`#${pageId}`).style.display = "block";
     }
-
   }
 
   // navigate to a new view/page by changing href
