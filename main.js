@@ -29,15 +29,6 @@ spaService.init();
 
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
-window.openFloors = () => map.openFloors();
-window.openMapFloor = () => map.openMapFloor();
-window.openMapFloor0 = () => map.openMapFloor0();
-window.openMapFloor1 = () => map.openMapFloor1();
-window.openMapFloor2 = () => map.openMapFloor2();
-window.openMapFloor3 = () => map.openMapFloor3();
-window.openMapFloor4 = () => map.openMapFloor4();
-window.openMapFloor5 = () => map.openMapFloor5();
-window.openMapFloor6 = () => map.openMapFloor6();
 window.openCloseNav = () => new NavBar();
 window.closeNav = () => nav.closeNav();
 window.navigateTo = (pageId) => spaService.navigateTo(pageId);

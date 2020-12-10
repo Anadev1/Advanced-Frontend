@@ -12,35 +12,39 @@ export default class Map {
             </header>
             <div class="map_container">
                 <div class="map_floors">
-                    <div class="floor_button" onclick="openFloors()">
-                    <p>FLOORS</p>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">-3</div>
                     </div>
-                    <div class="floors_container">
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor()">-3</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor6()">-2</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle"onclick="openMapFloor5()" >-1</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor0()">0</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor1()">1</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor2()">2</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor3()">3</div>
-                        </div>
-                        <div class="circles_numbers">
-                            <div class="circle" onclick="openMapFloor4()">4</div>
-                        </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">-2</div>
                     </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">-1</div>
+                    </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">0</div>
+                    </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">1</div>
+                    </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">2</div>
+                    </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">3</div>
+                    </div>
+                    <div class="circles_numbers">
+                    <p>Floor</p>
+                        <div class="circle">4</div>
+                    </div>
+                   
                 </div>
             </div>
             
@@ -48,44 +52,5 @@ export default class Map {
         
         `;
         
-    }
-    
-    openFloors() {
-        document.querySelector(".floors_container").setAttribute("style","transition: 1s; opacity: 1; width: auto; height: auto;")
-    }
-
-    openMapFloor(){
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background2.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-
-    openMapFloor0() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-
-    openMapFloor1() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background2.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-    openMapFloor2() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background3.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-    openMapFloor3() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background2.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-    openMapFloor4() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background3.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-    openMapFloor5() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background2.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
-    }
-    openMapFloor6() {
-        document.querySelector(".map_page").style.backgroundImage= "url('../media/map_background3.png')",
-        document.querySelector(".floors_container").setAttribute("style","transition: 0.1s; opacity: 0; width: 0; height: 0;")
     }
 }
