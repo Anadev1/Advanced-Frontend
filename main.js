@@ -1,5 +1,4 @@
 //Declare and init
-import welcomePage from "./pages/welcome.js";
 import ExhibitionDetailPage from "./pages/exhibition-details.js";
 import ArtDetails from "./pages/art-details.js";
 import NavBar from "./components/nav.js";
@@ -26,10 +25,7 @@ let onboardingPage2 = new OnboardingPage2();
 let onboardingPage3 = new OnboardingPage3();
 let ticketsPage = new TicketsPage();
 
-
 spaService.init();
-welcomePage.init();
-
 
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
