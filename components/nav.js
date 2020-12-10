@@ -20,7 +20,7 @@ export default class NavBar{
                 
                 <div class="log-out-container">
                     <span class="arrow-icon"><i class="fas fa-arrow-left"></i></span>
-                    <p class="log-out">Log out</p>
+                    <p class="log-out" onclick="logout()">Log out</p>
                 </div>
             </nav>
         </div>
