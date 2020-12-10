@@ -1,16 +1,16 @@
 //Declare and init
-import ExhibitionDetailPage from "./pages/exhibition-details.js";
-import ArtDetails from "./pages/art-details.js";
-import NavBar from "./components/nav.js";
-import HomePage from "./pages/home.js";
-import Map from "/pages/map.js";
-import Profile from "/pages/profile.js";
-import Exhibitions from "./pages/exhibitions.js";
-import OnboardingPage from "/pages/onboarding.js";
-import OnboardingPage2 from "/pages/onboarding2.js";
-import OnboardingPage3 from "/pages/onboarding3.js";
-import spaService from "./js/spa.js";
-import TicketsPage from "./pages/tickets.js";
+import ExhibitionDetailPage from "../pages/exhibition-details.js";
+import ArtDetails from "../pages/art-details.js";
+import NavBar from "../components/nav.js";
+import HomePage from "../pages/home.js";
+import Map from "../pages/map.js";
+import Profile from "../pages/profile.js";
+import Exhibitions from "../pages/exhibitions.js";
+import OnboardingPage from "../pages/onboarding.js";
+import OnboardingPage2 from "../pages/onboarding2.js";
+import OnboardingPage3 from "../pages/onboarding3.js";
+import spaService from "../js/spa.js";
+import TicketsPage from "../pages/tickets.js";
 
 //Declare and init
 let map = new Map();
