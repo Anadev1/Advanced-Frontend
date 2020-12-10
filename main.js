@@ -34,6 +34,7 @@ welcomePage.init();
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.closeNav = () => nav.closeNav();
+window.logout = () => welcomePage.logout();
 window.navigateTo = (pageId) => spaService.navigateTo(pageId);
 window.updateAmount = (that) => ticketsPage.updateAmount(that);
 window.updateAmount1 = (that) => ticketsPage.updateAmount1(that);

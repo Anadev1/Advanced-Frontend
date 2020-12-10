@@ -14,7 +14,7 @@ class WelcomePage {
     }
 
     init(){
-        firebase.auth().onAuthStateChange(user => {
+        firebase.auth().onAuthStateChanged(user => {
             if(user){
                 this.userAuthenticated(user);
             }   else {
@@ -43,7 +43,6 @@ class WelcomePage {
     }
 
     initAuthUserRef() {
-        document.body.innerHTML = "<h1>Hi USER</h1>";
         let authUser = firebase.auth().currentUser;
         this.authUserRef = firebaseDB.collection("users").doc(authUser.uid);
 
@@ -57,7 +56,7 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
-                //Sthis.appendAuthUser();
+                //this.appendAuthUser();
             }
         });
     }
@@ -88,8 +87,9 @@ class WelcomePage {
                     <header class="welcome">
                         <h1>Log in to Aros</h1>
                     </header>
-                    <div id="firebaseui-auth-container"></div>
+                    
                     <div class="choice">
+                    <div id="firebaseui-auth-container"></div>
                         <div class="main-cta-btn">
                             <p class="log-out">Log in</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span>
                         </div>
@@ -103,7 +103,6 @@ class WelcomePage {
                     <header class="welcome">
                         <h1>Sign up to Aros</h1>
                     </header>
-                    <div id="firebaseui-auth-container"></div>
                     <div class="choice">
                         <div class="main-cta-btn">
                             <a href="#your-card" class="go"><p class="log-out">Sign up</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>

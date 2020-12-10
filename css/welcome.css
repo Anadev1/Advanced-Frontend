@@ -23,7 +23,8 @@
 
 .choice{
      margin-top: auto;
-     height: 25vh;
+     min-height: 25vh;
+     margin-bottom: 30px;
 }
 
 .main-cta-btn {
@@ -45,7 +46,6 @@
      height: auto;
      transform: rotate(90deg) translate(40%, calc(100% - 10%));
 }
-
 
 .other-options{
      display: flex;
@@ -111,4 +111,9 @@ input[type="number"]{
 
 .ticket{
      margin-top: 10px;
+}
+
+/***FIREBASE UI***/
+.firebaseui-card-header{
+     display: none;
 }
