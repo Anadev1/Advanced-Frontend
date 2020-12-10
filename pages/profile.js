@@ -73,12 +73,11 @@ export default class Profile {
     appendExhibitions(exhibitions) {
         let template = "";
         for (let exhibition of exhibitions) {
-             template += /*html*/ `
-             <article class="exhibition-favourite">
-                       <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
-             </article>
-             `;
-             }
-             document.querySelector(".favourite_artworks").innerHTML = template;
-        }   
+                template += /*html*/ `
+                <article class="exhibition-favourite">
+                    <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
+                </article>
+            `;}
+            document.querySelector(".favourite_artworks").innerHTML = template;
+    }   
 }
