@@ -42,7 +42,7 @@ window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
 window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
 window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
 // window.selectUser = (id, name, date, image) => exhibitions.selectUser(id, name, date, image);
-window.selectUser = (name, image, floor, description) => {
+window.selectExhibition = (name, image, floor, description) => {
      console.log(name, image, floor, description);
      // references to the input fields
      let nameInput = document.querySelector('.exhibition_title');
@@ -55,4 +55,5 @@ window.selectUser = (name, image, floor, description) => {
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
 };
+window.search = (value) => exhibitions.search(value);
 

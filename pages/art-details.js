@@ -28,9 +28,8 @@ export default class ArtDetails {
                       <div class="artwork-image-container"><img src="./media/boy.jpg" id="artwork-image"></div>
                       <div id="artwork-overlay"></div>
                       <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibition-details')">
-                        <!-- add navigateTo function -->
                       <h3 class="artwork-title">Boy</h3>
-                      <img src="./media/empty_heart.svg" id="heart" alt="heart">
+                      <!-- favorite button -->
                   </div>
                   <div id="artwork-description-top">
                         <div id="artist-image-container">
@@ -42,7 +41,7 @@ export default class ArtDetails {
                             <p class="facts">Height: 4.5 m</p>
                             <p class="facts">Weight: 500 kg</p>
                         </div>
-                      </div>
+                        </div>
                   <div id="details-container">
                     <div id="artwork-description-left">
                          <h1 class="artist-name">Ron Mueck</h1>
@@ -55,7 +54,7 @@ export default class ArtDetails {
                              The figure is executed with astonishing attention to detail: the surface of the skin, for instance, is utterly
                             convincing with veins and hair follicles clearly marked. This hyperrealism makes the boy 
                              at once a living and compelling presence and yet alien and unreal. </p> 
-                      </div>
+                    </div>
                   </div>
                   <div id="artist-artworks">
                       <h4 class="list-title">Other artworks by this artist</h4>
@@ -74,4 +73,15 @@ export default class ArtDetails {
         }
         document.querySelector("#other-artworks-list").innerHTML = template;
     }
+
+    // function generateFavArtworkButton(artworkId) {
+    //     let btnTemplate = `
+    //         <img src="./media/empty_heart.svg" id="heart" alt="heart" onclick="addToFavourites('${movieId}')">`;
+    //     if (_currentUser.favorites && _currentUser.favorites.includes(artworkId)) {
+    //         btnTemplate = `
+    //         <img src="./media/full_heart.svg" id="heart" alt="heart" onclick="addToFavourites('${movieId}')">`;
+    //     }
+    //     return btnTemplate;
+    //     }
+    
 }
