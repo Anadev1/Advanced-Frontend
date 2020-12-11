@@ -68,3 +68,21 @@ window.selectExhibition = (name, image, floor, description) => {
 };
 window.search = (value) => exhibitions.search(value);
 
+window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
+     console.log(artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription);
+     // references to the input fields
+     let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
+     let artworkImageInput = document.querySelector('#artist-image');
+     let artistImgInput = document.querySelector('#artist-image');
+     let artworkFactsInput = document.querySelector('.facts');
+     let artworkNameInput = document.querySelector('.artist-name');
+     let artworkDescriptionInput = document.querySelector(".description-text");
+
+     artworkTitleInput.textContent = artworkTitle;
+     artworkImageInput.style.backgroundImage = "url(" + artworkImage + ")";
+     artistImgInput.style.backgroundImage = "url(" + artistImg + ")";
+     artworkFactsInput.textContent = artworkFacts;
+     artworkNameInput.textContent = artworkName;
+     artworkDescriptionInput.textContent = artworkDescription;
+     spaService.navigateTo("art-details");
+};

@@ -83,5 +83,5 @@ export default class ArtDetails {
     //     }
     //     return btnTemplate;
     //     }
-    
+
 }
