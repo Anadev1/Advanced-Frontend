@@ -23,14 +23,44 @@
 }
 
 .nav-container {
-     background-color: rgba(26, 26, 26, 0.6);
+     background-color: rgba(26, 26, 26, 0.95);
      width: 100%;
      height: 100vh;
      position: absolute;
-     right: 0px;
+     right: -3000px;
      top: 0px;
      display: none;
      z-index: 999999;
+}
+
+.open-nav{
+     animation: openNavAnimation 0.5s;
+     animation-fill-mode: forwards;
+}
+
+.close-nav{
+     animation: closeNavAnimation 2s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes openNavAnimation{
+     from{
+          right: -3000px;
+     }
+
+     to{
+          right: 0px;
+     }
+}
+
+@keyframes closeNavAnimation{
+     from{
+          right: 0px;
+     }
+
+     to{
+          right: -3000px;
+     }
 }
 
 .close-btn {
