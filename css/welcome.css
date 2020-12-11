@@ -8,6 +8,10 @@
      padding: 0;
 }
 
+.login-page{
+     background-image: url("../media/sign-in-bg.jpg");
+}
+
 .sign-up-page, .your-card-page, .your-card-presentation-page{
      background-image: url("../media/sign-up-bg.jpg");
 }
@@ -17,14 +21,22 @@
 }
 
 .welcome{
+     position: absolute;
      color: var(--white);
-     font-weight: 100;
+     top: 10%;
+     left: 20%;
+     transform: translate(-20%, -10%);
+}
+
+.welcome h1{
+     font-weight: 300;
+     font-size: 40px;
 }
 
 .choice{
      margin-top: auto;
      min-height: 25vh;
-     margin-bottom: 30px;
+     padding-bottom: 30px;
 }
 
 .main-cta-btn {
@@ -57,7 +69,7 @@
 }
 
 .skip-go-container{
-     margin: 40px 0;
+     margin: 40px 0 20px 0;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -82,7 +94,7 @@
      margin-right: 10px;
 }
 
-.card-container{
+.card-container, .login-container{
      background-color: rgba(26, 26, 26, 0.6);
      box-sizing: border-box;
      padding: 20px;
@@ -96,6 +108,7 @@
 
 .card-container .card-desc{
      margin-bottom: 20px;
+     color: var(--white);
 }
 
 input[type="number"]{
@@ -109,12 +122,65 @@ input[type="number"]{
      padding: 10px;
 }
 
+::placeholder{
+     color: var(--white);
+     font-family: 'Lato', sans-serif;
+     font-size: 14px;
+}
+
 .ticket{
      margin-top: 10px;
 }
 
 /***FIREBASE UI***/
-.firebaseui-card-header{
+.firebaseui-card-header, .firebaseui-card-footer{
      display: none;
 }
 
+.firebaseui-container{
+     background: none;
+}
+
+.firebaseui-label{
+     color: var(--white);
+}
+
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+     color: var(--yellow);
+}
+
+.mdl-textfield__input{
+     border-bottom: 2px solid var(--white);
+     color: var(--white);
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-input{
+     border-color: rgba(255,255,255,0.12);
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after{
+     background-color: var(--white);
+}
+
+.mdl-button--primary.mdl-button--primary{
+     color: var(--blue);
+}
+
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover{
+     background: var(--white);
+     color: var(--black);
+}
+
+.firebaseui-link{
+     color: var(--blue);
+}
+
+.firebaseui-form-actions{
+     text-align: center;
+}
+
+.firebaseui-error{
+     color: rgb(109, 25, 4);
+}

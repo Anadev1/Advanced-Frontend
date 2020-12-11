@@ -88,11 +88,8 @@ class WelcomePage {
                         <h1>Log in to Aros</h1>
                     </header>
                     
-                    <div class="choice">
-                    <div id="firebaseui-auth-container"></div>
-                        <div class="main-cta-btn">
-                            <p class="log-out">Log in</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span>
-                        </div>
+                    <div class="login-container">
+                        <div id="firebaseui-auth-container"></div>
                         <div class="other-options">
                             <a href="#signup" class="log-in-option">Ups! I don't have an account yet.</a>
                         </div>
@@ -120,8 +117,7 @@ class WelcomePage {
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
 
-                        <label for="card-number" class="ticket">Ticket number</label>
-                        <input type="number" name="card-number">
+                        <input type="number" name="card-number" placeholder="Ticket number">
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>

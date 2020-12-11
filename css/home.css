@@ -30,6 +30,10 @@
      color: var(--white);
 }
 
+.current-exhibitions h3{
+     font-weight: 300;
+}
+
 .current-exhibitions-stuff {
      display: flex;
      flex-direction: row;
