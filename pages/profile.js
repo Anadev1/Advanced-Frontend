@@ -29,7 +29,7 @@ export default class Profile {
         <img src="./media/settings.png" class="settings_icon">
             <header class="topbar profile_top">
                <h2>PROFILE</h2>
-               <h2>Adam Smith</h2>
+               <h2 id="user-name">Adam Smith</h2>
             </header>
            
             <div class="virtual_card">
