@@ -18,9 +18,9 @@ export default class TicketsPage {
                         <h5 class="ticket_title">Adult<h5> 
                         <div id="ticket-amount">
                                 <h5 class="ticket_price">150DKK<h5> 
-                            <button type="button" value="minus" onclick="updateAmount(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                            <button type="button" value="minus" onclick="updateAmount(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity">0</span>
-                        <button type="button" value="plus" onclick="updateAmount(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>    
                         </div>  
 
@@ -31,9 +31,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount1(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount1(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity1">0</span>
-                        <button type="button" value="plus" onclick="updateAmount1(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount1(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
                         
@@ -41,9 +41,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">Students<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">120DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount2(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount2(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity2">0</span>
-                        <button type="button" value="plus" onclick="updateAmount2(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount2(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -55,9 +55,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">130DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount3(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount3(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity3">0</span>
-                        <button type="button" value="plus" onclick="updateAmount3(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount3(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div>
                         </div> 
 
@@ -69,9 +69,9 @@ export default class TicketsPage {
                            </div>
                            <div id="ticket-amount">
                             <h5 class="ticket_price">FREE<h5> 
-                        <button type="button" value="minus" onclick="updateAmount4(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount4(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity4">0</span>
-                        <button type="button" value="plus" onclick="updateAmount4(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount4(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>
 
@@ -87,9 +87,9 @@ export default class TicketsPage {
                            <h5 class="ticket_title">ARoS27<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">200DKK<h5> 
-                        <button type="button" value="minus" onclick="updateAmount5(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                        <button type="button" value="minus" onclick="updateAmount5(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                         <span class="quantity_value" id="quantity5">0</span>
-                        <button type="button" value="plus" onclick="updateAmount5(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                        <button type="button" value="plus" onclick="updateAmount5(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                         </div> 
                         </div>  
 
@@ -98,9 +98,9 @@ export default class TicketsPage {
                             <div id="ticket-amount">
                             <h5 class="ticket_price">410DKK<h5> 
                                 <form>
-                                <button type="button" value="minus" onclick="updateAmount6(this);"><img src="/media/minus.svg" alt="minus" class="minus_btn"></button>
+                                <button type="button" value="minus" onclick="updateAmount6(this);"><img src="./media/minus.svg" alt="minus" class="minus_btn"></button>
                                 <span class="quantity_value" id="quantity6">0</span>
-                                <button type="button" value="plus" onclick="updateAmount6(this);"><img src="/media/plus.svg" alt="minus" class="plus_btn"></button>
+                                <button type="button" value="plus" onclick="updateAmount6(this);"><img src="./media/plus.svg" alt="minus" class="plus_btn"></button>
                                 </form>
                         </div> 
                         </div>
@@ -109,7 +109,7 @@ export default class TicketsPage {
 
                     <div id="price-total">
                     <h3 class="price_text">Total price:<h3>
-                    <button class="checkout_btn" onclick="navigateTo('')">PROCEED TO CHECKOUT<img src="/media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
+                    <button class="checkout_btn" onclick="navigateTo('')">PROCEED TO CHECKOUT<img src="./media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
                 <div>
 
                 </div>

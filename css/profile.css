@@ -61,3 +61,24 @@
 .favourite-image {
      width: 100%;
 }
+
+#user-name {
+     font-size: 15px;
+     margin: 10px 0;
+}
+
+.detailed_ticket{
+     position: absolute;
+     display: none;
+     z-index: 2;
+     background-color: black;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+
+.detailed_card {
+     width: 85%;
+
+}

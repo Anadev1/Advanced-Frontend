@@ -12,7 +12,7 @@ export default class NavBar{
                 <ul>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#map" class="nav-link">Museum Map</a></li>
-                    <li><a href="#exhibitions" class="nav-link">Exhibition</a></li>
+                    <li><a href="#exhibitions" class="nav-link">Exhibitions</a></li>
                     <li><a href="#tickets" class="nav-link">Ticket store</a></li>
                     <li><a href="#profile" class="nav-link">Profile</a></li>
                 </ul>

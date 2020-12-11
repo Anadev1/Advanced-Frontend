@@ -54,3 +54,8 @@
      height: 12vw;
      padding: 18vh 10vw;
 }
+
+.floors_container{
+     flex-direction: column;
+     display: none;
+}

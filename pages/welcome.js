@@ -26,6 +26,8 @@ class WelcomePage {
 
     userAuthenticated(user) {
         this.initAuthUserRef();
+        document.getElementById("user-name").innerHTML =
+        `<h2>${user.displayName}</h2>`;
     }
 
     userNotAuthenticated() {

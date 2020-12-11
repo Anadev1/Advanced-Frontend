@@ -23,7 +23,7 @@ export default class Exhibitions {
                });
                this.appendExhibitions(exhibitions);
           });
-          
+
      }
 
      template() {
@@ -33,12 +33,12 @@ export default class Exhibitions {
                </section>
           `;
      }
-     
+
      appendExhibitions(exhibitions) {
-     let template = "";
-     for (let exhibition of exhibitions) {
-          template += /*html*/ `
-          <article class="exhibition-item" onclick="selectUser('${exhibition.name}', '${exhibition.image}', '${exhibition.floor}', '${exhibition.description}' )">
+          let template = "";
+          for (let exhibition of exhibitions) {
+               template += /*html*/ `
+          <article class="exhibition-item" onclick="selectExhibition('${exhibition.name}', '${exhibition.image}', '${exhibition.floor}', '${exhibition.description}' )">
                <div class="image-container">
                     <img src="${exhibition.image}" alt="exhibition" class="exhibition-image">
                </div>
@@ -54,11 +54,11 @@ export default class Exhibitions {
           `;
           }
           document.querySelector("#exhibitions").innerHTML = template;
-     }  
-     
-   
+     }
+
+
 }
 
-     
+
 
 

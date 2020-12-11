@@ -25,6 +25,7 @@
      padding-bottom: 15px;
      padding-left: 30px;
      font-size: 30px;
+     width: 80%;
 }
 
 .banner_img {
@@ -120,7 +121,7 @@
      position: absolute;
      right: 0;
      top: 0;
-     padding: 62px 30px;
+     padding: 62px 30px 0;
 }
 
 #back-arrow {

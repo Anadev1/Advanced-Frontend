@@ -33,6 +33,17 @@ window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.closeNav = () => nav.closeNav();
 window.logout = () => welcomePage.logout();
+window.openMapFloor = () => map.openMapFloor();
+window.openMapFloor0 = () => map.openMapFloor0();
+window.openMapFloor1 = () => map.openMapFloor1();
+window.openMapFloor2 = () => map.openMapFloor2();
+window.openMapFloor3 = () => map.openMapFloor3();
+window.openMapFloor4 = () => map.openMapFloor4();
+window.openMapFloor5 = () => map.openMapFloor5();
+window.openMapFloor6 = () => map.openMapFloor6();
+window.openFloors = () => map.openFloors();
+window.zoomTicket = () => profile.zoomTicket();
+window.closeTicket = () => profile.closeTicket();
 window.navigateTo = (pageId) => spaService.navigateTo(pageId);
 window.updateAmount = (that) => ticketsPage.updateAmount(that);
 window.updateAmount1 = (that) => ticketsPage.updateAmount1(that);
@@ -42,7 +53,7 @@ window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
 window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
 window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
 // window.selectUser = (id, name, date, image) => exhibitions.selectUser(id, name, date, image);
-window.selectUser = (name, image, floor, description) => {
+window.selectExhibition = (name, image, floor, description) => {
      console.log(name, image, floor, description);
      // references to the input fields
      let nameInput = document.querySelector('.exhibition_title');
@@ -55,4 +66,23 @@ window.selectUser = (name, image, floor, description) => {
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
 };
+window.search = (value) => exhibitions.search(value);
 
+window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
+     console.log(artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription);
+     // references to the input fields
+     let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
+     let artworkImageInput = document.querySelector('#artist-image');
+     let artistImgInput = document.querySelector('#artist-image');
+     let artworkFactsInput = document.querySelector('.facts');
+     let artworkNameInput = document.querySelector('.artist-name');
+     let artworkDescriptionInput = document.querySelector(".description-text");
+
+     artworkTitleInput.textContent = artworkTitle;
+     artworkImageInput.style.backgroundImage = "url(" + artworkImage + ")";
+     artistImgInput.style.backgroundImage = "url(" + artistImg + ")";
+     artworkFactsInput.textContent = artworkFacts;
+     artworkNameInput.textContent = artworkName;
+     artworkDescriptionInput.textContent = artworkDescription;
+     spaService.navigateTo("art-details");
+};
