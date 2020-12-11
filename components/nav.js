@@ -29,6 +29,7 @@ export default class NavBar{
 
     closeNav(){
         let navContainer = document.querySelector(".nav-container");
+        navContainer.classList.remove("open-nav");
         navContainer.style.display = "none";
     }
 }

@@ -15,6 +15,7 @@ class WelcomePage {
 
     init(){
         firebase.auth().onAuthStateChanged(user => {
+            console.log(user);
             if(user){
                 this.userAuthenticated(user);
             }   else {
@@ -32,6 +33,11 @@ class WelcomePage {
     userNotAuthenticated() {
         console.log("Firebase");
         spaService.navigateTo("start");
+        /*
+        const btnAnon = document.querySelector(".guest");
+        btnAnon.addEventListener('click', e => {
+            firebase.auth().signInAnonymously();
+        })*/
 
         // Firebase UI configuration
         const uiConfig = {
@@ -79,7 +85,7 @@ class WelcomePage {
                             <a href="#login" class="go"><p class="log-out">Log in</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
                         </div>
                         <div class="other-options">
-                            <a href="#guest" class="log-in-option">Continue as a guest</a>
+                            <a href="#guest" class="log-in-option guest">Continue as a guest</a>
                             <a href="#signup" class="log-in-option">Sign up</a>
                         </div>
                     </div>

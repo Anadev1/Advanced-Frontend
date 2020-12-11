@@ -23,19 +23,29 @@ class SpaService {
       document.querySelector(`#${pageId}`).style.display = "flex";
     } else if (pageId == "login") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      //this.hideNavIcon();
     } else if (pageId == "start") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      //this.hideNavIcon();
     } else if (pageId == "signup") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      //this.hideNavIcon();
     } else if (pageId == "your-card") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      //this.hideNavIcon();
     } else if (pageId == "your-card-presentation") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      //this.hideNavIcon();
     } else {
       document.querySelector(`#${pageId}`).style.display = "block";
+      //this.hideNavIcon(false);
     }
 
   }
+
+  //hideNavIcon(){
+    //document.querySelector(".nav-btn").style.display = "none";
+  //}
 
   // navigate to a new view/page by changing href
   navigateTo(pageId) {

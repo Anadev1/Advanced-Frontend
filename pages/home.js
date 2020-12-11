@@ -55,7 +55,7 @@ export default class HomePage{
     openCloseNav(){
         console.log("Clicked nav");
         let navContainer = document.querySelector(".nav-container");
-        navContainer.style.right = "0px";
         navContainer.style.display = "block";
+        navContainer.classList.add("open-nav");
     }
 }
