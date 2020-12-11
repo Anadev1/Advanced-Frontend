@@ -7,7 +7,7 @@ export default class OnboardingPage2 {
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
         <section id="onboarding2" class="page onboarding-page">
-            <img src="/media/onboarding-2.jpg" alt="Art museum" class="onboarding_img">
+            <img src="./media/onboarding-2.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
                 <h3 class="onboarding_title">Discover exhibitions</h3>
                 <p class="onboarding_text">The app also helps you stay up to date with the 
@@ -20,7 +20,7 @@ export default class OnboardingPage2 {
                     <span class="dot_active"></span>
                     <span class="dot" onclick="navigateTo('onboarding3')"></span>
                 </div>
-                    <img src="/media/arrow-big.svg" alt="arrow" class="onboarding_arrow" onclick="navigateTo('onboarding3')">
+                    <img src="./media/arrow-big.svg" alt="arrow" class="onboarding_arrow" onclick="navigateTo('onboarding3')">
                 </div>
             </div>
         </section>
