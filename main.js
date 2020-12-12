@@ -32,6 +32,8 @@ welcomePage.init();
 window.pageChange = () => spaService.pageChange();
 window.openCloseNav = () => homePage.openCloseNav();
 window.closeNav = () => nav.closeNav();
+window.openHours = () => nav.openHours();
+window.closeHours = () => nav.closeHours();
 window.logout = () => welcomePage.logout();
 window.openMapFloor = () => map.openMapFloor();
 window.openMapFloor0 = () => map.openMapFloor0();
@@ -53,9 +55,14 @@ window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
 window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
 window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
 window.search = (value) => exhibitionsPage.search(value);
+window.openSearch = () => exhibitionsPage.openSearch();
+window.closeSearch = () => exhibitionsPage.closeSearch();
+window.addToFavourites = (artworkId) => artDetails.addToFavourites(artworkId);
+window.removeFromFavourites = (artworkId) => artDetailsPage.removeFromFavourites(artworkId);
+// window.generateFavMovieButton = (id) => artDetails.generateFavMovieButton(id);
+
 
 window.selectExhibition = (name, image, floor, description) => {
-     console.log(name, image, floor, description);
      // references to the input fields
      let nameInput = document.querySelector('.exhibition_title');
      let nameInputMap = document.querySelector('.exhibition_title_map');
@@ -76,8 +83,7 @@ window.selectExhibition = (name, image, floor, description) => {
 
 };
 
-window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
-     console.log(artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription);
+window.selectArtwork = (id, artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
      // references to the input fields
      let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
      let artworkImageInput = document.querySelector('.artwork-image-container');
@@ -85,7 +91,8 @@ window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, art
      let artworkFactsInput = document.querySelector('.facts');
      let artworkNameInput = document.querySelector('.artist-name');
      let artworkDescriptionInput = document.querySelector(".description-text");
-
+     let artworkFavButtonContainer = document.querySelector(".fav-button-container");
+     // artworkFavButtonContainer = generateFavMovieButton(id); 
      artworkTitleInput.textContent = artworkTitle;
      artworkImageInput.style.backgroundImage = "url(" + artworkImage + ")";
      artistImgInput.style.backgroundImage = "url(" + artistImg + ")";

@@ -6,11 +6,6 @@ export default class TicketsPage {
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="tickets" class="page tickets-page">
-                <div class="nav-btn">
-                    <div></div>
-                    <div></div>
-                </div>
-
                 <div>
                     <h2 class="tickets_title">TICKETS</h2>
 
@@ -94,7 +89,7 @@ export default class TicketsPage {
                         </div>  
 
                         <div id="ticket-types">
-                           <h5 class="ticket_title">The ARoS Club<h5> 
+                           <h5 class="ticket_title">ARoS Art Club<h5> 
                             <div id="ticket-amount">
                             <h5 class="ticket_price">410DKK<h5> 
                                 <form>
@@ -126,7 +121,6 @@ export default class TicketsPage {
         number.innerHTML = num;
         console.log("it works");
     }
-
 
     updateAmount1(that) {
         let number1 = document.getElementById('quantity1');

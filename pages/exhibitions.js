@@ -30,9 +30,10 @@ export default class Exhibitions {
           document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibitions" class="page">
                     <div id="search-container">
-                    <!-- <img src="./media/search_icon.svg" id="search-icon" alt="search icon"> -->
-                    <input type="search" placeholder="Search" onkeyup="search(this.value)">
-               </div>
+                         <img src="./media/search_icon.svg" id="search-icon" alt="search icon" onclick="openSearch()">
+                         <input type="search" placeholder="Search..." onkeyup="search(this.value)" class="search-bar">   
+                         <img src="./media/close_button.png" id="close-button" alt=" close button" onclick="closeSearch()">
+                    </div>
                <div id="exhibitions-container">
 
                 </div>    
@@ -67,8 +68,24 @@ export default class Exhibitions {
           let searchValue = value.toLowerCase();
           let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
           this.appendExhibitions(filteredExhibitions);
-          console.log(searchValue);
-          console.log(exhibitionsData);
+     }
+
+     openSearch() {
+          let searchIcon = document.querySelector("#search-icon");
+          let searchBar = document.querySelector(".search-bar");
+          let closeButton = document.querySelector("#close-button");
+          closeButton.style.opacity = "1";
+          searchIcon.style.opacity = "0";
+          searchBar.classList.add("active");
+     }
+
+     closeSearch() {
+          let searchIcon = document.querySelector("#search-icon");
+          let searchBar = document.querySelector(".search-bar");
+          let closeButton = document.querySelector("#close-button");
+          closeButton.style.opacity = "0";
+          searchIcon.style.opacity = "1";
+          searchBar.classList.remove("active");
      }
 }
 
