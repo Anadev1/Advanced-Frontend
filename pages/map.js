@@ -180,8 +180,8 @@ export default class Map {
              template += /*html*/ `
             <div class="map_exhibition_img">
                 <img class="exhibition_img_map" src='${exhibition.image}'>
+                <h3 class="exhibition-floor map_floor">FLOOR ${exhibition.floor}</h3>
                 <h1 class="exhibition-name map_name">${exhibition.name}</h1>
-                <h3 class="exhibition-floor map_name">FLOOR ${exhibition.floor}</h1>
             </div>
         </article>
         `;

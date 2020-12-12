@@ -73,25 +73,33 @@
      display: none;
      flex-direction: column;
      justify-content: space-around;
-     margin: 30px 30px 30px 0;
+     margin: 30px 0 30px 0;
      height: auto;
      align-self: flex-end;
 }
 
 .exhibition-image-map {
      padding: 20px;
+     width: 240px;
 }
 
 .exhibition_img_map{
-     width: 230px;
-}
-
-.map_exhibition_img {
-     display: flex;
-     justify-self: center;
+     width: 240px;
+     filter: brightness(0.4);
 }
 
 .map_name{
      position: absolute;
+     bottom: 80px;
+     left: 40px;
+     width: 230px;
+     font-weight: 500;
+}
+
+.map_floor{
+     position: absolute;
+     bottom: 45px;
+     left: 40px;
      width: 220px;
+     font-weight: 600;
 }
