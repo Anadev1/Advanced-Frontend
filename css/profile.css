@@ -3,6 +3,12 @@
      color: white;
 }
 
+#profile-title {
+     font-size: 30px;
+     font-weight: 500;
+     margin-top: -20px;
+}
+
 .virtual_card {
      margin: 30px 0;
 }
@@ -38,10 +44,6 @@
      flex-wrap: wrap;
 }
 
-.profile_title {
-     margin: 30px 0;
-}
-
 .settings_icon {
      position: absolute;
 }
@@ -63,8 +65,18 @@
 }
 
 #user-name {
-     font-size: 15px;
+     font-size: 24px;
      margin: 10px 0;
+     font-weight: 500;
+}
+
+#titles {
+     margin: 40px 0 10px;
+     font-size: 24px;
+}
+
+#card-img {
+     margin-bottom: 10px;
 }
 
 .detailed_ticket{

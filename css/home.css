@@ -53,8 +53,14 @@
      margin-left: 0px;
 }
 
+.home_title {
+     font-size: 24px;
+}
+
 .more {
      color: var(--white);
      text-decoration: none;
      text-align: right;
+     float: right;
+     font-weight: 600;
 }

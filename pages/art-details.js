@@ -25,35 +25,29 @@ export default class ArtDetails {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="art-details" class="page">
                   <div id="artwork-banner">
-                      <div class="artwork-image-container"><img src="./media/boy.jpg" id="artwork-image"></div>
+                      <div class="artwork-image-container"></div>
                       <div id="artwork-overlay"></div>
                       <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibition-details')">
-                      <h3 class="artwork-title">Boy</h3>
+                      <h3 class="artwork-title"></h3>
                       <!-- favorite button -->
                   </div>
                   <div id="artwork-description-top">
+                      <div id="image-wrapper">
                         <div id="artist-image-container">
-                            <img src="./media/ron-mueck.jpg" id="artist-image" alt="artist">
+                        </div>
                         </div>
                         <div id="artwork-facts-container">
-                            <p class="facts">Year: 1999</p>
-                            <p class="facts">Type: Sculpture</p>
-                            <p class="facts">Height: 4.5 m</p>
-                            <p class="facts">Weight: 500 kg</p>
+                            <p class="facts"></p>
                         </div>
                         </div>
                   <div id="details-container">
                     <div id="artwork-description-left">
-                         <h1 class="artist-name">Ron Mueck</h1>
-                         <h3 class="artwork-name">Boy</h3>
+                         <h1 class="artist-name"></h1>
+                         <h3 class="artwork-name"></h3>
                     </div>
                     <div id="artwork-description-right">
                          <h3 class="description-title">Description</h3>
-                         <p class="description-text">Ron Mueck created Boy in 1999. It took the artist eight months to 
-                             progress from a 40 cm high clay maquette to the present almost five metre high sculpture cast in glass fibre. 
-                             The figure is executed with astonishing attention to detail: the surface of the skin, for instance, is utterly
-                            convincing with veins and hair follicles clearly marked. This hyperrealism makes the boy 
-                             at once a living and compelling presence and yet alien and unreal. </p> 
+                         <p class="description-text"></p> 
                     </div>
                   </div>
                   <div id="artist-artworks">

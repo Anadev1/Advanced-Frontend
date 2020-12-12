@@ -21,6 +21,7 @@ export default class Exhibitions {
                     exhibitionsData.push(exhibition);
                });
                this.appendExhibitions(exhibitionsData);
+
           });
 
      }
@@ -62,8 +63,9 @@ export default class Exhibitions {
      }  
 
      search(value) {
+
           let searchValue = value.toLowerCase();
-          let filteredExhibitions = this.exhibitions.filter(exhibition => exhibition.name.rendered.toLowerCase().includes(searchValue));
+          let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
           this.appendExhibitions(filteredExhibitions);
           console.log(searchValue);
           console.log(exhibitionsData);

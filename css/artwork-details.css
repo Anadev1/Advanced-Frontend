@@ -6,7 +6,7 @@
 #artwork-banner {
      color: var(--white);
      height: 40vh;
-     width: 100vw;
+     width: 100%;
      position: relative;
 }
 
@@ -14,11 +14,13 @@
      width: 100%;
      height: 100%;
      overflow: hidden;
+     background-size: cover;
+     background-repeat: no-repeat;
 }
 
 #artwork-overlay {
      width: 100%;
-     height: 100%;
+     height: 40vh;
      position: absolute;
      top: 0;
      left: 0;
@@ -49,6 +51,7 @@
      padding-bottom: 15px;
      padding-left: 30px;
      font-size: 30px;
+     width: 80%;
 }
 
 .banner_img {
@@ -93,38 +96,51 @@
 }
 
 #artist-image-container {
-     width: 30vw;
+     width: 100%;
+     height: 24vh;
+     background-size: auto 100%;
+     background-repeat: no-repeat;
+}
+
+#image-wrapper {
+     width: 100%;
+     height: 100%;
 }
 
 #artwork-facts-container {
-     padding: 30px;
-}
-
-#artist-image {
-     width: 100%;
+     width: 50vw;
+     padding-top: 30px;
+     padding-left: 15px;
 }
 
 #details-container {
      padding: 30px;
      color: var(--white);
      display: flex;
+     height: fit-content;
 }
 
 #artwork-description-left {
      color: var(--white);
-     width: 20vw;
-     height: 35vh;
+     width: 25vw;
+     height: fit-content;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: flex-end;
      transform: rotate(270deg);
      margin-right: 10vw;
+     margin-top: 22px;
 }
 
 #artwork-description-right {
      color: var(--white);
-     width: 80vw;
+     width: 60vw;
+}
+
+.facts {
+     width: 50vw;
+     white-space: pre-wrap;
 }
 
 .artworks_arrow {
