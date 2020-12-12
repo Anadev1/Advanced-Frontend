@@ -77,3 +77,21 @@
      height: auto;
      align-self: flex-end;
 }
+
+.exhibition-image-map {
+     padding: 20px;
+}
+
+.exhibition_img_map{
+     width: 230px;
+}
+
+.map_exhibition_img {
+     display: flex;
+     justify-self: center;
+}
+
+.map_name{
+     position: absolute;
+     width: 220px;
+}

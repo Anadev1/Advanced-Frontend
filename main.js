@@ -69,18 +69,20 @@ window.selectExhibition = (name, image, floor, description) => {
      let floorInput = document.querySelector('.floornumber');
      let floorInputMap = document.querySelector('.floornumbermap');
      let imageInput = document.querySelector('#details-banner');
+     let imageInputMap = document.querySelector('.exhibition-image-map');
      let descriptionInput = document.querySelector(".description_text");
      nameInput.textContent = name;
      nameInputMap.textContent = name;
      floorInput.textContent = "Floor " + floor;
      floorInputMap.textContent = "Floor " + floor;
      imageInput.style.backgroundImage = "url(" + image + ")";
+     imageInputMap.style.backgroundImage = "url(" + image + ")";
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
 
      document.querySelector(".map_exhibition_details").style.display = "flex";
      document.querySelector(".map_exhibition_details_filtered").style.display = "none";
-
+     
 };
 
 window.selectArtwork = (id, artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
