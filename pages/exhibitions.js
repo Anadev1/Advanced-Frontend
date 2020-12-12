@@ -3,8 +3,7 @@ import {
      firebaseDB
 } from "../js/firebase_config.js";
 
-
-// let _selectedUserId = "";
+let exhibitionsData = [];
 
 export default class Exhibitions {
      constructor() {
@@ -15,13 +14,14 @@ export default class Exhibitions {
 
      read() {
           this.exhibitionRef.onSnapshot(snapshotData => {
-               let exhibitions = [];
+               
                snapshotData.forEach(doc => {
                     let exhibition = doc.data();
                     exhibition.id = doc.id;
-                    exhibitions.push(exhibition);
+                    exhibitionsData.push(exhibition);
                });
-               this.appendExhibitions(exhibitions);
+               this.appendExhibitions(exhibitionsData);
+
           });
 
      }
@@ -29,7 +29,13 @@ export default class Exhibitions {
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibitions" class="page">
-                    <img src="./media/search_icon.svg" id="search-icon" alt="search icon">
+                    <div id="search-container">
+                    <!-- <img src="./media/search_icon.svg" id="search-icon" alt="search icon"> -->
+                    <input type="search" placeholder="Search" onkeyup="search(this.value)">
+               </div>
+               <div id="exhibitions-container">
+
+                </div>    
                </section>
           `;
      }
@@ -53,10 +59,17 @@ export default class Exhibitions {
           </article>
           `;
           }
-          document.querySelector("#exhibitions").innerHTML = template;
+           document.querySelector("#exhibitions-container").innerHTML = template;
+     }  
+
+     search(value) {
+
+          let searchValue = value.toLowerCase();
+          let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
+          this.appendExhibitions(filteredExhibitions);
+          console.log(searchValue);
+          console.log(exhibitionsData);
      }
-
-
 }
 
 

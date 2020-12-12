@@ -16,7 +16,7 @@ import welcomePage from "./pages/welcome.js";
 //Declare and init
 let map = new Map();
 let profile = new Profile();
-let exhibitions = new Exhibitions();
+let exhibitionsPage = new Exhibitions();
 let homePage = new HomePage();
 let nav = new NavBar();
 let exhibitionDetailPage = new ExhibitionDetailPage();
@@ -52,7 +52,8 @@ window.updateAmount3 = (that) => ticketsPage.updateAmount3(that);
 window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
 window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
 window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
-// window.selectUser = (id, name, date, image) => exhibitions.selectUser(id, name, date, image);
+window.search = (value) => exhibitionsPage.search(value);
+
 window.selectExhibition = (name, image, floor, description) => {
      console.log(name, image, floor, description);
      // references to the input fields
@@ -66,7 +67,6 @@ window.selectExhibition = (name, image, floor, description) => {
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
 };
-window.search = (value) => exhibitions.search(value);
 
 window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
      console.log(artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription);
@@ -86,3 +86,4 @@ window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, art
      artworkDescriptionInput.textContent = artworkDescription;
      spaService.navigateTo("art-details");
 };
+
