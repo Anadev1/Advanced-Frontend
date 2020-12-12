@@ -17,7 +17,9 @@ export default class ExhibitionDetailsPage {
                 let exhibition = doc.data();
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
+                
             });
+
         });
 
         this.artworkRef.onSnapshot(snapshotData => {
