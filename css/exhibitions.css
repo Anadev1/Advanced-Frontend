@@ -89,14 +89,15 @@
      visibility: hidden;
      width: 0;
      height: 3.5vh;
-     padding-left: 10px;
+     padding: 0 10px;
      color: var(--white);
      font-family: Lato;
-     font-weight: 700;
+     font-weight: 300;
      background-color: rgba(0, 0, 0, 0.3);
      border: 2px solid var(--white);
      border-radius: 10px;
      transition: all .2s linear;
+     outline: none;
 }
 
 .search-bar.active {
