@@ -4,7 +4,7 @@ import {
 
 export default class HomePage {
     constructor() {
-        this.exhibitsImgRef = firebaseDB.collection("exhibitions");
+        this.exhibitsImgRef = firebaseDB.collection("exhibitions").limit(4);
         this.template();
         this.read();
     }
@@ -32,7 +32,7 @@ export default class HomePage {
                 <div class="current-exhibitions">
                     <h3 class="home_title">CURRENT EXHIBITIONS</h3>
                     <div class="current-exhibitions-stuff"></div>
-                    <a href="#exhibitions" class="more">See more...</a>
+                    <a href="#exhibitions" class="more">See more</a>
                 </div>
             </section>
         `;
@@ -42,7 +42,11 @@ export default class HomePage {
         let htmlTemplate = "";
         for (let exhibitImg of exhibitsImgs) {
             htmlTemplate += `
-                <img src="${exhibitImg.image}">
+                <div class="exhibits" onclick="selectExhibition('${exhibitImg.name}', '${exhibitImg.image}', '${exhibitImg.floor}', '${exhibitImg.description}' )">
+                    <img src="${exhibitImg.image}" alt="${exhibitImg.name}">
+                    <h3>${exhibitImg.name}</h3>
+                </div>
+                
           `;
         }
         document.querySelector('.current-exhibitions-stuff').innerHTML = htmlTemplate;

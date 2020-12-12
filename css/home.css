@@ -42,14 +42,25 @@
      scroll-snap-type: x mandatory;
 }
 
-.current-exhibitions-stuff img {
-     height: 150px;
-     width: auto;
-     margin-left: 20px;
+.exhibits{
      scroll-snap-align: center;
+     position: relative;
+     margin-left: 20px;
 }
 
-.current-exhibitions-stuff img:first-child {
+.exhibits img {
+     height: 150px;
+     width: auto;    
+}
+
+.exhibits h3{
+     position: absolute;
+     bottom: 10px;
+     left: 10px;
+     font-weight: 500;
+}
+
+.current-exhibitions-stuff .exhibits:first-child {
      margin-left: 0px;
 }
 
