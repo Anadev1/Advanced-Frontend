@@ -2,15 +2,15 @@ import {
     firebaseDB
 } from "../js/firebase_config.js";
 
-export default class HomePage{
-    constructor(){
+export default class HomePage {
+    constructor() {
         this.exhibitsImgRef = firebaseDB.collection("exhibitions");
         this.template();
         this.read();
     }
 
-    read(){
-        this.exhibitsImgRef.onSnapshot (snapshotData => {
+    read() {
+        this.exhibitsImgRef.onSnapshot(snapshotData => {
             let exhibitsImgs = [];
             snapshotData.forEach(doc => {
                 let exhibitImg = doc.data();
@@ -21,7 +21,7 @@ export default class HomePage{
         });
     }
 
-    template(){
+    template() {
         document.querySelector("#app").innerHTML += /*html*/`
             <section id="home" class="page home-page">
                 <div class="home-content">
@@ -34,14 +34,14 @@ export default class HomePage{
                 </div>
                 </div>
                 <div class="current-exhibitions">
-                    <h3>Current exhibition</h3>
+                    <h3 class="home_title">CURRENT EXHIBITIONS</h3>
                     <div class="current-exhibitions-stuff"></div>
-                    <a href="#exhibitions" class="more">See more</a>
+                    <a href="#exhibitions" class="more">See more...</a>
                 </div>
             </section>
         `;
     }
-    
+
     appendExhibitsImgs(exhibitsImgs) {
         let htmlTemplate = "";
         for (let exhibitImg of exhibitsImgs) {
@@ -51,8 +51,8 @@ export default class HomePage{
         }
         document.querySelector('.current-exhibitions-stuff').innerHTML = htmlTemplate;
     }
-    
-    openCloseNav(){
+
+    openCloseNav() {
         console.log("Clicked nav");
         let navContainer = document.querySelector(".nav-container");
         navContainer.style.display = "block";
