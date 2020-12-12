@@ -33,11 +33,11 @@ export default class ExhibitionDetailsPage {
 
     }
 
-    appendArtworks(artworks, exhibitions) {
+    appendArtworks(artworks) {
         let template = "";
         for (let artwork of artworks) {
             template += /*html*/ `
-                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
+                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.id}', '${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
                     <div id="artwork-content">
                     <div id="overlay">
                     <div id="artwork-text">

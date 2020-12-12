@@ -17,7 +17,7 @@ export default class Profile {
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
             });
-            this.appendExhibitions(exhibitions);
+            // this.appendExhibitions(exhibitions);
         });
 
     }
@@ -72,17 +72,17 @@ export default class Profile {
 
     }
 
-    appendExhibitions(exhibitions) {
-        let template = "";
-        for (let exhibition of exhibitions) {
-            template += /*html*/ `
-             <article class="exhibition-favourite">
-                       <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
-             </article>
-             `;
-        }
-        document.querySelector(".favourite_artworks").innerHTML = template;
-    }
+    // appendExhibitions(exhibitions) {
+    //     let template = "";
+    //     for (let exhibition of exhibitions) {
+    //         template += /*html*/ `
+    //          <article class="exhibition-favourite">
+    //                    <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
+    //          </article>
+    //          `;
+    //     }
+    //     document.querySelector(".favourite_artworks").innerHTML = template;
+    // }
 
     zoomTicket() {
         document.querySelector(".profile_page").style.padding = "0";

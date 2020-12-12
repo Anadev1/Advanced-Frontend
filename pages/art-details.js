@@ -6,10 +6,22 @@ export default class ArtDetails {
     constructor() {
         this.template();
         this.artworkRef = firebaseDB.collection("artworks");
-        this.read();
+        // this.read();
     }
 
-    read() {
+    // read() {
+    //     this.artworkRef.onSnapshot(snapshotData => {
+    //         let artworks = [];
+    //         snapshotData.forEach(doc => {
+    //             let artwork = doc.data();
+    //             artwork.id = doc.id;
+    //             artworks.push(artwork);
+    //         });
+    //         this.appendOtherArtworks(artworks)
+    //     });
+
+    init() {
+        // init all movies
         this.artworkRef.onSnapshot(snapshotData => {
             let artworks = [];
             snapshotData.forEach(doc => {
@@ -17,8 +29,10 @@ export default class ArtDetails {
                 artwork.id = doc.id;
                 artworks.push(artwork);
             });
-            this.appendOtherArtworks(artworks)
+            this.appendOtherArtworks(artworks);
+
         });
+        this.appendFavArtworks();
     }
 
     template() {
@@ -29,7 +43,7 @@ export default class ArtDetails {
                       <div id="artwork-overlay"></div>
                       <img src="./media/back-arrow.svg" id="back-arrow" alt="back arrow" onclick="navigateTo('exhibition-details')">
                       <h3 class="artwork-title"></h3>
-                      <!-- favorite button -->
+                      <div class="fav-button-container"></div>
                   </div>
                   <div id="artwork-description-top">
                       <div id="image-wrapper">
@@ -68,14 +82,74 @@ export default class ArtDetails {
         document.querySelector("#other-artworks-list").innerHTML = template;
     }
 
-    // function generateFavArtworkButton(artworkId) {
-    //     let btnTemplate = `
-    //         <img src="./media/empty_heart.svg" id="heart" alt="heart" onclick="addToFavourites('${movieId}')">`;
-    //     if (_currentUser.favorites && _currentUser.favorites.includes(artworkId)) {
-    //         btnTemplate = `
-    //         <img src="./media/full_heart.svg" id="heart" alt="heart" onclick="addToFavourites('${movieId}')">`;
-    //     }
-    //     return btnTemplate;
-    //     }
+    generateFavArtworkButton(artworkId) {
+        let btnTemplate = `
+          <button onclick="addToFavourites('${artworkId}')">Add to favourites</button>`;
+        if (this.userHasFav(artworkId)) {
+            btnTemplate = `
+            <button onclick="removeFromFavourites('${artworkId}')" class="rm">Remove from favourites</button>`;
+        }
+        return btnTemplate;
+    }
+
+    userHasFav(favArtworkId) {
+        if (authService.authUser.favorites && authService.authUser.favorites.includes(favArtworkId)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // adds a given artworkId to the favorites array inside _currentUser
+    addToFavourites(artworkId) {
+        // loaderService.show(true);
+        authService.authUserRef.set({
+            favorites: firebase.firestore.FieldValue.arrayUnion(artworkId)
+        }, {
+            merge: true
+        });
+    }
+
+    // removes a given artworkId to the favorites array inside _currentUser
+    removeFromFavourites(artworkId) {
+        // loaderService.show(true);
+        authService.authUserRef.update({
+            favorites: firebase.firestore.FieldValue.arrayRemove(artworkId)
+        });
+    }
+
+    async getFavArtworks() {
+        let favorites = [];
+        if (authService.authUser.favorites) {
+            for (let artworkId of authService.authUser.favorites) {
+                await this.artworkRef.doc(artworkId).get().then(function (doc) {
+                    let artwork = doc.data();
+                    artwork.id = doc.id;;
+                    favorites.push(artwork);
+                });
+            }
+        }
+        return favorites;
+    }
+
+    async appendFavArtworks() {
+        let artworks = await ArtDetails.getFavArtworks();
+        let template = "";
+        for (let artwork of artworks) {
+            template += /* html */ `
+            <article>
+              <h2>${artwork.title}</h2>
+              <img src="${artwork.image}">
+              <button onclick="removeFromFavourites('${artwork.id}')" class="rm">Remove from favourites</button>
+            </article>
+          `;
+        }
+        if (artworks.length === 0) {
+            template = `
+                <p>No artworks added</p>
+            `;
+        }
+        document.querySelector('#favourite_artworks').innerHTML = template;
+    }
 
 }

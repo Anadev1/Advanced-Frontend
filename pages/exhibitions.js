@@ -68,8 +68,6 @@ export default class Exhibitions {
           let searchValue = value.toLowerCase();
           let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
           this.appendExhibitions(filteredExhibitions);
-          console.log(searchValue);
-          console.log(exhibitionsData);
      }
 
      openSearch() {
