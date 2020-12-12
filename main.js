@@ -72,8 +72,8 @@ window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, art
      console.log(artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription);
      // references to the input fields
      let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
-     let artworkImageInput = document.querySelector('#artist-image');
-     let artistImgInput = document.querySelector('#artist-image');
+     let artworkImageInput = document.querySelector('.artwork-image-container');
+     let artistImgInput = document.querySelector('#artist-image-container');
      let artworkFactsInput = document.querySelector('.facts');
      let artworkNameInput = document.querySelector('.artist-name');
      let artworkDescriptionInput = document.querySelector(".description-text");
