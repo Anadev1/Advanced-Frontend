@@ -28,10 +28,6 @@ export default class HomePage{
                     <header class="applogo">
                         <img src="../media/aros-logo.svg" class="logo-main">
                     </header>
-                <div class="nav-btn" onclick="openCloseNav()">
-                    <div></div>
-                    <div></div>
-                </div>
                 </div>
                 <div class="current-exhibitions">
                     <h3>Current exhibition</h3>

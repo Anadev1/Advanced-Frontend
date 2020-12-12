@@ -6,11 +6,6 @@ export default class TicketsPage {
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="tickets" class="page tickets-page">
-                <div class="nav-btn">
-                    <div></div>
-                    <div></div>
-                </div>
-
                 <div>
                     <h2 class="tickets_title">TICKETS</h2>
 
