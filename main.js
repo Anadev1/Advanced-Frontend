@@ -58,14 +58,22 @@ window.selectExhibition = (name, image, floor, description) => {
      console.log(name, image, floor, description);
      // references to the input fields
      let nameInput = document.querySelector('.exhibition_title');
+     let nameInputMap = document.querySelector('.exhibition_title_map');
      let floorInput = document.querySelector('.floornumber');
+     let floorInputMap = document.querySelector('.floornumbermap');
      let imageInput = document.querySelector('#details-banner');
      let descriptionInput = document.querySelector(".description_text");
      nameInput.textContent = name;
+     nameInputMap.textContent = name;
      floorInput.textContent = "Floor " + floor;
+     floorInputMap.textContent = "Floor " + floor;
      imageInput.style.backgroundImage = "url(" + image + ")";
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
+
+     document.querySelector(".map_exhibition_details").style.display = "flex";
+     document.querySelector(".map_exhibition_details_filtered").style.display = "none";
+
 };
 
 window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {

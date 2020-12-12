@@ -10,7 +10,7 @@
 .map_container {
      height: 100%;
      display: flex;
-     justify-content: flex-end;
+     justify-content: space-between;
 }
 
 .map_floors {
@@ -58,4 +58,22 @@
 .floors_container{
      flex-direction: column;
      display: none;
+}
+
+.map_exhibition_details {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     margin: 30px 30px 30px 0;
+     height: auto;
+     align-self: flex-end;
+}
+
+.map_exhibition_details_filtered {
+     display: none;
+     flex-direction: column;
+     justify-content: space-around;
+     margin: 30px 30px 30px 0;
+     height: auto;
+     align-self: flex-end;
 }

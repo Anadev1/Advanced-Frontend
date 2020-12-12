@@ -17,7 +17,9 @@ export default class ExhibitionDetailsPage {
                 let exhibition = doc.data();
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
+                
             });
+
         });
 
         this.artworkRef.onSnapshot(snapshotData => {
@@ -37,7 +39,7 @@ export default class ExhibitionDetailsPage {
         let template = "";
         for (let artwork of artworks) {
             template += /*html*/ `
-                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
+                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}')">
                     <div id="artwork-content">
                     <div id="overlay">
                     <div id="artwork-text">
