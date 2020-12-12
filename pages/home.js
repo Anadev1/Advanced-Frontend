@@ -1,6 +1,7 @@
 import {
     firebaseDB
 } from "../js/firebase_config.js";
+import Loader from "../js/loader.js";
 
 export default class HomePage {
     constructor() {

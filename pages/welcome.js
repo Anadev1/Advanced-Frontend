@@ -1,7 +1,7 @@
 import {
     firebaseDB
 } from "../js/firebase_config.js";
-
+import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
 
 class WelcomePage {
@@ -26,6 +26,7 @@ class WelcomePage {
 
     userAuthenticated(user) {
         this.initAuthUserRef();
+        Loader.show(false);
         document.getElementById("user-name").innerHTML =
         `<h2>${user.displayName}</h2>`;
     }
@@ -48,6 +49,7 @@ class WelcomePage {
             signInSuccessUrl: '#home'
         };
         this.ui.start('#firebaseui-auth-container', uiConfig);
+        Loader.show(false);
     }
 
     initAuthUserRef() {
@@ -64,6 +66,7 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                Loader.show(false);
                 //this.appendAuthUser();
             }
         });

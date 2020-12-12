@@ -1,4 +1,5 @@
 //Declare and init
+import Loader from "../js/loader.js";
 import ExhibitionDetailPage from "../pages/exhibition-details.js";
 import ArtDetails from "../pages/art-details.js";
 import NavBar from "../components/nav.js";
