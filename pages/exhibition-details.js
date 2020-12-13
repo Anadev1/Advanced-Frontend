@@ -19,7 +19,7 @@ export default class ExhibitionDetailsPage {
                 let exhibition = doc.data();
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
-                
+
             });
 
         });
@@ -48,7 +48,6 @@ export default class ExhibitionDetailsPage {
                                     <h1 class="artwork_title">${artwork.title}</h1>
                                     <p class="artwork_name">${artwork.name}</p>
                                 </div>
-                                ${artDetailsService.generateFavArtworkButton(artwork.id)}
                                 <img src="./media/arrow.svg" alt="arrow" class="artworks_arrow">
                             </div>
                         <img class="artwork_img" src='${artwork.image}'>

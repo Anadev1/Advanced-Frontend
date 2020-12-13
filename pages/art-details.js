@@ -21,10 +21,10 @@ export default class ArtDetails {
             });
             this.appendOtherArtworks(artworks)
         });
-    
+
     }
-        template() {
-            document.querySelector('#app').innerHTML += /*html*/ `
+    template() {
+        document.querySelector('#app').innerHTML += /*html*/ `
                <section id="art-details" class="page">
                   <div id="artwork-banner">
                       <div class="artwork-image-container"></div>
@@ -39,6 +39,7 @@ export default class ArtDetails {
                         </div>
                         </div>
                         <div id="artwork-facts-container">
+                            <p class="facts_title">Year: Type: Size:<p>
                             <p class="facts"></p>
                         </div>
                         </div>
@@ -58,24 +59,24 @@ export default class ArtDetails {
                 </div>
                </section>
           `;
-        }
+    }
 
-        appendOtherArtworks(artworks) {
-            let template = "";
-            for (let artwork of artworks) {
-                template += /*html*/ `
+    appendOtherArtworks(artworks) {
+        let template = "";
+        for (let artwork of artworks) {
+            template += /*html*/ `
                 <img class="other-artwork-image" src='${artwork.image}'>
             `;
-            }
-            document.querySelector("#other-artworks-list").innerHTML = template;
         }
-    
-        addToFavourites(artworkId) {
-            artDetailsService.addToFavourites(artworkId);
-        }
-
-        removeFromFavourites(artworkId) {
-            artDetailsService.removeFromFavourites(artworkId);
-        }
-
+        document.querySelector("#other-artworks-list").innerHTML = template;
     }
+
+    addToFavourites(artworkId) {
+        artDetailsService.addToFavourites(artworkId);
+    }
+
+    removeFromFavourites(artworkId) {
+        artDetailsService.removeFromFavourites(artworkId);
+    }
+
+}
