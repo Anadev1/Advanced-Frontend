@@ -23,6 +23,7 @@ export default class Profile {
 
     }
 
+    // profile page template
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
             
@@ -88,6 +89,7 @@ export default class Profile {
     //     document.querySelector(".favourite_artworks").innerHTML = template;
     // }
 
+    // animation enlarging the ticket
     zoomTicket() {
         document.querySelector(".profile_page").style.padding = "0";
         document.querySelector(".profile_page").style.overflow = "hidden";
@@ -95,6 +97,7 @@ export default class Profile {
         document.querySelector(".detailed_ticket").style.display = "flex";
     }
 
+    //animation minimizing the ticket
     closeTicket() {
         document.querySelector(".profile_page").style.padding = "30px";
         document.querySelector(".profile_page").style.overflow = "unset";

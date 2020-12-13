@@ -3,6 +3,7 @@ export default class TicketsPage {
         this.template();
     }
 
+    //tickets page template
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="tickets" class="page tickets-page">
