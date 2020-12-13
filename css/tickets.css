@@ -72,6 +72,11 @@ button {
     margin: 5vh 0;
     font-size: 24px;
     color: var(--yellow);
+    font-weight: 500;
+}
+
+.price_text {
+    font-weight: 500;
 }
 
 .checkout_btn {

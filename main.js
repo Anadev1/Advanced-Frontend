@@ -81,7 +81,7 @@ window.selectExhibition = (name, image, floor, description) => {
 
      document.querySelector(".map_exhibition_details").style.display = "flex";
      document.querySelector(".map_exhibition_details_filtered").style.display = "none";
-     
+
 };
 
 window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
@@ -100,4 +100,3 @@ window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, art
      artworkDescriptionInput.textContent = artworkDescription;
      spaService.navigateTo("art-details");
 };
-

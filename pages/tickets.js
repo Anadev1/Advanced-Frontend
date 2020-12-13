@@ -103,7 +103,7 @@ export default class TicketsPage {
                     </div>
 
                     <div id="price-total">
-                    <h3 class="price_text">Total price:<h3>
+                    <h3 class="price_text">Total price: 0 DKK<h3>
                     <button class="checkout_btn" onclick="navigateTo('')">PROCEED TO CHECKOUT<img src="./media/arrow-big.svg" alt="arrow" class="checkout_arrow"><button>
                 <div>
 

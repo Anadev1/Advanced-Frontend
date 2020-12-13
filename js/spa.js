@@ -21,31 +21,44 @@ class SpaService {
     this.hideAllPages();
     if (pageId == "home") {
       document.querySelector(`#${pageId}`).style.display = "flex";
+      this.hideNavIcon(false);
     } else if (pageId == "login") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-      //this.hideNavIcon();
+      this.hideNavIcon(true);
     } else if (pageId == "start") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-      //this.hideNavIcon();
+      this.hideNavIcon(true);
     } else if (pageId == "signup") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-      //this.hideNavIcon();
+      this.hideNavIcon(true);
     } else if (pageId == "your-card") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-      //this.hideNavIcon();
+      this.hideNavIcon(true);
     } else if (pageId == "your-card-presentation") {
       document.querySelector(`#${pageId}`).style.display = "flex";
-      //this.hideNavIcon();
+      this.hideNavIcon(true);
+    } else if (pageId == "onboarding") {
+      this.hideNavIcon(true);
+    } else if (pageId == "onboarding2") {
+      this.hideNavIcon(true);
+    } else if (pageId == "onboarding3") {
+      this.hideNavIcon(true);
     } else {
       document.querySelector(`#${pageId}`).style.display = "block";
-      //this.hideNavIcon(false);
+      this.hideNavIcon(false);
     }
 
   }
 
-  //hideNavIcon(){
-    //document.querySelector(".nav-btn").style.display = "none";
-  //}
+  hideNavIcon(hide){
+    if(hide){
+      console.log("hiden nav");
+      document.querySelector(".nav-btn").style.display = "none";
+    } else {
+      document.querySelector(".nav-btn").style.display = "block";
+
+    }
+  }
 
   // navigate to a new view/page by changing href
   navigateTo(pageId) {

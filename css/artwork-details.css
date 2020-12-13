@@ -103,6 +103,7 @@
      height: 24vh;
      background-size: auto 100%;
      background-repeat: no-repeat;
+     background-position: center;
 }
 
 #image-wrapper {
@@ -114,8 +115,7 @@
      width: 50vw;
      padding-top: 30px;
      padding-left: 15px;
-     display: grid;
-     grid-template-rows: 5vw 10vw;
+     display: flex;
 
 }
 
@@ -145,10 +145,14 @@
 }
 
 .facts {
-     width: 35vw;
-     margin: 0 5vw;
-     white-space: pre-wrap;
+     width: 25vw;
      font-weight: 500;
+}
+
+.facts_title {
+     width: 15vw;
+     font-weight: 600;
+     margin-left: 5vw;
 }
 
 .artworks_arrow {
