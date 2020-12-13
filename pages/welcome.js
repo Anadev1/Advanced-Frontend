@@ -26,8 +26,12 @@ class WelcomePage {
 
     userAuthenticated(user) {
         this.initAuthUserRef();
+
+        //display username in profile
         document.getElementById("user-name").innerHTML =
         `<h2>${user.displayName}</h2>`;
+        document.getElementById("user-name").innerHTML =
+        `<h2>${user.ticket}</h2>`;
     }
 
     userNotAuthenticated() {
@@ -45,7 +49,7 @@ class WelcomePage {
             signInOptions: [
                 firebase.auth.EmailAuthProvider.PROVIDER_ID
             ],
-            signInSuccessUrl: '#home'
+            signInSuccessUrl: '#your-card'
         };
         this.ui.start('#firebaseui-auth-container', uiConfig);
     }
@@ -64,9 +68,13 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
-                //this.appendAuthUser();
+                this.appendAuthUser();
             }
         });
+    }
+
+    appendAuthUser() {
+        document.querySelector('#ticket').value = this.authUser.ticket || "";
     }
 
     logout() {
@@ -125,7 +133,7 @@ class WelcomePage {
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
 
-                        <input type="number" name="card-number" placeholder="Ticket number">
+                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number">
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>
