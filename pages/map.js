@@ -25,6 +25,7 @@ export default class Map {
 
     }
 
+    // map page template
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
             
@@ -174,6 +175,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
 
+    // appending the exhibitions
     appendExhibitions(exhibitions) {
         let template = "";
         for (let exhibition of exhibitions) {

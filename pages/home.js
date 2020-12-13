@@ -22,6 +22,7 @@ export default class HomePage {
         });
     }
 
+    // home page template
     template() {
         document.querySelector("#app").innerHTML += /*html*/`
             <section id="home" class="page home-page">
@@ -39,6 +40,7 @@ export default class HomePage {
         `;
     }
 
+    // appending the current exhibitions
     appendExhibitsImgs(exhibitsImgs) {
         let htmlTemplate = "";
         for (let exhibitImg of exhibitsImgs) {
@@ -53,6 +55,7 @@ export default class HomePage {
         document.querySelector('.current-exhibitions-stuff').innerHTML = htmlTemplate;
     }
 
+    // opening and closing of the navigation
     openCloseNav() {
         console.log("Clicked nav");
         let navContainer = document.querySelector(".nav-container");

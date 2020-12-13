@@ -33,10 +33,9 @@ export default class ExhibitionDetailsPage {
             });
             this.appendArtworks(artworks);
         });
-
-
     }
 
+    // appending the artworks
     appendArtworks(artworks) {
         let template = "";
         for (let artwork of artworks) {
@@ -59,7 +58,7 @@ export default class ExhibitionDetailsPage {
         document.querySelector("#artwork-list").innerHTML = template;
     }
 
-
+    // exhibition details page template
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibition-details" class="page exhibition-details">

@@ -3,7 +3,7 @@ export default class OnboardingPage2 {
         this.template();
     }
 
-
+    // second onboarding page template
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `
         <section id="onboarding2" class="page onboarding-page">
