@@ -3,6 +3,9 @@ import {
 } from "../js/firebase_config.js";
 import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
+import artDetailsService from "../js/art-details-service.js";
+
+let _currentUser;
 
 class WelcomePage {
     constructor() {
@@ -56,7 +59,7 @@ class WelcomePage {
         let authUser = firebase.auth().currentUser;
         this.authUserRef = firebaseDB.collection("users").doc(authUser.uid);
 
-        // init user data and favourite movies
+        // init user data and favourite artworks
         this.authUserRef.onSnapshot({
             includeMetadataChanges: true
         }, userData => {
@@ -66,6 +69,7 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                artDetailsService.init();
                 Loader.show(false);
                 //this.appendAuthUser();
             }
@@ -74,6 +78,15 @@ class WelcomePage {
 
     logout() {
         firebase.auth().signOut();
+    }
+
+    updateUser() {
+        // update database user
+        _userRef.doc(_currentUser.uid).set({
+            name: document.querySelector('#user-name').value
+        }, {
+            merge: true
+        });
     }
      
     template() {
