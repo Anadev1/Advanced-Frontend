@@ -86,7 +86,7 @@ export default class Map {
     }
 
     openMapFloor() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background2.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background2.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("0"));
@@ -98,7 +98,7 @@ export default class Map {
     };
 
     openMapFloor0() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("3"));
@@ -110,7 +110,7 @@ export default class Map {
     };
 
     openMapFloor1() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background2.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background2.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("4"));
@@ -121,7 +121,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
     openMapFloor2() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background.png')",
             document.querySelector(".floors_container").style.display = "none"
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("5"));
@@ -132,7 +132,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
     openMapFloor3() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background2.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background2.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("6"));
@@ -143,7 +143,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
     openMapFloor4() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("7"));
@@ -154,7 +154,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
     openMapFloor5() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background2.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background2.png')",
             document.querySelector(".floors_container").style.display = "none";
 
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("2"));
@@ -165,7 +165,7 @@ export default class Map {
         document.querySelector(".map_exhibition_details").style.display = "none";
     };
     openMapFloor6() {
-        document.querySelector(".map_page").style.backgroundImage = "url('../media/map_background.png')",
+        document.querySelector(".map_page").style.backgroundImage = "url('./media/map_background.png')",
             document.querySelector(".floors_container").style.display = "none";
         let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.floor.includes("1"));
         this.appendExhibitions(filteredExhibitions);
