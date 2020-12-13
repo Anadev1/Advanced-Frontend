@@ -1,4 +1,3 @@
-
 import {
      firebaseDB
 } from "../js/firebase_config.js";
@@ -25,7 +24,7 @@ export default class Exhibitions {
           });
 
      }
-
+     // exhibitions page template
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
                <section id="exhibitions" class="page">
@@ -41,6 +40,7 @@ export default class Exhibitions {
           `;
      }
 
+     // appending the exhibitions in the template
      appendExhibitions(exhibitions) {
           let template = "";
           for (let exhibition of exhibitions) {
@@ -62,9 +62,8 @@ export default class Exhibitions {
           }
            document.querySelector("#exhibitions-container").innerHTML = template;
      }  
-
+     // search functionality
      search(value) {
-
           let searchValue = value.toLowerCase();
           let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
           this.appendExhibitions(filteredExhibitions);
@@ -73,7 +72,16 @@ export default class Exhibitions {
                this.noResults();
           }
      }
+     // the message that appears if there are no results for the search
+      noResults() {
 
+          let template = `
+               <p class="no-results-info">Sorry but we couldn't find this for you!</p>
+          `;
+          document.querySelector("#exhibitions-container").innerHTML = template;
+     }
+
+     // animation for opening the search bar
      openSearch() {
           let searchIcon = document.querySelector("#search-icon");
           let searchBar = document.querySelector(".search-bar");
@@ -83,6 +91,7 @@ export default class Exhibitions {
           searchBar.classList.add("active");
      }
 
+     // animation for closing the search bar
      closeSearch() {
           let searchIcon = document.querySelector("#search-icon");
           let searchBar = document.querySelector(".search-bar");
@@ -92,15 +101,6 @@ export default class Exhibitions {
           searchBar.classList.remove("active");
      }
 
-     noResults() {
-
-          let template = `
-               <p class="no-results-info">Sorry but we couldn't find this for you!</p>
-          `;
-          
-          document.querySelector("#exhibitions-container").innerHTML = template;
-      
-     }
 }
 
 

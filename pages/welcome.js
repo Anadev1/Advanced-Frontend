@@ -79,10 +79,6 @@ class WelcomePage {
         });
     }
 
-    appendAuthUser() {
-        document.querySelector('#ticket').value = this.authUser.ticket || "";
-    }
-
     logout() {
         firebase.auth().signOut();
     }

@@ -4,6 +4,7 @@ export default class NavBar{
         console.log("works");
     }
 
+    // navigation template
     template(){
         document.querySelector("#app").innerHTML += /*html*/`
         <div class="nav-container">

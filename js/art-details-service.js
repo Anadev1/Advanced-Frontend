@@ -23,7 +23,7 @@ class ArtDetailsService {
         this.appendFavArtworks();
      }
      
-
+    // creating the button for adding to favorites
     generateFavArtworkButton(artworkId) {
         let btnTemplate = `
           <button onclick="addToFavourites('${artworkId}')">Add to favourites</button>`;
@@ -34,6 +34,7 @@ class ArtDetailsService {
         return btnTemplate;
     }
 
+    //checking if the user has any favorite artworks
     userHasFav(favArtworkId) {
         if (welcomePage.authUser.favorites && welcomePage.authUser.favorites.includes(favArtworkId)) {
             return true;
@@ -60,6 +61,7 @@ class ArtDetailsService {
         });
     }
 
+    // getting the favorite artworks
     async getFavArtworks() {
         let favorites = [];
         if (welcomePage.authUser.favorites) {
@@ -74,6 +76,7 @@ class ArtDetailsService {
         return favorites;
     }
 
+    // appending the favorite artworks
     async appendFavArtworks() {
         let artworks = await this.getFavArtworks();
         let template = "";
@@ -91,7 +94,7 @@ class ArtDetailsService {
                 <p>No artworks added</p>
             `;
         }
-        document.querySelector('#favourite_artworks').innerHTML = template;
+        document.querySelector('.favourite_artworks').innerHTML = template;
     }
 
 }
