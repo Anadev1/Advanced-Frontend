@@ -44,7 +44,10 @@ export default class Profile {
             </div>
 
             <div class="coffee_stamps">
+                <div class="title_container">
                 <h3 id="titles">Coffee stamps collection</h3>
+                <img src="/media/question.svg" alt="question mark" class="info_btn">
+                </div>
                 <div class="collection">
                     <img class="coffee" src="./media/coffee.png"> 
                     <img class="coffee" src="./media/coffee.png"> 

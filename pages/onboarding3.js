@@ -8,7 +8,7 @@ export default class OnboardingPage3 {
         <section id="onboarding3" class="page onboarding-page">
             <img src="./media/onboarding-3.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
-                <h3 class="onboarding_title">Purchase your ticket</h3>
+                <h3 class="onboarding_title">PURCHASE YOUR TICKET</h3>
                 <p class="onboarding_text">Do you want to skip the line? Purchasing your tickets or 
                     annual passes through our app allows you to skip the line at the ticket office 
                     and you can start exploring our exhibitions in an instant.</p>
