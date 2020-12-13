@@ -1,13 +1,16 @@
+/* ONBOARDING PAGE ONE */
 #onboarding {
      padding: 0;
      overflow: hidden;
 }
 
+/* ONBOARDING PAGE TWO */
 #onboarding2 {
      padding: 0;
      overflow: hidden;
 }
 
+/* ONBOARDING PAGE THREE */
 #onboarding3 {
      padding: 0;
      overflow: hidden;
@@ -15,10 +18,15 @@
 
 .onboarding_img {
      padding: 0;
+     height: 100vh;
+     width: 100%;
 }
 
 #onboarding-content {
      padding: 30px;
+     display: flex; 
+     flex-direction: column;
+     margin: auto;
      position: absolute;
      background: rgba(0, 0, 0, 0.5);
      height: 45%;
@@ -36,14 +44,15 @@
 .onboarding_text {
      font-size: 16px;
      margin-bottom: 4vh;
-     height: 12vh;
+     height: 16vh;
 }
+
+/* Navigational features */
 
 #onboarding-nav {
      width: 100%;
      display: flex;
      justify-content: space-around;
-     margin: auto;
 }
 
 .skip_btn {

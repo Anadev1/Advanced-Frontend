@@ -58,8 +58,7 @@ window.search = (value) => exhibitionsPage.search(value);
 window.openSearch = () => exhibitionsPage.openSearch();
 window.closeSearch = () => exhibitionsPage.closeSearch();
 window.addToFavourites = (artworkId) => artDetails.addToFavourites(artworkId);
-window.removeFromFavourites = (artworkId) => artDetailsPage.removeFromFavourites(artworkId);
-// window.generateFavMovieButton = (id) => artDetails.generateFavMovieButton(id);
+window.removeFromFavourites = (artworkId) => artDetails.removeFromFavourites(artworkId);
 
 
 window.selectExhibition = (name, image, floor, description) => {
@@ -82,10 +81,10 @@ window.selectExhibition = (name, image, floor, description) => {
 
      document.querySelector(".map_exhibition_details").style.display = "flex";
      document.querySelector(".map_exhibition_details_filtered").style.display = "none";
-     
+
 };
 
-window.selectArtwork = (id, artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
+window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
      // references to the input fields
      let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
      let artworkImageInput = document.querySelector('.artwork-image-container');
@@ -93,8 +92,6 @@ window.selectArtwork = (id, artworkTitle, artworkImage, artistImg, artworkFacts,
      let artworkFactsInput = document.querySelector('.facts');
      let artworkNameInput = document.querySelector('.artist-name');
      let artworkDescriptionInput = document.querySelector(".description-text");
-     let artworkFavButtonContainer = document.querySelector(".fav-button-container");
-     // artworkFavButtonContainer = generateFavMovieButton(id); 
      artworkTitleInput.textContent = artworkTitle;
      artworkImageInput.style.backgroundImage = "url(" + artworkImage + ")";
      artistImgInput.style.backgroundImage = "url(" + artistImg + ")";
@@ -103,4 +100,3 @@ window.selectArtwork = (id, artworkTitle, artworkImage, artistImg, artworkFacts,
      artworkDescriptionInput.textContent = artworkDescription;
      spaService.navigateTo("art-details");
 };
-

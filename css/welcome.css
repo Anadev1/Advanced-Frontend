@@ -29,7 +29,7 @@
 }
 
 .welcome h1{
-     font-weight: 300;
+     font-weight: 500;
      font-size: 40px;
 }
 
@@ -92,6 +92,7 @@
 .log-out{
      text-transform: uppercase;
      margin-right: 10px;
+     font-weight: 600;
 }
 
 .card-container, .login-container{

@@ -26,7 +26,7 @@
 .current-exhibitions {
      margin-top: auto;
      background-color: rgba(26, 26, 26, 0.6);
-     padding: 20px;
+     padding: 20px 30px;
      color: var(--white);
 }
 

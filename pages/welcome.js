@@ -3,6 +3,9 @@ import {
 } from "../js/firebase_config.js";
 import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
+import artDetailsService from "../js/art-details-service.js";
+
+let _currentUser;
 
 class WelcomePage {
     constructor() {
@@ -29,6 +32,8 @@ class WelcomePage {
         Loader.show(false);
         document.getElementById("user-name").innerHTML =
         `<h2>${user.displayName}</h2>`;
+        document.getElementById("user-name").innerHTML =
+        `<h2>${user.ticket}</h2>`;
     }
 
     userNotAuthenticated() {
@@ -56,7 +61,7 @@ class WelcomePage {
         let authUser = firebase.auth().currentUser;
         this.authUserRef = firebaseDB.collection("users").doc(authUser.uid);
 
-        // init user data and favourite movies
+        // init user data and favourite artworks
         this.authUserRef.onSnapshot({
             includeMetadataChanges: true
         }, userData => {
@@ -66,14 +71,29 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                artDetailsService.init();
+                this.appendAuthUser();
                 Loader.show(false);
                 //this.appendAuthUser();
             }
         });
     }
 
+    appendAuthUser() {
+        document.querySelector('#ticket').value = this.authUser.ticket || "";
+    }
+
     logout() {
         firebase.auth().signOut();
+    }
+
+    updateUser() {
+        // update database user
+        _userRef.doc(_currentUser.uid).set({
+            name: document.querySelector('#user-name').value
+        }, {
+            merge: true
+        });
     }
      
     template() {
@@ -128,7 +148,7 @@ class WelcomePage {
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
 
-                        <input type="number" name="card-number" placeholder="Ticket number">
+                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number">
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>

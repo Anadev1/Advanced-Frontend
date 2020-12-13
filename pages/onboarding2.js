@@ -9,7 +9,7 @@ export default class OnboardingPage2 {
         <section id="onboarding2" class="page onboarding-page">
             <img src="./media/onboarding-2.jpg" alt="Art museum" class="onboarding_img">
             <div id="onboarding-content">
-                <h3 class="onboarding_title">Discover exhibitions</h3>
+                <h3 class="onboarding_title">DISCOVER EXHIBITIONS</h3>
                 <p class="onboarding_text">The app also helps you stay up to date with the 
                     ARoS newest exhibitions and makes it easier for you to read more about
                      the different artworks.</p>

@@ -38,6 +38,11 @@
      margin: 5px;
 }
 
+.title_container {
+     display: flex;
+     justify-content: space-between;
+}
+
 .favourite_artworks {
      display: flex;
      flex-direction: row;
@@ -65,14 +70,15 @@
 }
 
 #user-name {
-     font-size: 24px;
-     margin: 10px 0;
+     font-size: 30px;
+     margin: 20px 0;
      font-weight: 500;
 }
 
 #titles {
      margin: 40px 0 10px;
      font-size: 24px;
+     font-weight: 500;
 }
 
 #card-img {
