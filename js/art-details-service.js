@@ -91,7 +91,7 @@ class ArtDetailsService {
                 <p>No artworks added</p>
             `;
         }
-        document.querySelector('#favourite_artworks').innerHTML = template;
+        document.querySelector('.favourite_artworks').innerHTML = template;
     }
 
 }
