@@ -22,8 +22,7 @@ export default class Map {
              this.appendExhibitions(exhibitionsData);
 
         });
-
-   }
+    }
 
     template() {
         document.querySelector("#app").innerHTML += /*html*/ `

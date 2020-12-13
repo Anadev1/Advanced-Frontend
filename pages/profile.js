@@ -2,6 +2,7 @@ import {
     firebaseDB
 } from "../js/firebase_config.js";
 
+
 export default class Profile {
     constructor() {
         this.exhibitionRef = firebaseDB.collection("artworks");
