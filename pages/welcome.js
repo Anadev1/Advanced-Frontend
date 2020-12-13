@@ -1,7 +1,7 @@
 import {
     firebaseDB
 } from "../js/firebase_config.js";
-
+import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
 
 class WelcomePage {
@@ -26,8 +26,7 @@ class WelcomePage {
 
     userAuthenticated(user) {
         this.initAuthUserRef();
-
-        //display username in profile
+        Loader.show(false);
         document.getElementById("user-name").innerHTML =
         `<h2>${user.displayName}</h2>`;
         document.getElementById("user-name").innerHTML =
@@ -52,6 +51,7 @@ class WelcomePage {
             signInSuccessUrl: '#your-card'
         };
         this.ui.start('#firebaseui-auth-container', uiConfig);
+        Loader.show(false);
     }
 
     initAuthUserRef() {
@@ -69,6 +69,8 @@ class WelcomePage {
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
                 this.appendAuthUser();
+                Loader.show(false);
+                //this.appendAuthUser();
             }
         });
     }
@@ -90,28 +92,28 @@ class WelcomePage {
                     </header>
                     <div class="choice">
                         <div class="main-cta-btn">
-                            <a href="#login" class="go"><p class="log-out">Log in</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
-                        </div>
+                            <a href="#login" class="go"><p class="log-out">Log in / Sign up</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                        </div><!--FUTURE IMPROVEMENTS
                         <div class="other-options">
                             <a href="#guest" class="log-in-option guest">Continue as a guest</a>
                             <a href="#signup" class="log-in-option">Sign up</a>
-                        </div>
+                        </div>-->
                     </div>
                </section>
                <!--LOGIN PAGE-->
                <section id="login" class="page login-page">
                     <header class="welcome">
-                        <h1>Log in to Aros</h1>
+                        <h1>Log in / Sign up to Aros</h1>
                     </header>
                     
                     <div class="login-container">
                         <div id="firebaseui-auth-container"></div>
-                        <div class="other-options">
+                        <!--<div class="other-options">
                             <a href="#signup" class="log-in-option">Ups! I don't have an account yet.</a>
-                        </div>
+                        </div>-->
                     </div>
                </section>
-               <!--SIGN UP PAGE-->
+               <!--SIGN UP PAGE--
                <section id="signup" class="page sign-up-page">
                     <header class="welcome">
                         <h1>Sign up to Aros</h1>
@@ -124,11 +126,11 @@ class WelcomePage {
                             <a href="#login" class="log-in-option">I have already an account!</a>
                         </div>
                     </div>
-               </section>
+               </section>-->
                <!--ADD YOUR CARD PAGE-->
                <section id="your-card" class="page your-card-page">
                     <header class="welcome">
-                        <h1>Sign up to Aros</h1>
+                        <h1>Get your virtual card</h1>
                     </header>
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
@@ -145,14 +147,14 @@ class WelcomePage {
                <!--YOUR TICKET PRESENTATION PAGE-->
                <section id="your-card-presentation" class="page your-card-presentation-page">
                     <header class="welcome">
-                        <h1>Sign up to Aros</h1>
+                        <h1>Your virtual card</h1>
                     </header>
                     <div class="card-container">
                         <img src="../media/virtual_card.png" class="card" alt="Your card">
                         <p class="card-desc">Your Aros ticket has been added. Now you can go to "Homepage".</p>
                         <div class="choice2">
                             <div class="main-cta-btn">
-                                <a href="#home" class="go"><p class="log-out">Let's start</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                                <a href="#onboarding" class="go"><p class="log-out">Let's start</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>

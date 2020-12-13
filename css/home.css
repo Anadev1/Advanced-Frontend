@@ -50,7 +50,8 @@
 
 .exhibits img {
      height: 150px;
-     width: auto;    
+     width: auto;  
+     filter: brightness(0.7);  
 }
 
 .exhibits h3{

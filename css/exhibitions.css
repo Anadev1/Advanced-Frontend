@@ -111,3 +111,9 @@
      transition: all .5s linear;
      margin-left: 5px;
 }
+
+.no-results-info{
+     color: var(--yellow);
+     font-weight: 800;
+     justify-self: center;
+}

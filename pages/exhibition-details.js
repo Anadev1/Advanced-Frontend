@@ -2,6 +2,8 @@ import {
     firebaseDB
 } from "../js/firebase_config.js";
 
+import artDetailsService from "../js/art-details-service.js";
+
 export default class ExhibitionDetailsPage {
     constructor() {
         this.template();
@@ -39,17 +41,18 @@ export default class ExhibitionDetailsPage {
         let template = "";
         for (let artwork of artworks) {
             template += /*html*/ `
-                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.id}', '${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
-                    <div id="artwork-content">
-                    <div id="overlay">
-                    <div id="artwork-text">
-                        <h1 class="artwork_title">${artwork.title}</h1>
-                        <p class="artwork_name">${artwork.name}</p>
-                    </div>
-                        <img src="./media/arrow.svg" alt="arrow" class="artworks_arrow">
-                    </div>
-                    <img class="artwork_img" src='${artwork.image}'>
-                    </div>
+                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
+                        <div id="artwork-content">
+                            <div id="overlay">
+                                <div id="artwork-text">
+                                    <h1 class="artwork_title">${artwork.title}</h1>
+                                    <p class="artwork_name">${artwork.name}</p>
+                                </div>
+                                
+                                <img src="./media/arrow.svg" alt="arrow" class="artworks_arrow">
+                            </div>
+                        <img class="artwork_img" src='${artwork.image}'>
+                        </div>
                     </article>
                 `;
         }
@@ -82,4 +85,6 @@ export default class ExhibitionDetailsPage {
                </section>
           `;
     }
+
+
 }

@@ -68,6 +68,10 @@ export default class Exhibitions {
           let searchValue = value.toLowerCase();
           let filteredExhibitions = exhibitionsData.filter(exhibition => exhibition.name.toLowerCase().includes(searchValue));
           this.appendExhibitions(filteredExhibitions);
+
+          if(filteredExhibitions.length === 0){
+               this.noResults();
+          }
      }
 
      openSearch() {
@@ -86,6 +90,16 @@ export default class Exhibitions {
           closeButton.style.opacity = "0";
           searchIcon.style.opacity = "1";
           searchBar.classList.remove("active");
+     }
+
+     noResults() {
+
+          let template = `
+               <p class="no-results-info">Sorry but we couldn't find this for you!</p>
+          `;
+          
+          document.querySelector("#exhibitions-container").innerHTML = template;
+      
      }
 }
 
