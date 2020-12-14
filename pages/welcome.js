@@ -156,7 +156,7 @@ class WelcomePage {
                         <h1>Your virtual card</h1>
                     </header>
                     <div class="card-container">
-                        <img src="../media/virtual_card.png" class="card" alt="Your card">
+                        <img src="./media/virtual_card.png" class="card" alt="Your card">
                         <p class="card-desc">Your Aros ticket has been added. Now you can go to "Homepage".</p>
                         <div class="choice2">
                             <div class="main-cta-btn">
