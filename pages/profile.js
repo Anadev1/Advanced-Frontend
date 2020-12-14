@@ -26,7 +26,7 @@ export default class Profile {
         document.querySelector("#app").innerHTML += /*html*/ `
             
         <section id="profile" class="page profile_page">
-
+    
         <div id="underlay">
                 </div>
                 <div id="info-box">
