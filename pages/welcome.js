@@ -32,8 +32,6 @@ class WelcomePage {
         Loader.show(false);
         document.getElementById("user-name").innerHTML =
         `<h2>${user.displayName}</h2>`;
-        document.getElementById("user-name").innerHTML =
-        `<h2>${user.ticket}</h2>`;
     }
 
     userNotAuthenticated() {
@@ -71,8 +69,8 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                this.updateUser();
                 artDetailsService.init();
-                this.appendAuthUser();
                 Loader.show(false);
                 //this.appendAuthUser();
             }
@@ -85,8 +83,8 @@ class WelcomePage {
 
     updateUser() {
         // update database user
-        _userRef.doc(_currentUser.uid).set({
-            name: document.querySelector('#user-name').value
+        firebaseDB.collection("users").doc(this.authUser.uid).set({
+            ticket: document.querySelector('#ticket').value,
         }, {
             merge: true
         });
