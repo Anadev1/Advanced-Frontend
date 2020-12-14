@@ -105,11 +105,4 @@ export default class Profile {
         document.querySelector(".detailed_ticket").style.display = "none";
     }
 
-    addToFavourites(artworkId) {
-        artDetailsService.addToFavourites(artworkId);
-    }
-
-    removeFromFavourites(artworkId) {
-        artDetailsService.removeFromFavourites(artworkId);
-    }
 }
