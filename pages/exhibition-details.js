@@ -1,3 +1,5 @@
+//firebase
+
 import {
     firebaseDB
 } from "../js/firebase_config.js";

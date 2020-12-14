@@ -3,6 +3,7 @@
     color: white;
     padding-top: 50px;
     padding-bottom: 10px;
+    position: relative;
 }
 
 #tickets-container {
@@ -89,4 +90,52 @@ button {
 
 .checkout_arrow {
     margin: 0 0 0 5vw;
+}
+
+/* Info button content */
+
+#ticket-info {
+    background: var(--white);
+    flex-direction: column;
+    margin: auto;
+    height: fit-content;
+    padding: 3vh 5vw;
+    margin: auto;
+    position: absolute;
+    width: 85%;
+     display: none;
+     z-index: 2;
+}
+
+#info-close {
+    height: 3vh;
+    margin-bottom: 2vh;
+    display: flex;
+    align-self:flex-end;
+}
+
+#underlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.info_title {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 500;
+    margin: auto;
+}
+
+.info_text {
+    color: var(--black);
+    margin-bottom: 2vh;
+}
+
+#info-link {
+    color: var(--black);
 }

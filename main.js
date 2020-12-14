@@ -55,6 +55,8 @@ window.updateAmount3 = (that) => ticketsPage.updateAmount3(that);
 window.updateAmount4 = (that) => ticketsPage.updateAmount4(that);
 window.updateAmount5 = (that) => ticketsPage.updateAmount5(that);
 window.updateAmount6 = (that) => ticketsPage.updateAmount6(that);
+window.openInfo = () => ticketsPage.openInfo();
+window.closeInfo = () => ticketsPage.closeInfo();
 window.search = (value) => exhibitionsPage.search(value);
 window.openSearch = () => exhibitionsPage.openSearch();
 window.closeSearch = () => exhibitionsPage.closeSearch();
