@@ -24,6 +24,7 @@ export default class Exhibitions {
           });
 
      }
+
      // exhibitions page template
      template() {
           document.querySelector('#app').innerHTML += /*html*/ `
@@ -62,6 +63,7 @@ export default class Exhibitions {
           }
            document.querySelector("#exhibitions-container").innerHTML = template;
      }  
+
      // search functionality
      search(value) {
           let searchValue = value.toLowerCase();
@@ -72,6 +74,7 @@ export default class Exhibitions {
                this.noResults();
           }
      }
+     
      // the message that appears if there are no results for the search
       noResults() {
 

@@ -36,12 +36,6 @@ class WelcomePage {
     userNotAuthenticated() {
         console.log("Firebase");
         spaService.navigateTo("start");
-        /*
-        const btnAnon = document.querySelector(".guest");
-        btnAnon.addEventListener('click', e => {
-            firebase.auth().signInAnonymously();
-        })*/
-
         // Firebase UI configuration
         const uiConfig = {
             credentialHelper: firebaseui.auth.CredentialHelper.NONE,
@@ -68,11 +62,8 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
-                // this.updateUser();
                 artDetailsService.init();
                 Loader.show(false);
-                //this.appendAuthUser();
-            
             }
         });
     }
@@ -80,18 +71,13 @@ class WelcomePage {
     logout() {
         firebase.auth().signOut();
     }
-
+  
     updateAuthUser(ticket, mail) {
         Loader.show(true);
 
         let user = firebase.auth().currentUser;
 
-        //update auth user
-        // user.updateProfile({
-        //     displayName: name
-        // });
-
-        //update database user
+        //update user database
         this.authUserRef.set({
             ticket: ticket,
             mail: mail
@@ -102,21 +88,18 @@ class WelcomePage {
         });
     }
 
-    // updateUser() {
-    //     // update database user
-    //     firebaseDB.collection("users").doc(this.authUser.uid).set({
-    //         ticket: document.querySelector('#ticket').value,
-    //     }, {
-    //         merge: true
-    //     });
-    // }
-
     updateUser() {
         let ticket = document.querySelector('#ticket').value;
-        // let name = document.querySelector('#name').value;
         let mail = document.querySelector('.firebaseui-id-email').value;
-            
-        this.updateAuthUser(ticket, mail);
+
+        
+        let inputTicketError = document.getElementById("ticket-error");
+        if(ticket.length == 6){  
+            this.updateAuthUser(ticket, mail);
+            navigateTo('onboarding');
+        } else{
+            inputTicketError.innerText = "Your card should have 6 numbers";   
+        }
     }     
 
     template() {
@@ -144,25 +127,9 @@ class WelcomePage {
                     
                     <div class="login-container">
                         <div id="firebaseui-auth-container"></div>
-                        <!--<div class="other-options">
-                            <a href="#signup" class="log-in-option">Ups! I don't have an account yet.</a>
-                        </div>-->
                     </div>
                </section>
-               <!--SIGN UP PAGE--
-               <section id="signup" class="page sign-up-page">
-                    <header class="welcome">
-                        <h1>Sign up to Aros</h1>
-                    </header>
-                    <div class="choice">
-                        <div class="main-cta-btn">
-                            <a href="#your-card" class="go"><p class="log-out">Sign up</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
-                        </div>
-                        <div class="other-options">
-                            <a href="#login" class="log-in-option">I have already an account!</a>
-                        </div>
-                    </div>
-               </section>-->
+              
                <!--ADD YOUR CARD PAGE-->
                <section id="your-card" class="page your-card-page">
                     <header class="welcome">
@@ -171,11 +138,12 @@ class WelcomePage {
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
 
-                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number">
+                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number" maxlength="6">
+                        <p id="ticket-error" class="ticket-error"></p>
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>
-                                <a href="#your-card-presentation" class="go"><p class="log-out" onclick="updateUser()">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                                <div class="go" onclick="updateUser()"><p class="log-out">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></div>
                             </div>
                         </div>
                     </div>

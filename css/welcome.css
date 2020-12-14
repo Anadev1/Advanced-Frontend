@@ -133,6 +133,10 @@ input[type="number"]{
      margin-top: 10px;
 }
 
+.ticket-error{
+     margin-top: 5px;
+}
+
 /***FIREBASE UI***/
 .firebaseui-card-header, .firebaseui-card-footer{
      display: none;
@@ -182,6 +186,6 @@ input[type="number"]{
      text-align: center;
 }
 
-.firebaseui-error{
+.firebaseui-error, .ticket-error{
      color: rgb(109, 25, 4);
 }

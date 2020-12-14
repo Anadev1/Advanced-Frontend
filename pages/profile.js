@@ -18,9 +18,7 @@ export default class Profile {
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
             });
-            // this.appendExhibitions(exhibitions);
         });
-
     }
 
     // profile page template
@@ -74,20 +72,7 @@ export default class Profile {
         </section>
         
         `;
-
     }
-
-    // appendExhibitions(exhibitions) {
-    //     let template = "";
-    //     for (let exhibition of exhibitions) {
-    //         template += /*html*/ `
-    //          <article class="exhibition-favourite">
-    //                    <img src="${exhibition.image}" alt="exhibition" class="favourite-image">
-    //          </article>
-    //          `;
-    //     }
-    //     document.querySelector(".favourite_artworks").innerHTML = template;
-    // }
 
     // animation enlarging the ticket
     zoomTicket() {
@@ -103,13 +88,5 @@ export default class Profile {
         document.querySelector(".profile_page").style.overflow = "unset";
         document.querySelector(".profile_page").style.height = "unset";
         document.querySelector(".detailed_ticket").style.display = "none";
-    }
-
-    addToFavourites(artworkId) {
-        artDetailsService.addToFavourites(artworkId);
-    }
-
-    removeFromFavourites(artworkId) {
-        artDetailsService.removeFromFavourites(artworkId);
     }
 }

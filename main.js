@@ -79,7 +79,6 @@ window.selectExhibition = (name, image, floor, description) => {
      imageInputMap.style.backgroundImage = "url(" + image + ")";
      descriptionInput.textContent = description;
      spaService.navigateTo("exhibition-details");
-
      document.querySelector(".map_exhibition_details").style.display = "flex";
      document.querySelector(".map_exhibition_details_filtered").style.display = "none";
 
