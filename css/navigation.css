@@ -20,6 +20,7 @@
 
 .nav-btn div:last-child {
      width: 15px;
+     float: right;
 }
 
 .nav-container {

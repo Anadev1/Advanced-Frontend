@@ -38,10 +38,13 @@ class SpaService {
       document.querySelector(`#${pageId}`).style.display = "flex";
       this.hideNavIcon(true);
     } else if (pageId == "onboarding") {
+      document.querySelector(`#${pageId}`).style.display = "block";
       this.hideNavIcon(true);
     } else if (pageId == "onboarding2") {
+      document.querySelector(`#${pageId}`).style.display = "block";
       this.hideNavIcon(true);
     } else if (pageId == "onboarding3") {
+      document.querySelector(`#${pageId}`).style.display = "block";
       this.hideNavIcon(true);
     } else {
       document.querySelector(`#${pageId}`).style.display = "block";

@@ -82,11 +82,19 @@ class WelcomePage {
 
     updateUser() {
         // update database user
-        firebaseDB.collection("users").doc(this.authUser.uid).set({
-            ticket: document.querySelector('#ticket').value,
-        }, {
-            merge: false
-        });
+        let inputTicket = document.getElementById("ticket");
+        let inputTicketError = document.getElementById("ticket-error");
+        if(inputTicket.value.length == 6){
+            firebaseDB.collection("users").doc(this.authUser.uid).set({
+                ticket: document.querySelector('#ticket').value,
+            }, {
+                merge: false
+            });
+            navigateTo('onboarding');
+        }   else{
+            inputTicketError.innerText = "Your card should have 6 numbers";   
+        }
+        
     }
      
     template() {
@@ -141,11 +149,12 @@ class WelcomePage {
                     <div class="card-container">
                         <p class="card-desc">We want to enable our clients to visit our museum in the most convenient and comfortable way, that's why you can get a virtual tickets if you already have traditional one.  To get virtual ticket you have to write a code from your current ticket.  Your ticket will be available in "Profile page".</p>
 
-                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number">
+                        <input id="ticket" type="number" name="card-number" placeholder="Ticket number" maxlength="6">
+                        <p id="ticket-error" class="ticket-error"></p>
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>
-                                <a href="#your-card-presentation" class="go"><p class="log-out" onclick="updateUser();">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                                <div class="go" onclick="updateUser()"><p class="log-out">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></div>
                             </div>
                         </div>
                     </div>
