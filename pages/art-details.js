@@ -72,6 +72,7 @@ export default class ArtDetails {
 
     addToFavourites(artworkId) {
         artDetailsService.addToFavourites(artworkId);
+
     }
 
     removeFromFavourites(artworkId) {

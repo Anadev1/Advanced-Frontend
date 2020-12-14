@@ -50,10 +50,10 @@ class ArtDetailsService {
     // creating the button for adding to favorites
     generateFavArtworkButton(artworkId) {
         let btnTemplate = `
-          <button onclick="addToFavourites('${artworkId}')">Add to favourites</button>`;
+          <button class="fav_button" onclick="addToFavourites('${artworkId}')"><img src="./media/heart.svg"></button>`;
         if (this.userHasFav(artworkId)) {
             btnTemplate = `
-            <button onclick="removeFromFavourites('${artworkId}')" class="rm">Remove from favourites</button>`;
+            <button class="fav_button" onclick="removeFromFavourites('${artworkId}')" class="rm"><img src="./media/heart_full.svg"></button>`;
         }
         return btnTemplate;
     }
@@ -106,10 +106,9 @@ class ArtDetailsService {
         let template = "";
         for (let artwork of artworks) {
             template += /* html */ `
-            <article>
-              <h2>${artwork.title}</h2>
-              <img src="${artwork.image}">
-              <button onclick="removeFromFavourites('${artwork.id}')" class="rm">Remove from favourites</button>
+            <article class="fav_artworks_profile">
+              <img class="profile_fav_art" src="${artwork.image}">
+              <button onclick="removeFromFavourites('${artwork.id}')" class="rm"><img src="./media/heart_delete.svg"></button>
             </article>
           `;
         }
