@@ -5,7 +5,6 @@ import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
 import artDetailsService from "../js/art-details-service.js";
 
-let _currentUser;
 
 class WelcomePage {
     constructor() {
@@ -69,9 +68,11 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                // this.updateUser();
                 artDetailsService.init();
                 Loader.show(false);
                 //this.appendAuthUser();
+            
             }
         });
     }
@@ -79,24 +80,52 @@ class WelcomePage {
     logout() {
         firebase.auth().signOut();
     }
+  
+    updateAuthUser(ticket, mail) {
+        Loader.show(true);
+
+        let user = firebase.auth().currentUser;
+
+        //update auth user
+        // user.updateProfile({
+        //     displayName: name
+        // });
+
+        //update database user
+        this.authUserRef.set({
+            ticket: ticket,
+            mail: mail
+        }, {
+            merge: true
+        }).then(() => {
+            Loader.show(false);
+        });
+    }
+
+    // updateUser() {
+    //     // update database user
+    //     firebaseDB.collection("users").doc(this.authUser.uid).set({
+    //         ticket: document.querySelector('#ticket').value,
+    //     }, {
+    //         merge: true
+    //     });
+    // }
 
     updateUser() {
-        // update database user
-        let inputTicket = document.getElementById("ticket");
+        let ticket = document.querySelector('#ticket').value;
+        // let name = document.querySelector('#name').value;
+        let mail = document.querySelector('.firebaseui-id-email').value;
+
+        
         let inputTicketError = document.getElementById("ticket-error");
-        if(inputTicket.value.length == 6){
-            firebaseDB.collection("users").doc(this.authUser.uid).set({
-                ticket: document.querySelector('#ticket').value,
-            }, {
-                merge: false
-            });
+        if(ticket.length == 6){  
+            this.updateAuthUser(ticket, mail);
             navigateTo('onboarding');
-        }   else{
+        } else{
             inputTicketError.innerText = "Your card should have 6 numbers";   
         }
-        
-    }
-     
+    }     
+
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                 <!--START PAGE-->
@@ -165,7 +194,7 @@ class WelcomePage {
                         <h1>Your virtual card</h1>
                     </header>
                     <div class="card-container">
-                        <img src="../media/virtual_card.png" class="card" alt="Your card">
+                        <img src="./media/virtual_card.png" class="card" alt="Your card">
                         <p class="card-desc">Your Aros ticket has been added. Now you can go to "Homepage".</p>
                         <div class="choice2">
                             <div class="main-cta-btn">
