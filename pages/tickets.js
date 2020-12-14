@@ -20,11 +20,11 @@ export default class TicketsPage {
                     <p class="ticket_text">The ARoS27 membership is for people between the age 18 and 27 - 
                     independent on whether you are a student. The membership gives you free entrance to the 
                     museum for an entire year, invitations to membership events as well as a variety of 
-                    other benefits.<a href="#" id="info-link">Read more about ARoS27 here. </a></p>
+                    other benefits.<a href="https://www.aros.dk/da/besoeg/%C3%A5rskort/" id="info-link">Read more about ARoS27 here. </a></p>
                     <h2 class="info_title">ARoS Art Club</h2>
                     <p class="ticket_text">The ARoS Art Club membership offers you and a guest free admission to 
                     the museum for a year, invitations to private views, individual exhibitions and a list of
-                    other advantages.<a href="#" id="info-link">Read more about ARoS Art Club here.</a></p>
+                    other advantages.<a href="https://www.aros.dk/da/besoeg/%C3%A5rskort/" id="info-link">Read more about ARoS Art Club here.</a></p>
                 </div>   
 
                     <h2 class="tickets_title">TICKETS</h2>
