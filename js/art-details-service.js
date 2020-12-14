@@ -120,7 +120,6 @@ class ArtDetailsService {
         }
         document.querySelector('.favourite_artworks').innerHTML = template;
     }
-
 }
 
 const artDetailsService = new ArtDetailsService();

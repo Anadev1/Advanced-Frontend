@@ -75,8 +75,6 @@ class WelcomePage {
     updateAuthUser(ticket, mail) {
         Loader.show(true);
 
-        let user = firebase.auth().currentUser;
-
         //update user database
         this.authUserRef.set({
             ticket: ticket,
