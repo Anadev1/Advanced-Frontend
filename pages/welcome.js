@@ -69,7 +69,6 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
-                this.updateUser();
                 artDetailsService.init();
                 Loader.show(false);
                 //this.appendAuthUser();
@@ -86,7 +85,7 @@ class WelcomePage {
         firebaseDB.collection("users").doc(this.authUser.uid).set({
             ticket: document.querySelector('#ticket').value,
         }, {
-            merge: true
+            merge: false
         });
     }
      
@@ -146,7 +145,7 @@ class WelcomePage {
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>
-                                <a href="#your-card-presentation" class="go"><p class="log-out">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                                <a href="#your-card-presentation" class="go"><p class="log-out" onclick="updateUser();">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>

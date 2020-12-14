@@ -20,6 +20,7 @@ export default class ArtDetails {
                 artworks.push(artwork);
             });
             this.appendOtherArtworks(artworks)
+            this.appendFavButton();
         });
 
     }
@@ -78,5 +79,11 @@ export default class ArtDetails {
     removeFromFavourites(artworkId) {
         artDetailsService.removeFromFavourites(artworkId);
     }
+
+//     appendFavButton() {
+//         document.querySelector('.fav-button-container').innerHTML += /*html*/ ` 
+//         <button onclick="addToFavourites()">Add to favourites</button>
+//    `;
+//    console.log("hello");}
 
 }
