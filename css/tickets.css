@@ -92,9 +92,9 @@ button {
     margin: 0 0 0 5vw;
 }
 
-/* Info button content */
+/* Info box */
 
-#ticket-info {
+#ticket-box {
     background: var(--white);
     flex-direction: column;
     margin: auto;
@@ -103,8 +103,8 @@ button {
     margin: auto;
     position: absolute;
     width: 85%;
-     display: none;
-     z-index: 2;
+    display: none;
+    z-index: 4;
 }
 
 #info-close {
@@ -114,7 +114,7 @@ button {
     align-self:flex-end;
 }
 
-#underlay {
+#underlay1 {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
@@ -122,6 +122,7 @@ button {
     display: none;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 .info_title {
@@ -131,7 +132,7 @@ button {
     margin: auto;
 }
 
-.info_text {
+.ticket_text {
     color: var(--black);
     margin-bottom: 2vh;
 }
