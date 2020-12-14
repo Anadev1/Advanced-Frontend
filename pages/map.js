@@ -20,7 +20,6 @@ export default class Map {
                 exhibitionsData.push(exhibition);
             });
             this.appendExhibitions(exhibitionsData);
-
         });
 
     }

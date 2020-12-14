@@ -36,12 +36,6 @@ class WelcomePage {
     userNotAuthenticated() {
         console.log("Firebase");
         spaService.navigateTo("start");
-        /*
-        const btnAnon = document.querySelector(".guest");
-        btnAnon.addEventListener('click', e => {
-            firebase.auth().signInAnonymously();
-        })*/
-
         // Firebase UI configuration
         const uiConfig = {
             credentialHelper: firebaseui.auth.CredentialHelper.NONE,
@@ -68,11 +62,8 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
-                // this.updateUser();
                 artDetailsService.init();
                 Loader.show(false);
-                //this.appendAuthUser();
-            
             }
         });
     }
@@ -86,12 +77,7 @@ class WelcomePage {
 
         let user = firebase.auth().currentUser;
 
-        //update auth user
-        // user.updateProfile({
-        //     displayName: name
-        // });
-
-        //update database user
+        //update user database
         this.authUserRef.set({
             ticket: ticket,
             mail: mail
@@ -102,18 +88,8 @@ class WelcomePage {
         });
     }
 
-    // updateUser() {
-    //     // update database user
-    //     firebaseDB.collection("users").doc(this.authUser.uid).set({
-    //         ticket: document.querySelector('#ticket').value,
-    //     }, {
-    //         merge: true
-    //     });
-    // }
-
     updateUser() {
         let ticket = document.querySelector('#ticket').value;
-        // let name = document.querySelector('#name').value;
         let mail = document.querySelector('.firebaseui-id-email').value;
 
         
@@ -151,25 +127,9 @@ class WelcomePage {
                     
                     <div class="login-container">
                         <div id="firebaseui-auth-container"></div>
-                        <!--<div class="other-options">
-                            <a href="#signup" class="log-in-option">Ups! I don't have an account yet.</a>
-                        </div>-->
                     </div>
                </section>
-               <!--SIGN UP PAGE--
-               <section id="signup" class="page sign-up-page">
-                    <header class="welcome">
-                        <h1>Sign up to Aros</h1>
-                    </header>
-                    <div class="choice">
-                        <div class="main-cta-btn">
-                            <a href="#your-card" class="go"><p class="log-out">Sign up</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
-                        </div>
-                        <div class="other-options">
-                            <a href="#login" class="log-in-option">I have already an account!</a>
-                        </div>
-                    </div>
-               </section>-->
+              
                <!--ADD YOUR CARD PAGE-->
                <section id="your-card" class="page your-card-page">
                     <header class="welcome">

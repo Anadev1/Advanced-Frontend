@@ -80,7 +80,5 @@ class SpaService {
   }
 }
 
-
-
 const spaService = new SpaService();
 export default spaService;

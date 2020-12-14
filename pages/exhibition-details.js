@@ -3,7 +3,6 @@ import {
 } from "../js/firebase_config.js";
 
 import artDetailsService from "../js/art-details-service.js";
-// import rtDetails from "./art-details.js";
 
 
 export default class ExhibitionDetailsPage {
@@ -35,7 +34,6 @@ export default class ExhibitionDetailsPage {
         });
     }
 
-
     // exhibition details page template
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
@@ -62,7 +60,5 @@ export default class ExhibitionDetailsPage {
                </section>
           `;
     }
-
-    
 
 }

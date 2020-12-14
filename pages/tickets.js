@@ -167,7 +167,5 @@ export default class TicketsPage {
         num6 = (that.value == "minus") ? --num6 : ++num6;
         number6.innerHTML = num6;
     }
-
-
 }
 
