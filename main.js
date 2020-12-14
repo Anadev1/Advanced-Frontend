@@ -12,6 +12,7 @@ import OnboardingPage3 from "./pages/onboarding3.js";
 import spaService from "./js/spa.js";
 import TicketsPage from "./pages/tickets.js";
 import welcomePage from "./pages/welcome.js";
+import artDetailsService from "./js/art-details-service.js";
 
 //Declare and init
 let map = new Map();
@@ -35,7 +36,6 @@ window.closeNav = () => nav.closeNav();
 window.openHours = () => nav.openHours();
 window.closeHours = () => nav.closeHours();
 window.logout = () => welcomePage.logout();
-window.updateUser = () => welcomePage.updateUser();
 window.openMapFloor = () => map.openMapFloor();
 window.openMapFloor0 = () => map.openMapFloor0();
 window.openMapFloor1 = () => map.openMapFloor1();
@@ -60,7 +60,7 @@ window.openSearch = () => exhibitionsPage.openSearch();
 window.closeSearch = () => exhibitionsPage.closeSearch();
 window.addToFavourites = (artworkId) => artDetails.addToFavourites(artworkId);
 window.removeFromFavourites = (artworkId) => artDetails.removeFromFavourites(artworkId);
-
+window.updateUser = () => welcomePage.updateUser();
 
 window.selectExhibition = (name, image, floor, description) => {
      // references to the input fields
@@ -85,7 +85,7 @@ window.selectExhibition = (name, image, floor, description) => {
 
 };
 
-window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
+window.selectArtwork = (artworkId, artworkTitle, artworkImage, artistImg, artworkFacts, artworkName, artworkDescription) => {
      // references to the input fields
      let artworkTitleInput = document.querySelector('.artwork-title, .artwork-name');
      let artworkImageInput = document.querySelector('.artwork-image-container');
@@ -93,6 +93,8 @@ window.selectArtwork = (artworkTitle, artworkImage, artistImg, artworkFacts, art
      let artworkFactsInput = document.querySelector('.facts');
      let artworkNameInput = document.querySelector('.artist-name');
      let artworkDescriptionInput = document.querySelector(".description-text");
+     let favButtonContainer = document.querySelector('.fav-button-container');
+     favButtonContainer.innerHTML = artDetailsService.generateFavArtworkButton(artworkId);
      artworkTitleInput.textContent = artworkTitle;
      artworkImageInput.style.backgroundImage = "url(" + artworkImage + ")";
      artistImgInput.style.backgroundImage = "url(" + artistImg + ")";

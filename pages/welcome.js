@@ -5,7 +5,6 @@ import Loader from "../js/loader.js";
 import spaService from "../js/spa.js";
 import artDetailsService from "../js/art-details-service.js";
 
-let _currentUser;
 
 class WelcomePage {
     constructor() {
@@ -69,9 +68,11 @@ class WelcomePage {
                     ...userData.data()
                 }; //concating two objects: authUser object and userData objec from the db
                 this.authUser = user;
+                // this.updateUser();
                 artDetailsService.init();
                 Loader.show(false);
                 //this.appendAuthUser();
+            
             }
         });
     }
@@ -80,15 +81,44 @@ class WelcomePage {
         firebase.auth().signOut();
     }
 
-    updateUser() {
-        // update database user
-        firebaseDB.collection("users").doc(this.authUser.uid).set({
-            ticket: document.querySelector('#ticket').value,
+    updateAuthUser(ticket, mail) {
+        Loader.show(true);
+
+        let user = firebase.auth().currentUser;
+
+        //update auth user
+        // user.updateProfile({
+        //     displayName: name
+        // });
+
+        //update database user
+        this.authUserRef.set({
+            ticket: ticket,
+            mail: mail
         }, {
-            merge: false
+            merge: true
+        }).then(() => {
+            Loader.show(false);
         });
     }
-     
+
+    // updateUser() {
+    //     // update database user
+    //     firebaseDB.collection("users").doc(this.authUser.uid).set({
+    //         ticket: document.querySelector('#ticket').value,
+    //     }, {
+    //         merge: true
+    //     });
+    // }
+
+    updateUser() {
+        let ticket = document.querySelector('#ticket').value;
+        // let name = document.querySelector('#name').value;
+        let mail = document.querySelector('.firebaseui-id-email').value;
+            
+        this.updateAuthUser(ticket, mail);
+    }     
+
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
                 <!--START PAGE-->
@@ -145,7 +175,7 @@ class WelcomePage {
                         <div class="choice2">
                             <div class="skip-go-container">
                                 <a href="#home" class="skip">SKIP</a>
-                                <a href="#your-card-presentation" class="go"><p class="log-out" onclick="updateUser();">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
+                                <a href="#your-card-presentation" class="go"><p class="log-out" onclick="updateUser()">Get a virtual ticket</p><span class="arrow-icon"><i class="fas fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>

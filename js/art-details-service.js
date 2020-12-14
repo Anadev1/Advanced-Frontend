@@ -19,10 +19,34 @@ class ArtDetailsService {
                 artwork.id = doc.id;
                 artworks.push(artwork);
             });
-            this.getFavArtworks(artworks);
+            
         });
+        this.appendFavArtworks();
      }
      
+    // appending the artworks
+    appendArtworks(artworks) {
+        let template = "";
+        for (let artwork of artworks) {
+            template += /*html*/ `
+                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.id}','${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
+                        <div id="artwork-content">
+                            <div id="overlay">
+                                <div id="artwork-text">
+                                    <h1 class="artwork_title">${artwork.title}</h1>
+                                    <p class="artwork_name">${artwork.name}</p>
+                                </div>
+                                </div>
+                                <img src="./media/arrow.svg" alt="arrow" class="artworks_arrow">
+                            </div>
+                        <img class="artwork_img" src='${artwork.image}'>
+                        </div>
+                    </article>
+                `;
+        }
+        document.querySelector("#artwork-list").innerHTML = template;
+    }
+    
     // creating the button for adding to favorites
     generateFavArtworkButton(artworkId) {
         let btnTemplate = `
