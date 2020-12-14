@@ -29,7 +29,7 @@ export default class Profile {
             
         <section id="profile" class="page profile_page">
         <div class="detailed_ticket">
-            <img src="../media/detailed_ticket.png" alt="detailed ticket" class="detailed_card" onclick="closeTicket()">
+            <img src="./media/detailed_ticket.png" alt="detailed ticket" class="detailed_card" onclick="closeTicket()">
         </div>
         <img src="./media/settings.png" class="settings_icon">
             <header class="topbar profile_top">
@@ -48,7 +48,7 @@ export default class Profile {
             <div class="coffee_stamps">
                 <div class="title_container">
                 <h3 id="titles">Coffee stamps collection</h3>
-                <img src="/media/question.svg" alt="question mark" class="info_btn">
+                <img src="./media/question.svg" alt="question mark" class="info_btn">
                 </div>
                 <div class="collection">
                     <img class="coffee" src="./media/coffee.png"> 
