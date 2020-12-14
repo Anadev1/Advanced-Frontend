@@ -19,8 +19,8 @@ class ArtDetailsService {
                 artwork.id = doc.id;
                 artworks.push(artwork);
             });
+            this.getFavArtworks(artworks);
         });
-        this.appendFavArtworks();
      }
      
     // creating the button for adding to favorites

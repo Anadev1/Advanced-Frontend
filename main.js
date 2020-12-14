@@ -35,6 +35,7 @@ window.closeNav = () => nav.closeNav();
 window.openHours = () => nav.openHours();
 window.closeHours = () => nav.closeHours();
 window.logout = () => welcomePage.logout();
+window.updateUser = () => welcomePage.updateUser();
 window.openMapFloor = () => map.openMapFloor();
 window.openMapFloor0 = () => map.openMapFloor0();
 window.openMapFloor1 = () => map.openMapFloor1();
