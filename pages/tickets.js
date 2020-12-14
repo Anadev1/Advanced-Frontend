@@ -78,7 +78,7 @@ export default class TicketsPage {
                 <div>
                     <div id="tickets-container">
                     <h2 class="tickets_title">ANNUAL PASSES</h2>
-                    <img src="/media/question.svg" alt="question mark" class="info_btn">
+                    <img src="./media/question.svg" alt="question mark" class="info_btn">
                     </div>
                     <div>
                         <div id="ticket-types">

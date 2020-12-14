@@ -54,7 +54,7 @@ export default class Exhibitions {
                     <h1 class="exhibition-name">${exhibition.name}</h1>
                     <div class="date-arrow-container">
                     <p class="exhibition-date">Exhibition end: ${exhibition.date}</p>
-                    <img src="/media/arrow.svg" alt="arrow" id="arrow">
+                    <img src="./media/arrow.svg" alt="arrow" id="arrow">
                     </div>
                </div>
           </article>
