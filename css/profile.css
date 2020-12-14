@@ -99,3 +99,67 @@
 .detailed_card {
      width: 85%;
 }
+
+/* info box */
+
+#info-box {
+    background: var(--white);
+    flex-direction: column;
+    margin: auto;
+    height: fit-content;
+    padding: 3vh 5vw;
+    margin: 8vh 0;
+    position: absolute;
+    width: 85%;
+    display: none;
+    z-index: 4;
+}
+
+#info-close {
+    height: 3vh;
+    margin-bottom: 2vh;
+    display: flex;
+    align-self:flex-end;
+}
+
+#underlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.info_title {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 500;
+    margin: auto;
+}
+
+.info_text {
+    color: var(--black);
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.info_img {
+     width: 25%;
+     height: 25%;
+     margin: 5vh 2vw;
+}
+
+#img-section {
+     display: flex;
+     justify-content: center;
+}
+
+.info_text_bold {
+     font-weight: 600;
+     color: var(--black);
+     margin: 4vh 0;
+     text-align: center;
+}

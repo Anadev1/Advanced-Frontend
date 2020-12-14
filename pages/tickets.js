@@ -9,20 +9,20 @@ export default class TicketsPage {
                <section id="tickets" class="page tickets-page">
                 <div>
 
-                <div id="underlay">
+                <div id="underlay1">
                 </div>
-                <div id="ticket-info">
-                    <img src="./media/close.svg" id="info-close" onclick="closeInfo()">
+                <div id="ticket-box">
+                    <img src="./media/close.svg" id="info-close" onclick="closeTicketInfo()">
                     <h2 class="info_title">Annual Passes</h2>
-                    <p class="info_text">Enjoy unlimited free entry for ARoS. Obtain enhanced opportunities 
+                    <p class="ticket_text">Enjoy unlimited free entry for ARoS. Obtain enhanced opportunities 
                     to experience art through the membership of the ARos club.</p>
                      <h2 class="info_title">ARoS27</h2>
-                    <p class="info_text">The ARoS27 membership is for people between the age 18 and 27 - 
+                    <p class="ticket_text">The ARoS27 membership is for people between the age 18 and 27 - 
                     independent on whether you are a student. The membership gives you free entrance to the 
                     museum for an entire year, invitations to membership events as well as a variety of 
                     other benefits.<a href="#" id="info-link">Read more about ARoS27 here. </a></p>
                     <h2 class="info_title">ARoS Art Club</h2>
-                    <p class="info_text">The ARoS Art Club membership offers you and a guest free admission to 
+                    <p class="ticket_text">The ARoS Art Club membership offers you and a guest free admission to 
                     the museum for a year, invitations to private views, individual exhibitions and a list of
                     other advantages.<a href="#" id="info-link">Read more about ARoS Art Club here.</a></p>
                 </div>   
@@ -97,7 +97,7 @@ export default class TicketsPage {
                 <div>
                     <div id="tickets-container">
                     <h2 class="tickets_title">ANNUAL PASSES</h2>
-                    <img src="/media/question.svg" alt="question mark" class="info_btn" onclick="openInfo()">
+                    <img src="/media/question.svg" alt="question mark" class="info_btn" onclick="openTicketInfo()">
                     </div>
                     <div>
                         <div id="ticket-types">
@@ -189,20 +189,20 @@ export default class TicketsPage {
 
     // Ticket info modal
 
-    openInfo() {
+    openTicketInfo() {
 
         document.querySelector(".tickets-page").style.overflow = "hidden";
         document.querySelector(".tickets-page").style.height = "fit-content";
-        document.querySelector("#ticket-info").style.display = "flex";
-        document.querySelector("#underlay").style.display = "block";
+        document.querySelector("#ticket-box").style.display = "flex";
+        document.querySelector("#underlay1").style.display = "block";
     }
 
-    closeInfo() {
+    closeTicketInfo() {
         document.querySelector(".tickets-page").style.overflow = "unset";
         document.querySelector(".tickets-page").style.height = "unset";
         document.querySelector(".tickets-page").style.opacity = "unset";
-        document.querySelector("#ticket-info").style.display = "none";
-        document.querySelector("#underlay").style.display = "none";
+        document.querySelector("#ticket-box").style.display = "none";
+        document.querySelector("#underlay1").style.display = "none";
     }
 
 
