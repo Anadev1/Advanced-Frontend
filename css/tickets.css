@@ -99,8 +99,7 @@ button {
     flex-direction: column;
     margin: auto;
     height: fit-content;
-    padding: 3vh 5vw;
-    margin: auto;
+    padding: 3vh 5vw 5vh;
     position: absolute;
     width: 85%;
     display: none;
