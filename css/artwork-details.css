@@ -186,3 +186,33 @@
      width: auto;
      margin-left: 20px;
 }
+
+.fav-button-container{
+     display: flex;
+     justify-content: flex-end;
+}
+
+.fav_button {
+     fill: white;
+     width: 150px;
+     height: 30px;
+     margin: 20px 0;
+     outline: none;
+}
+
+.fav_artworks_profile {
+     width: 45%;
+     margin: 5px;
+     display: flex;
+     flex-direction: column;
+}
+
+.profile_fav_art {
+     width: 100%;
+     height: 150px;
+}
+
+.rm {
+     color: white;
+     margin: 10px auto 15px;
+}

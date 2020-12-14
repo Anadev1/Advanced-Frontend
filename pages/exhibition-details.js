@@ -6,6 +6,7 @@ import {
 
 import artDetailsService from "../js/art-details-service.js";
 
+
 export default class ExhibitionDetailsPage {
     constructor() {
         this.template();
@@ -21,9 +22,7 @@ export default class ExhibitionDetailsPage {
                 let exhibition = doc.data();
                 exhibition.id = doc.id;
                 exhibitions.push(exhibition);
-
             });
-
         });
 
         this.artworkRef.onSnapshot(snapshotData => {
@@ -33,31 +32,8 @@ export default class ExhibitionDetailsPage {
                 artwork.id = doc.id;
                 artworks.push(artwork);
             });
-            this.appendArtworks(artworks);
+            artDetailsService.appendArtworks(artworks);
         });
-    }
-
-    // appending the artworks
-    appendArtworks(artworks) {
-        let template = "";
-        for (let artwork of artworks) {
-            template += /*html*/ `
-                    <article id="exhibition-artworks" onclick="selectArtwork('${artwork.title}', '${artwork.image}', '${artwork.artistimg}', '${artwork.facts}', '${artwork.name}', '${artwork.description}' )">
-                        <div id="artwork-content">
-                            <div id="overlay">
-                                <div id="artwork-text">
-                                    <h1 class="artwork_title">${artwork.title}</h1>
-                                    <p class="artwork_name">${artwork.name}</p>
-                                </div>
-                            
-                                <img src="./media/arrow.svg" alt="arrow" class="artworks_arrow">
-                            </div>
-                        <img class="artwork_img" src='${artwork.image}'>
-                        </div>
-                    </article>
-                `;
-        }
-        document.querySelector("#artwork-list").innerHTML = template;
     }
 
     // exhibition details page template
@@ -86,6 +62,5 @@ export default class ExhibitionDetailsPage {
                </section>
           `;
     }
-
 
 }

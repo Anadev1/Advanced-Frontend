@@ -20,9 +20,7 @@ export default class ArtDetails {
                 artworks.push(artwork);
             });
             this.appendOtherArtworks(artworks)
-            this.appendFavButton();
         });
-
     }
     template() {
         document.querySelector('#app').innerHTML += /*html*/ `
@@ -74,16 +72,11 @@ export default class ArtDetails {
 
     addToFavourites(artworkId) {
         artDetailsService.addToFavourites(artworkId);
+
     }
 
     removeFromFavourites(artworkId) {
         artDetailsService.removeFromFavourites(artworkId);
     }
-
-//     appendFavButton() {
-//         document.querySelector('.fav-button-container').innerHTML += /*html*/ ` 
-//         <button onclick="addToFavourites()">Add to favourites</button>
-//    `;
-//    console.log("hello");}
 
 }
