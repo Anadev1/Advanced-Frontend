@@ -50,7 +50,7 @@ export default class Profile {
         <img src="./media/settings.png" class="settings_icon">
             <header class="topbar profile_top">
                <h2 id="profile-title">PROFILE</h2>
-               <h2 id="user-name">Adam Smith</h2>
+               <h3 id="user-name"></h3>
             </header>
             <div class="virtual_card">
                 <h3 id="titles">Your virtual ticket</h3>

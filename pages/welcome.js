@@ -30,7 +30,7 @@ class WelcomePage {
         this.initAuthUserRef();
         Loader.show(false);
         document.getElementById("user-name").innerHTML =
-        `<h2>${user.displayName}</h2>`;
+        `${user.displayName}`;
     }
 
     userNotAuthenticated() {
